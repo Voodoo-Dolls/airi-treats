@@ -1,0 +1,74 @@
+{
+  "id": "product_details",
+  "type": "SharedSlice",
+  "name": "ProductDetails",
+  "description": "ProductDetails",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "product_name": {
+          "type": "Text",
+          "config": {
+            "label": "Product Name",
+            "placeholder": ""
+          }
+        },
+        "product_price": {
+          "type": "Text",
+          "config": {
+            "label": "Product Price",
+            "placeholder": "Ex. 4.50"
+          }
+        },
+        "product_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Product Description",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "product_id": {
+          "type": "Text",
+          "config": {
+            "label": "Product ID",
+            "placeholder": ""
+          }
+        },
+        "main_image": {
+          "type": "Image",
+          "config": {
+            "label": "Main Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "product_gallery": {
+          "type": "Group",
+          "config": {
+            "label": "Product Gallery",
+            "repeat": true,
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
