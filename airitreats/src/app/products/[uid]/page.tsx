@@ -23,7 +23,7 @@ export default async function Page({ params }: { params: Params }) {
             <div className={styles.container}>
                 {
                     slices.map((data) => (
-                        <ProductCard data={data.primary} />
+                        <ProductCard data={data.primary} key={data.primary.product_id} />
                     ))
                 }
             </div>

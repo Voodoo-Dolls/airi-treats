@@ -2,7 +2,8 @@ import Image from "next/image"
 import styles from "./ProductCard.module.scss"
 
 
-export default function ProductCard({ data }) {
+
+export default function ProductCard({ data }: any) {
     const title = data.product_name
     const price = data.product_price
     const desc = data.product_description
