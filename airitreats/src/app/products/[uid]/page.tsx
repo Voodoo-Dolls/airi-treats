@@ -4,7 +4,8 @@ import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
-import ProductCard from "@/components/Products/ProductCard";
+
+import ProductGrid from "@/components/Products/ProductGrid/ProductGrid";
 
 type Params = { uid: string };
 
@@ -17,13 +18,15 @@ export default async function Page({ params }: { params: Params }) {
     let productData = await client.getAllByEveryTag([params.uid, "product"])
 
 
-    productData.map((product) => {
-        console.log(product)
-    })
+    // productData.map((product) => {
+    //     console.log(product)
+    // })
     return (
         <>
-            <h2>This is the {params.uid} page.</h2>
-            <ProductCard />
+            <div className="container">
+                <h2>This is the {params.uid} page.</h2>
+            </div>
+            <ProductGrid productData={productData} />
         </>
     )
     return <SliceZone slices={page.data.slices} components={components} />;

@@ -1,9 +1,13 @@
 import Image from "next/image"
 import styles from "./ProductCard.module.scss"
+import { headerFont } from "@/app/layout"
 
 
 
-export default function ProductCard() {
+export default function ProductCard({ product }) {
+    // console.log(product.data.slices[0].primary)
+    const { product_id, product_name, product_price, product_description, main_image } = product.data.slices[0].primary
+    console.log(product_id)
     // const title = data.product_name
     // const price = data.product_price
     // const desc = data.product_description
@@ -13,19 +17,18 @@ export default function ProductCard() {
 
 
     return (
-        <div>
-            <div className={styles.imageContainer}>
-                <Image src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTlpuXR0utjtmyljXGkJFBxbp6CPDF-isNdA&s`} fill alt="" />
+        <div className={styles.container}>
+            <div className={styles.wrapper}>
+                <div className={styles.bannerImage}> </div>
+                <h1 className={`${headerFont.className} ${styles.h1}`}>{product_name}</h1>
+                <p className={styles.p}>${product_price.toFixed(2)}</p>
             </div>
-            <div>
-                <h2>Title</h2>
-                <p>$4.00</p>
+            <div className={styles.buttonWrapper}>
+                <button className={`${styles.btn} ${styles.outline}`}>DETAILS</button>
+                <button className={`${styles.btn} ${styles.fill}`}>ADD TO CART</button>
             </div>
-            <div>
-                Details
-            </div>
-            <button className="snipcart-add-item">Add to cart</button>
-        </div>
+        </div >
+
         // <div className={styles.container}>
         //     <div className={styles.imageContainer}>
         //         <Image src={image} fill alt="" className={styles.image} sizes="(max-width: 1200px) 50vw, 33vw" />

@@ -6,7 +6,8 @@ import Header from "@/components/Header/Header";
 import "./snipcart.css"
 import "./global.scss"
 
-export const headertFont = Fjalla_One({
+
+export const headerFont = Fjalla_One({
   weight: '400',
   subsets: ['latin'],
   variable: '--headerFont'
@@ -17,6 +18,9 @@ export const bodyFont = Source_Sans_3({
   subsets: ['latin'],
   variable: '--bodyFont'
 })
+
+
+// either Static metadata
 
 
 export default function RootLayout({
@@ -30,7 +34,6 @@ export default function RootLayout({
         <link rel="preconnect" href="<https://app.snipcart.com>" />
         <link rel="preconnect" href="<https://cdn.snipcart.com>" />
         {/* <link rel="stylesheet" href="<https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css>" /> */}
-        <link rel="shortcut icon" href="../public/favicon.ico" />
       </Head>
       <body>
         <Header />
