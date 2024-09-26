@@ -5,7 +5,7 @@ import { SliceZone } from "@prismicio/react";
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import ProductCard from "@/components/Products/ProductCard";
-import styles from "./Category.module.scss"
+
 type Params = { uid: string };
 
 export default async function Page({ params }: { params: Params }) {
@@ -14,22 +14,19 @@ export default async function Page({ params }: { params: Params }) {
         .getByUID("category", params.uid)
         .catch(() => notFound());
 
-    // My Stuff
-    const product = await client.getByUID('product_list', "gummy-products")
-    const slices = product.data.slices
-    console.log(slices)
+    let productData = await client.getAllByEveryTag([params.uid, "product"])
+
+
+    productData.map((product) => {
+        console.log(product)
+    })
     return (
         <>
-            <div className={styles.container}>
-                {
-                    slices.map((data) => (
-                        <ProductCard data={data.primary} key={data.primary.product_id} />
-                    ))
-                }
-            </div>
+            <h2>This is the {params.uid} page.</h2>
+            <ProductCard />
         </>
     )
-
+    return <SliceZone slices={page.data.slices} components={components} />;
 }
 
 export async function generateMetadata({
@@ -52,12 +49,7 @@ export async function generateStaticParams() {
     const client = createClient();
     const pages = await client.getAllByType("category");
 
-
-
     return pages.map((page) => {
         return { uid: page.uid };
     });
 }
-
-
-

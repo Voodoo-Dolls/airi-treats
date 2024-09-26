@@ -1,6 +1,11 @@
+:root {
+    --primaryColor: #00a1e4;
+}
+
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -10,4 +15,13 @@ a {
 
 ul {
     list-style: none;
+}
+
+body {
+    background-color: #bde0fe;
+}
+
+.container {
+    padding: 24px;
+    width: min(100%, 1280px);
 }

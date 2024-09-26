@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type CategoryDocumentDataSlicesSlice = RichTextSlice;
+type CategoryDocumentDataSlicesSlice = never;
 
 /**
  * Content for Category documents
@@ -152,37 +152,49 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-type ProductListDocumentDataSlicesSlice = ProductDetailsSlice;
+type ProductDocumentDataSlicesSlice = ProductDetailsSlice;
 
 /**
- * Content for Product_List documents
+ * Content for Product documents
  */
-interface ProductListDocumentData {
+interface ProductDocumentData {
   /**
-   * Slice Zone field in *Product_List*
+   * category field in *Product*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: gummies
+   * - **API ID Path**: product.category
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  category: prismic.SelectField<"gummies" | "fruits", "filled">;
+
+  /**
+   * Slice Zone field in *Product*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
-   * - **API ID Path**: product_list.slices[]
+   * - **API ID Path**: product.slices[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<ProductListDocumentDataSlicesSlice>;
+  slices: prismic.SliceZone<ProductDocumentDataSlicesSlice>;
 }
 
 /**
- * Product_List document from Prismic
+ * Product document from Prismic
  *
- * - **API ID**: `product_list`
+ * - **API ID**: `product`
  * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type ProductListDocument<Lang extends string = string> =
+export type ProductDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<
-    Simplify<ProductListDocumentData>,
-    "product_list",
+    Simplify<ProductDocumentData>,
+    "product",
     Lang
   >;
 
@@ -268,7 +280,7 @@ export type SettingsDocument<Lang extends string = string> =
 export type AllDocumentTypes =
   | CategoryDocument
   | PageDocument
-  | ProductListDocument
+  | ProductDocument
   | SettingsDocument;
 
 /**
@@ -291,6 +303,16 @@ export interface ProductDetailsSliceDefaultPrimaryProductGalleryItem {
  */
 export interface ProductDetailsSliceDefaultPrimary {
   /**
+   * Product_ID field in *ProductDetails → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Must be the same as earlier
+   * - **API ID Path**: product_details.default.primary.product_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  product_id: prismic.KeyTextField;
+
+  /**
    * Product Name field in *ProductDetails → Default → Primary*
    *
    * - **Field Type**: Text
@@ -303,12 +325,12 @@ export interface ProductDetailsSliceDefaultPrimary {
   /**
    * Product Price field in *ProductDetails → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Number
    * - **Placeholder**: Ex. 4.50
    * - **API ID Path**: product_details.default.primary.product_price
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#number
    */
-  product_price: prismic.KeyTextField;
+  product_price: prismic.NumberField;
 
   /**
    * Product Description field in *ProductDetails → Default → Primary*
@@ -319,16 +341,6 @@ export interface ProductDetailsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   product_description: prismic.RichTextField;
-
-  /**
-   * Product ID field in *ProductDetails → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: product_details.default.primary.product_id
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  product_id: prismic.KeyTextField;
 
   /**
    * Main Image field in *ProductDetails → Default → Primary*
@@ -444,9 +456,9 @@ declare module "@prismicio/client" {
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
-      ProductListDocument,
-      ProductListDocumentData,
-      ProductListDocumentDataSlicesSlice,
+      ProductDocument,
+      ProductDocumentData,
+      ProductDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
       SettingsDocumentDataLinksItem,

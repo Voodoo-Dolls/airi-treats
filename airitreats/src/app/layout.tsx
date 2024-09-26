@@ -1,14 +1,21 @@
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import Head from "next/head";
-import { Pacifico } from 'next/font/google'
+import { Fjalla_One, Source_Sans_3 } from 'next/font/google'
 import Header from "@/components/Header/Header";
-
+import "./snipcart.css"
 import "./global.scss"
 
-const font = Pacifico({
+export const headertFont = Fjalla_One({
   weight: '400',
-  subsets: ['latin']
+  subsets: ['latin'],
+  variable: '--headerFont'
+})
+
+export const bodyFont = Source_Sans_3({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--bodyFont'
 })
 
 
@@ -18,11 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={font.className}>
+    <html lang="en" className={bodyFont.className}>
       <Head>
         <link rel="preconnect" href="<https://app.snipcart.com>" />
         <link rel="preconnect" href="<https://cdn.snipcart.com>" />
-        <link rel="stylesheet" href="<https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css>" />
+        {/* <link rel="stylesheet" href="<https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css>" /> */}
         <link rel="shortcut icon" href="../public/favicon.ico" />
       </Head>
       <body>

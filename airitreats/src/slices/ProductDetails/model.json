@@ -12,6 +12,13 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "product_id": {
+          "type": "Text",
+          "config": {
+            "label": "Product_ID",
+            "placeholder": "Must be the same as earlier"
+          }
+        },
         "product_name": {
           "type": "Text",
           "config": {
@@ -20,7 +27,7 @@
           }
         },
         "product_price": {
-          "type": "Text",
+          "type": "Number",
           "config": {
             "label": "Product Price",
             "placeholder": "Ex. 4.50"
@@ -33,13 +40,6 @@
             "placeholder": "",
             "allowTargetBlank": false,
             "multi": "paragraph,strong,em"
-          }
-        },
-        "product_id": {
-          "type": "Text",
-          "config": {
-            "label": "Product ID",
-            "placeholder": ""
           }
         },
         "main_image": {
