@@ -1,0 +1,23 @@
+.container {
+
+    button {
+        background-color: white;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        cursor: pointer;
+    }
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    button {
+        padding: 4px 8px;
+        width: fit-content;
+        background-color: white;
+
+    }
+}

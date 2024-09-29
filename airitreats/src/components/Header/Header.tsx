@@ -21,7 +21,7 @@ export default async function Header() {
             <div className={`${styles.container} container`}>
 
                 <Link href={"/"}>
-                    <h1 className={`${headerFont.className}`}>{settings.data.site_title}</h1>
+                    <h1 className={`${headerFont.className} `}>{settings.data.site_title}</h1>
                 </Link>
                 <Navbar />
             </div>

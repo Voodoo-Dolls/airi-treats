@@ -1,0 +1,6 @@
+.container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
