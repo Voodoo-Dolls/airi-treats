@@ -10,11 +10,6 @@ export default async function Header() {
 
     const settings = await client.getSingle('settings')
 
-    // // Hydration
-    // const [isClient, setIsClient] = useState(false)
-    // useEffect(() => {
-    //     setIsClient(true)
-    // }, [])
 
     return (
         <header className={styles.header}>

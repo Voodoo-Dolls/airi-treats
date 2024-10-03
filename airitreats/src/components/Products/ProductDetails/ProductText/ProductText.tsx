@@ -4,12 +4,17 @@ import styles from "./ProductText.module.scss"
 import { useEffect, useState } from "react"
 import { usePathname } from 'next/navigation'
 
-export default function ProductText({ productName, productDescription, productPrice, productID }) {
-    const [quantity, setQuantity] = useState(5);
+interface Props {
+    productName: string,
+    productDescription: { text: string }[],
+    productPrice: number,
+    productID: string
+}
+
+export default function ProductText({ productName, productDescription, productPrice, productID }: Props) {
+    const [quantity, setQuantity] = useState(1);
     const pathname = usePathname()
-
-
-    const handleQuantity = (x) => {
+    const handleQuantity = (x: number) => {
         let newQuantity = quantity + x
         if (newQuantity <= 0) {
             newQuantity = 1
@@ -17,8 +22,6 @@ export default function ProductText({ productName, productDescription, productPr
         setQuantity(newQuantity)
 
     }
-
-
     return (
         <div className={styles.container}>
             <h2 className={headerFont.className}>
