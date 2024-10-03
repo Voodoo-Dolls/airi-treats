@@ -159,16 +159,15 @@ type ProductDocumentDataSlicesSlice = ProductDetailsSlice;
  */
 interface ProductDocumentData {
   /**
-   * category field in *Product*
+   * Category field in *Product*
    *
-   * - **Field Type**: Select
+   * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
-   * - **Default Value**: gummies
    * - **API ID Path**: product.category
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#select
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  category: prismic.SelectField<"gummies" | "fruits", "filled">;
+  category: prismic.ContentRelationshipField<"category">;
 
   /**
    * Slice Zone field in *Product*
@@ -384,16 +383,6 @@ export interface ProductDetailsSliceDefaultPrimaryProductGalleryItem {
  * Primary content in *ProductDetails → Default → Primary*
  */
 export interface ProductDetailsSliceDefaultPrimary {
-  /**
-   * Product_ID field in *ProductDetails → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Must be the same as earlier
-   * - **API ID Path**: product_details.default.primary.product_id
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  product_id: prismic.KeyTextField;
-
   /**
    * Product Name field in *ProductDetails → Default → Primary*
    *

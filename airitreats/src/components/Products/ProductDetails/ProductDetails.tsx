@@ -1,3 +1,4 @@
+
 import ProductImage from "./ProductImage/ProductImage";
 import ProductText from "./ProductText/ProductText";
 
@@ -28,7 +29,7 @@ interface productProps {
 }
 
 export default function ProductDetails({ productData }: any) {
-    console.log(productData)
+
     const { product_name, product_price, product_description, main_image } = productData.data.slices[0].primary
     const productID = productData.uid
 

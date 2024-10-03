@@ -1,5 +1,5 @@
 {
-  "format": "custom",
+  "format": "page",
   "id": "product",
   "label": "Product",
   "repeatable": true,
@@ -14,12 +14,11 @@
         }
       },
       "category": {
-        "type": "Select",
+        "type": "Link",
         "config": {
-          "label": "category",
-          "placeholder": "",
-          "options": ["gummies", "fruits"],
-          "default_value": "gummies"
+          "label": "Category",
+          "select": "document",
+          "customtypes": ["category"]
         }
       },
       "slices": {

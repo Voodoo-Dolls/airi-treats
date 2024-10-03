@@ -11,7 +11,7 @@ interface imageProps {
 
 
 export default function ProductImage({ mainImage }: imageProps) {
-    console.log(mainImage)
+    // console.log(mainImage)
     return (
         <div className={styles.container}>
             <div className={styles.imageContainer}>

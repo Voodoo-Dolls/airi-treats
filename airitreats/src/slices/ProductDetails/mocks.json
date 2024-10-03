@@ -82,11 +82,6 @@
 				"__TYPE__": "FieldContent",
 				"value": "88",
 				"type": "Number"
-			},
-			"product_id": {
-				"__TYPE__": "FieldContent",
-				"value": "poem",
-				"type": "Text"
 			}
 		},
 		"items": []
