@@ -3,28 +3,6 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"header": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading2",
-						"content": {
-							"text": "Ocean"
-						}
-					}
-				]
-			},
-			"body_text": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Officia sunt ullamco do consequat magna. Incididunt excepteur magna pariatur ut tempor excepteur anim in laboris aliquip mollit ut. Est est mollit fugiat ea."
-						}
-					}
-				]
-			},
 			"link_url": {
 				"__TYPE__": "LinkContent",
 				"value": {
@@ -38,7 +16,6 @@
 				"type": "Text"
 			},
 			"hero_image": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
@@ -56,7 +33,20 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"header": {
+				"__TYPE__": "FieldContent",
+				"value": "congress",
+				"type": "Text"
+			},
+			"body_text": {
+				"__TYPE__": "FieldContent",
+				"value": "melted",
+				"type": "Text"
 			}
 		},
 		"items": []

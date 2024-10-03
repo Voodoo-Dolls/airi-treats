@@ -15,7 +15,7 @@ export default async function Page({ params }: { params: Params }) {
         .getByUID("category", params.uid)
         .catch(() => notFound());
 
-    let productData = await client.getAllByEveryTag([params.uid, "product"])
+    let productData: any = await client.getAllByEveryTag([params.uid, "product"])
 
 
     // productData.map((product) => {

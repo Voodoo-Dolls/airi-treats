@@ -1,8 +1,9 @@
 'use client'
-import { headerFont } from "@/app/layout"
+
 import styles from "./ProductText.module.scss"
 import { useEffect, useState } from "react"
 import { usePathname } from 'next/navigation'
+import { headerFont } from "@/app/fonts"
 
 interface Props {
     productName: string,

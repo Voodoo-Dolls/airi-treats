@@ -1,26 +1,17 @@
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import Head from "next/head";
-import { Fjalla_One, Source_Sans_3 } from 'next/font/google'
+
 import Header from "@/components/Header/Header";
 import "./snipcart.css"
 import "./global.scss"
+import { bodyFont } from "./fonts";
 
 
-export const headerFont = Fjalla_One({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--headerFont'
-})
-
-export const bodyFont = Source_Sans_3({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--bodyFont'
-})
 
 
-// either Static metadata
+
+
 
 
 export default function RootLayout({

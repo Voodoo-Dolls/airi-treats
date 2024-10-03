@@ -290,22 +290,22 @@ export interface HeroSliceDefaultPrimary {
   /**
    * Header field in *Hero → Default → Primary*
    *
-   * - **Field Type**: Title
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
    * - **API ID Path**: hero.default.primary.header
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  header: prismic.TitleField;
+  header: prismic.KeyTextField;
 
   /**
    * Body Text field in *Hero → Default → Primary*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
    * - **API ID Path**: hero.default.primary.body_text
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  body_text: prismic.RichTextField;
+  body_text: prismic.KeyTextField;
 
   /**
    * Link URL field in *Hero → Default → Primary*

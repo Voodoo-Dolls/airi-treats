@@ -13,21 +13,17 @@
       "imageUrl": "",
       "primary": {
         "header": {
-          "type": "StructuredText",
+          "type": "Text",
           "config": {
             "label": "Header",
-            "placeholder": "",
-            "allowTargetBlank": false,
-            "single": "heading2"
+            "placeholder": ""
           }
         },
         "body_text": {
-          "type": "StructuredText",
+          "type": "Text",
           "config": {
             "label": "Body Text",
-            "placeholder": "",
-            "allowTargetBlank": false,
-            "multi": "paragraph"
+            "placeholder": ""
           }
         },
         "link_url": {

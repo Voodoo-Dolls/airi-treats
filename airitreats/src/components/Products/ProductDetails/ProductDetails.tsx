@@ -6,7 +6,7 @@ import styles from "./ProductDetails.module.scss"
 
 interface productSlice {
     primary: {
-        product_id: number,
+        product_id: string,
         product_name: string,
         product_price: number,
         product_description: [],
@@ -27,7 +27,7 @@ interface productProps {
     }
 }
 
-export default function ProductDetails({ productData }: productProps) {
+export default function ProductDetails({ productData }: any) {
     console.log(productData)
     const { product_name, product_price, product_description, main_image } = productData.data.slices[0].primary
     const productID = productData.uid

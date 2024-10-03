@@ -2,16 +2,21 @@ import { Content } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import styles from "./Hero.module.scss"
-import { headerFont } from "@/app/layout";
+import { headerFont } from "@/app/fonts";
+// import { headerFont } from "@/app/layout";
+
 /**
  * Props for `Hero`.
  */
+
+
 export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 
 /**
  * Component for "Hero" Slices.
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
+
   return (
 
     <section className={styles.hero}
@@ -24,9 +29,11 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       <div className={`container ${styles.textContainer}`}>
         <div>
           <h2 className={`${headerFont.className} ${styles.header}`}>
-            {slice.primary.header[0].text}
+            {slice.primary.header}
           </h2>
-          <PrismicRichText field={slice.primary.body_text} />
+          <p>
+            {slice.primary.body_text}
+          </p>
           <PrismicNextLink field={slice.primary.link_url}>
             {slice.primary.link_label}
           </PrismicNextLink>

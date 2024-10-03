@@ -24,6 +24,12 @@ export default async function Navbar() {
                 }
                 )}
                 {/* Snipcart Cart */}
+                <li>
+                    <a href="#" className="snipcart-user-profile">
+                        User profile
+                    </a>
+                </li>
+
                 <li><a href="#" className="snipcart-checkout">Cart:<span className="snipcart-items-count"> </span></a></li>
             </ul>
         </nav>

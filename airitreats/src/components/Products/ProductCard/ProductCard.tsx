@@ -1,7 +1,9 @@
 import Image from "next/image"
 import styles from "./ProductCard.module.scss"
-import { headerFont } from "@/app/layout"
+
 import Link from "next/link"
+import { headerFont } from "@/app/fonts"
+// import { headerFont } from "@/app/layout"
 
 interface productSlice {
     primary: {
@@ -23,6 +25,8 @@ interface productProps {
         }
     }
 }
+
+
 
 export default function ProductCard({ product }: productProps) {
     const { product_id, product_name, product_price, main_image } = product.data.slices[0].primary
