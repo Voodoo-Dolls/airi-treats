@@ -2,19 +2,20 @@
 
 import styles from "./ProductText.module.scss"
 import { useEffect, useState } from "react"
-import { usePathname } from 'next/navigation'
+import { usePathname, useParams } from 'next/navigation'
 import { headerFont } from "@/app/fonts"
 
 interface Props {
     productName: string,
     productDescription: { text: string }[],
     productPrice: number,
-    productID: string
 }
 
-export default function ProductText({ productName, productDescription, productPrice, productID }: Props) {
+export default function ProductText({ productName, productDescription, productPrice }: Props) {
     const [quantity, setQuantity] = useState(1);
     const pathname = usePathname()
+    const params = useParams()
+    console.log(params)
     const handleQuantity = (x: number) => {
         let newQuantity = quantity + x
         if (newQuantity <= 0) {
@@ -42,16 +43,16 @@ export default function ProductText({ productName, productDescription, productPr
             </div>
             <button
                 className="snipcart-add-item"
-                data-item-id={productID}
+                data-item-id={params.productid}
                 data-item-name={productName}
                 data-item-price={productPrice}
                 data-item-url={pathname}
-                data-item-description={productDescription}
+                data-item-description={productDescription[0].text}
                 data-item-quantity={quantity}
             >
                 Add to Cart
             </button>
-            <p>Current pathname: {pathname}</p>
+            {/* <p>Current pathname: {pathname}</p> */}
         </div>
     )
 }

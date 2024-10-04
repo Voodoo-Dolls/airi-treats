@@ -17,18 +17,21 @@ interface productSlice {
 interface Props {
     productData: {
         uid: string,
-        data: {
-            slices: productSlice[]
-            category: string
-        }
     }[]
 
 }
 
+interface productProps {
+    uid: string
+
+}
+
+
 export default function ProductGrid({ productData }: Props) {
+
     return (
         <div className={`container ${styles.container}`}>
-            {productData.map((product) => (
+            {productData.map((product: any) => (
                 <ProductCard product={product} key={product.uid} />
             ))}
         </div>

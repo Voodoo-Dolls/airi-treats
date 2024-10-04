@@ -19,13 +19,12 @@ interface productSlice {
 
 interface productProps {
     product: {
+        uid: string,
+        url: string,
         data: {
-            slices: productSlice[]
-            category: {
-                uid: string
-            }
+            slices: any
         }
-        url: string
+
     }
 }
 
@@ -33,14 +32,7 @@ interface productProps {
 
 export default function ProductCard({ product }: productProps) {
     const { product_name, product_price, main_image } = product.data.slices[0].primary
-    const url = product.url
-
-
-
-
-
-
-
+    console.log(product)
 
 
     return (
@@ -53,7 +45,7 @@ export default function ProductCard({ product }: productProps) {
                 <p className={styles.p}>${product_price.toFixed(2)}</p>
             </div>
             <div className={styles.buttonWrapper}>
-                <Link href={`${url}`}>
+                <Link href={`${product.url}`}>
                     <button className={`${styles.btn} ${styles.outline}`}>DETAILS</button>
                 </Link>
             </div>

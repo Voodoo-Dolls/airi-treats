@@ -1,3 +1,5 @@
+import { SliceZone } from "@prismicio/react";
+import { components } from "@/slices";
 import { createClient } from "@/prismicio";
 import ProductDetails from "@/components/Products/ProductDetails/ProductDetails";
 import { notFound } from "next/navigation";
@@ -35,14 +37,14 @@ export default async function Page({ params }: { params: { productid: string, ui
     if (uid != slug) {
         notFound()
     }
-
     return (
-
-        <div className={`container`}>
-            <ProductDetails productData={productData} />
-        </div>
-
-
-
+        <>
+            <SliceZone slices={productData.data.slices} components={components} />;
+        </>
     )
+    // return (
+    //     <div className={`container`}>
+    //         <ProductDetails productData={productData} />
+    //     </div>
+    // )
 }
