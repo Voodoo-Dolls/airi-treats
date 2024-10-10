@@ -7,6 +7,7 @@ import "./snipcart.css"
 import "./global.scss"
 import { bodyFont } from "./fonts";
 import Footer from "@/components/Footer/Footer";
+import { Toaster } from "sonner";
 
 
 
@@ -31,6 +32,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Toaster />
         <script dangerouslySetInnerHTML={{
           __html: `
             window.SnipcartSettings = {

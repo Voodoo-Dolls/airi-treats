@@ -5,7 +5,7 @@ export default function Newsletter() {
     const [email, setEmail] = useState("");
     const [isValid, setIsValid] = useState(true);
 
-    async function handleSubscribe(e) {
+    async function handleSubscribe(e: any) {
         e.preventDefault()
         if (validateEmail(email)) {
             const response = await fetch(`/api/newsletter`, {
