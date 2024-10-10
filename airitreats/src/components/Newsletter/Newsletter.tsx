@@ -37,6 +37,7 @@ export default function Newsletter() {
                     onChange={(e) => setEmail(e.target.value)}
                     name="email"
                 />
+                {/* CHECK FOR INVALID EMAIL LATER */}
                 {!isValid && (
                     <p>Hello</p>
                 )}
