@@ -53,7 +53,7 @@ export default function MobileNav({ links, logo }: any) {
                     {/* Logo */}
                     <div className={styles.imageContainer}>
                         <Link href={"/"}>
-                            <Image src={logo} alt={`Airitreats Logo`} fill />
+                            <Image src={logo} alt={`Airitreats Logo`} fill sizes="(max-width: 768px) 300px" />
                         </Link>
                     </div>
                 </div>
