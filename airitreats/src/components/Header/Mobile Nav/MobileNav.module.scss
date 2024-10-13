@@ -1,0 +1,49 @@
+// Entire Nav Styles
+.container {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav {
+    // display: none;
+    position: absolute;
+    width: 100%;
+    transition: all 300ms ease-in-out;
+    max-height: 0px;
+    overflow: hidden;
+    pointer-events: none;
+
+    &.active {
+        max-height: 1000px;
+        pointer-events: unset;
+    }
+
+    ul {
+        background-color: red;
+    }
+}
+
+// Logo Styling
+.imageContainer {
+    width: 100%;
+    aspect-ratio: 10/2;
+    position: relative;
+
+    &>img {
+        object-fit: contain;
+    }
+}

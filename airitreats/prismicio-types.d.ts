@@ -80,6 +80,60 @@ export type CategoryDocument<Lang extends string = string> =
     Lang
   >;
 
+/**
+ * Content for Footer documents
+ */
+interface FooterDocumentData {
+  /**
+   * Address field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: 13 Amherst Crescent, St. Albert, AB T8N 2P7
+   * - **API ID Path**: footer.address
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address: prismic.KeyTextField;
+
+  /**
+   * Phone field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: (xxx) xxx-xxxx
+   * - **API ID Path**: footer.phone
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone: prismic.KeyTextField;
+
+  /**
+   * Google Maps URL of your location field in *Footer*
+   *
+   * - **Field Type**: GeoPoint
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.your_map_location
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#geopoint
+   */
+  your_map_location: prismic.GeoPointField;
+}
+
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    "footer",
+    Lang
+  >;
+
 type PageDocumentDataSlicesSlice = HeroSlice | RichTextSlice;
 
 /**
@@ -220,6 +274,16 @@ export interface SettingsDocumentDataLinksItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   label: prismic.KeyTextField;
+
+  /**
+   * Position field in *Settings → Links*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.links[].position
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  position: prismic.SelectField<"Front" | "Menu Dropdown" | "More Dropdown">;
 }
 
 /**
@@ -236,6 +300,17 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   site_title: prismic.KeyTextField;
+
+  /**
+   * Site Logo field in *Settings*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.site_logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  site_logo: prismic.ImageField<never>;
 
   /**
    * OG Image field in *Settings*
@@ -278,6 +353,7 @@ export type SettingsDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | CategoryDocument
+  | FooterDocument
   | PageDocument
   | ProductDocument
   | SettingsDocument;
@@ -524,6 +600,8 @@ declare module "@prismicio/client" {
       CategoryDocument,
       CategoryDocumentData,
       CategoryDocumentDataSlicesSlice,
+      FooterDocument,
+      FooterDocumentData,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,

@@ -1,0 +1,31 @@
+{
+  "format": "custom",
+  "id": "footer",
+  "label": "Footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "address": {
+        "type": "Text",
+        "config": {
+          "label": "Address",
+          "placeholder": "13 Amherst Crescent, St. Albert, AB T8N 2P7"
+        }
+      },
+      "phone": {
+        "type": "Text",
+        "config": {
+          "label": "Phone",
+          "placeholder": "(xxx) xxx-xxxx"
+        }
+      },
+      "your_map_location": {
+        "type": "GeoPoint",
+        "config": {
+          "label": "Google Maps URL of your location"
+        }
+      }
+    }
+  }
+}

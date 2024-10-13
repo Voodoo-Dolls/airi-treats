@@ -13,6 +13,14 @@
           "placeholder": "Name of Website"
         }
       },
+      "site_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Site Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "og_image": {
         "type": "Image",
         "config": {
@@ -41,6 +49,14 @@
               "config": {
                 "label": "Label",
                 "placeholder": ""
+              }
+            },
+            "position": {
+              "type": "Select",
+              "config": {
+                "label": "Position",
+                "placeholder": "",
+                "options": ["Front", "Menu Dropdown", "More Dropdown"]
               }
             }
           }

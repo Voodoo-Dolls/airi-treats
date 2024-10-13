@@ -29,3 +29,15 @@ body {
     width: min(100%, 1280px);
     margin: 0 auto;
 }
+
+svg {
+    height: 36px;
+    width: 36px;
+}
+
+// Cart Styling
+.cartContainer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
