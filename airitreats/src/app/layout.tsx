@@ -32,7 +32,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <Toaster />
+        <Toaster position="top-center" richColors duration={2500} />
         <script dangerouslySetInnerHTML={{
           __html: `
             window.SnipcartSettings = {

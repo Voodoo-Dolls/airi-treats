@@ -1,24 +1,41 @@
 'use client'
 import { useState, FormEvent } from "react";
+import { Toaster, toast } from "sonner";
 
 export default function Newsletter() {
     const [email, setEmail] = useState("");
-    const [isValid, setIsValid] = useState(true);
 
+    // SUBSCRIBE EVENT HANDLER
     async function handleSubscribe(e: any) {
         e.preventDefault()
         if (validateEmail(email)) {
-            const response = await fetch(`/api/newsletter`, {
-                method: "POST",
-                body: JSON.stringify({ email: `${email}` })
+            subscribe(email).then((res) => {
+                if (res.status == 200) {
+                    toast.success(res.body)
+                }
+                else {
+                    toast.error(res.body)
+                }
             })
         }
         else {
-            setIsValid(false);
+            toast.error("Invalid Email")
         }
 
     }
+    // MAILCHIMP ENDPOINT
+    const subscribe = async (email: string) => {
+        let load = toast.loading('Adding Email')
+        const response = await fetch(`/api/newsletter`, {
+            method: "POST",
+            body: JSON.stringify({ email: `${email}` })
+        })
+        toast.dismiss(load)
+        return response.json()
+    }
 
+
+    // EMAIL VALIDATION
     const validateEmail = (email: string) => {
         return String(email)
             .toLowerCase()
@@ -31,18 +48,14 @@ export default function Newsletter() {
         <form onSubmit={handleSubscribe} >
             <div >
                 <input
-                    type="email"
                     placeholder="What is your email address?"
-                    value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     name="email"
                 />
                 {/* CHECK FOR INVALID EMAIL LATER */}
-                {!isValid && (
-                    <p>Hello</p>
-                )}
                 <button
                     type="submit"
+
                 >
                     Subscribe
                 </button>

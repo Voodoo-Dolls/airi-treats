@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
             subscriberHash
         );
         if (response.status == "subscribed") {
-            return NextResponse.json(("User Already Subscribed"))
+            return NextResponse.json({ body: 'Email is already subscribed', status: 500 })
         }
 
     } catch (e: any) {
@@ -32,15 +32,15 @@ export async function POST(req: NextRequest) {
                     email_address: email.email,
                     status: "subscribed",
                 });
-                // console.log(response)
-                return NextResponse.json("Subscribed")
+
+                return NextResponse.json({ body: "Successfully Subscribed", status: 200 }, { status: 200 })
             }
             catch (e: any) {
-                return NextResponse.json("Invalid Email Sent")
+                return NextResponse.json({ body: "Invalid Email", status: 500 }, { status: 500 })
             }
         }
     }
-    return NextResponse.json("Error")
+    return NextResponse.json({ body: "Error, Please Try Again Later", status: 400 }, { status: 400 })
 
 }
 
