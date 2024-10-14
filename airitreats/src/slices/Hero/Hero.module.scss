@@ -3,7 +3,6 @@
     position: relative;
 }
 
-// Image Banner
 .imageContainer {
     width: 100%;
     height: 50dvh;
@@ -14,36 +13,62 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-    object-position: 0 50%;
-    filter: brightness(0.7);
+    // object-position: right;
 }
 
-// Text Styles
+
 .textContainer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
     color: white;
+    padding: calc(3*(var(--gap))) calc(var(--gap));
+
 
     .header {
+        text-align: center;
         text-transform: uppercase;
-        font-size: 44px;
-    }
-
-    p {
-        text-wrap: balance;
-        margin-bottom: 24px;
-    }
-
-    div {
-        width: 50%;
-    }
-
-    a {
-        color: white;
-        border: white 1px solid;
-        border-radius: 9999px;
-        padding: 0.5rem 1rem;
     }
 }
+
+
+
+
+// .hero {
+//     width: 100%;
+//     position: relative;
+// }
+
+// // Image Banner
+
+
+
+// // Text Styles
+// .textContainer {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     color: white;
+
+//     .header {
+//         text-transform: uppercase;
+//         font-size: 44px;
+//     }
+
+//     p {
+//         text-wrap: balance;
+//         margin-bottom: 24px;
+//     }
+
+//     div {
+//         width: 50%;
+//     }
+
+//     a {
+//         color: white;
+//         border: white 1px solid;
+//         border-radius: 9999px;
+//         padding: 0.5rem 1rem;
+//     }
+// }

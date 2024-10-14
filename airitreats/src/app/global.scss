@@ -1,20 +1,22 @@
 :root {
-    --primaryColor: #00a1e4;
-    --darkAccent1: #670021;
     --blackText: #4D3D41;
+    --gap: 16px;
     --headingColor: white;
+    --overlayColor: #d65674db;
+    --primaryColor: #FF6F91;
 
+    --darkAccent1: #670021;
 }
 
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 ul {
@@ -22,14 +24,17 @@ ul {
 }
 
 body {
-    background-color: #bde0fe;
-    font-size: 18px;
+    background: linear-gradient(0deg, var(--overlayColor), var(--overlayColor)), url("/images/background.webp");
+    background-attachment: fixed;
+    font-family: var(--bodyFont);
+    color: var(--blackText);
+    font-size: 16px;
 }
 
 .container {
-    padding: 24px;
-    width: min(100%, 1280px);
     margin: 0 auto;
+    padding: var(--gap);
+    width: min(100%, 1280px);
 }
 
 svg {
@@ -37,9 +42,35 @@ svg {
     width: 36px;
 }
 
+// Type
+h2 {
+    font-family: var(--headerFont);
+    font-size: 24px;
+}
+
+h3 {
+    font-family: var(--subheadingFont);
+    font-size: 20px;
+}
+
 // Cart Styling
 .cartContainer {
-    display: flex;
     align-items: center;
+    display: flex;
     gap: 4px;
+}
+
+// Reususable Button
+
+.button {
+    background-color: var(--darkAccent1);
+    border-bottom: var(--primaryColor) solid 4px;
+    border-left: var(--primaryColor) solid 4px;
+    border-radius: 10000px;
+    font-family: var(--headerFont);
+    font-size: 24px;
+    font-weight: 700;
+    padding: 8px;
+    text-align: center;
+    text-transform: uppercase;
 }
