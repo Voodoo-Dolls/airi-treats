@@ -134,7 +134,7 @@ export type FooterDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = HeroSlice | RichTextSlice;
+type PageDocumentDataSlicesSlice = ImageGridSlice | HeroSlice | RichTextSlice;
 
 /**
  * Content for Page documents
@@ -441,6 +441,98 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Item in *ImageGrid → Default → Primary → Repeatable Card*
+ */
+export interface ImageGridSliceDefaultPrimaryRepeatableCardItem {
+  /**
+   * Image Card field in *ImageGrid → Default → Primary → Repeatable Card*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_grid.default.primary.repeatable_card[].image_card
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_card: prismic.ImageField<never>;
+
+  /**
+   * Heading field in *ImageGrid → Default → Primary → Repeatable Card*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_grid.default.primary.repeatable_card[].heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Body Text field in *ImageGrid → Default → Primary → Repeatable Card*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Lorem Ipsum
+   * - **API ID Path**: image_grid.default.primary.repeatable_card[].body_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  body_text: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *ImageGrid → Default → Primary*
+ */
+export interface ImageGridSliceDefaultPrimary {
+  /**
+   * Section Title field in *ImageGrid → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Select From Categories
+   * - **API ID Path**: image_grid.default.primary.section_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_title: prismic.KeyTextField;
+
+  /**
+   * Repeatable Card field in *ImageGrid → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_grid.default.primary.repeatable_card[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  repeatable_card: prismic.GroupField<
+    Simplify<ImageGridSliceDefaultPrimaryRepeatableCardItem>
+  >;
+}
+
+/**
+ * Default variation for ImageGrid Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageGridSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ImageGridSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ImageGrid*
+ */
+type ImageGridSliceVariation = ImageGridSliceDefault;
+
+/**
+ * ImageGrid Shared Slice
+ *
+ * - **API ID**: `image_grid`
+ * - **Description**: ImageGrid
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageGridSlice = prismic.SharedSlice<
+  "image_grid",
+  ImageGridSliceVariation
+>;
+
+/**
  * Item in *ProductDetails → Default → Primary → Product Gallery*
  */
 export interface ProductDetailsSliceDefaultPrimaryProductGalleryItem {
@@ -616,6 +708,11 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      ImageGridSlice,
+      ImageGridSliceDefaultPrimaryRepeatableCardItem,
+      ImageGridSliceDefaultPrimary,
+      ImageGridSliceVariation,
+      ImageGridSliceDefault,
       ProductDetailsSlice,
       ProductDetailsSliceDefaultPrimaryProductGalleryItem,
       ProductDetailsSliceDefaultPrimary,

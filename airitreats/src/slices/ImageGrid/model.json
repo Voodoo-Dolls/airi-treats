@@ -1,0 +1,57 @@
+{
+  "id": "image_grid",
+  "type": "SharedSlice",
+  "name": "ImageGrid",
+  "description": "ImageGrid",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "section_title": {
+          "type": "Text",
+          "config": {
+            "label": "Section Title",
+            "placeholder": "Select From Categories"
+          }
+        },
+        "repeatable_card": {
+          "type": "Group",
+          "config": {
+            "label": "Repeatable Card",
+            "repeat": true,
+            "fields": {
+              "image_card": {
+                "type": "Image",
+                "config": {
+                  "label": "Image Card",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading",
+                  "placeholder": ""
+                }
+              },
+              "body_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Body Text",
+                  "placeholder": "Lorem Ipsum"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
