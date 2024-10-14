@@ -1,12 +1,15 @@
 import Newsletter from "@/components/Newsletter/Newsletter";
-import { toast } from "sonner";
+import Map from "./Map/Map";
+import styles from "./Footer.module.scss"
+
 
 
 export default function Footer() {
+
     return (
-        <div>
-            Footer
+        <footer className={styles.footer}>
+            <Map />
             <Newsletter />
-        </div>
+        </footer>
     )
 }

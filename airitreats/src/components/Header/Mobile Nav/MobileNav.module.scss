@@ -40,8 +40,16 @@
 // Logo Styling
 .imageContainer {
     width: 100%;
-    aspect-ratio: 10/2;
+    aspect-ratio: 10 / 2;
     position: relative;
+
+
+    a {
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
 
     &>img {
         object-fit: contain;
