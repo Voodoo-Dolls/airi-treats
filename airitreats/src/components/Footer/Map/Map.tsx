@@ -9,7 +9,7 @@ import { MdEmail } from "react-icons/md";
 export default async function Map() {
     const client = createClient()
     const details = await client.getSingle("footer")
-    console.log(details)
+    // console.log(details)
     return (
         <>
             <div className={`${styles.mapContainer}`}>

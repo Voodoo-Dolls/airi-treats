@@ -134,7 +134,11 @@ export type FooterDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = ImageGridSlice | HeroSlice | RichTextSlice;
+type PageDocumentDataSlicesSlice =
+  | FeaturedProductsSlice
+  | ImageGridSlice
+  | HeroSlice
+  | RichTextSlice;
 
 /**
  * Content for Page documents
@@ -357,6 +361,78 @@ export type AllDocumentTypes =
   | PageDocument
   | ProductDocument
   | SettingsDocument;
+
+/**
+ * Item in *FeaturedProducts → Default → Primary → Product List*
+ */
+export interface FeaturedProductsSliceDefaultPrimaryProductListItem {
+  /**
+   * Product field in *FeaturedProducts → Default → Primary → Product List*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_products.default.primary.product_list[].product
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  product: prismic.ContentRelationshipField<"product">;
+}
+
+/**
+ * Primary content in *FeaturedProducts → Default → Primary*
+ */
+export interface FeaturedProductsSliceDefaultPrimary {
+  /**
+   * Heading field in *FeaturedProducts → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Ex. Featured Products
+   * - **API ID Path**: featured_products.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Product List field in *FeaturedProducts → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured_products.default.primary.product_list[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  product_list: prismic.GroupField<
+    Simplify<FeaturedProductsSliceDefaultPrimaryProductListItem>
+  >;
+}
+
+/**
+ * Default variation for FeaturedProducts Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FeaturedProductsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FeaturedProductsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *FeaturedProducts*
+ */
+type FeaturedProductsSliceVariation = FeaturedProductsSliceDefault;
+
+/**
+ * FeaturedProducts Shared Slice
+ *
+ * - **API ID**: `featured_products`
+ * - **Description**: FeaturedProducts
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FeaturedProductsSlice = prismic.SharedSlice<
+  "featured_products",
+  FeaturedProductsSliceVariation
+>;
 
 /**
  * Primary content in *Hero → Default → Primary*
@@ -704,6 +780,11 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       SettingsDocumentDataLinksItem,
       AllDocumentTypes,
+      FeaturedProductsSlice,
+      FeaturedProductsSliceDefaultPrimaryProductListItem,
+      FeaturedProductsSliceDefaultPrimary,
+      FeaturedProductsSliceVariation,
+      FeaturedProductsSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
