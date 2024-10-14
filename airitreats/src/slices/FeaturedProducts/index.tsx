@@ -21,20 +21,22 @@ const FeaturedProducts = ({ slice }: any): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className={styles.container}
     >
-      <h2>
-        {slice.primary.heading}
-      </h2>
-      <div className={styles.slider}>
-
-        {slice.primary.product_list.map((item: { product: { uid: string; }; }) => {
-          let uid = item.product.uid
-          return (
-            <ProductCard uid={uid} />
+      <div className="container">
+        <h2>
+          {slice.primary.heading}
+        </h2>
+        <div className={styles.slider}>
+          {slice.primary.product_list.map((item: { product: { uid: string; }; }) => {
+            let uid = item.product.uid
+            return (
+              <ProductCard uid={uid} />
+            )
+          }
           )
-        }
-        )
-        }
+          }
+        </div>
       </div>
     </section >
   );

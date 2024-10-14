@@ -19,10 +19,10 @@
     border-bottom: 4px solid var(--primaryColor);
     border-left: 4px solid var(--primaryColor);
     border-radius: 8px;
-    height: 200px;
     overflow: hidden;
     position: relative;
     width: 100%;
+    aspect-ratio: 7 / 9;
 
     img {
         object-fit: cover;
