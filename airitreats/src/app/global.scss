@@ -24,8 +24,8 @@ ul {
 }
 
 body {
-    // background: linear-gradient(0deg, var(--overlayColor), var(--overlayColor)), url("/images/background.webp");
-    // background-attachment: fixed;
+    background: linear-gradient(0deg, var(--overlayColor), var(--overlayColor)), url("/images/background.webp");
+    background-attachment: fixed;
     font-family: var(--bodyFont);
     color: var(--blackText);
     font-size: 16px;

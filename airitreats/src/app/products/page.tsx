@@ -9,7 +9,6 @@ export default async function page() {
     let data: any = await client.getAllByEveryTag(["product", "product"])
     // let singleData = await client.getByUID("product", "1");
 
-    // console.log(data)
     return (
         <div>
             <div className="container">

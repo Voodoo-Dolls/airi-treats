@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ProductCard from '../ProductCard/ProductCard'
 import styles from "./ProductGrid.module.scss"
 
@@ -28,11 +28,10 @@ interface productProps {
 
 
 export default function ProductGrid({ productData }: Props) {
-    console.log(productData)
     return (
         <div className={`container ${styles.container}`}>
             {productData.map((product: any) => (
-                <ProductCard product={product} key={product.uid} />
+                <ProductCard uid={product.uid} key={product.uid} />
             ))}
         </div>
     )

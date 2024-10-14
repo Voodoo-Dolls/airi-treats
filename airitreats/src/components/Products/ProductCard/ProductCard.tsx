@@ -1,9 +1,9 @@
 import Image from "next/image"
-import styles from "./ProductCard.module.scss"
-
+import { createClient } from "@/prismicio";
 import Link from "next/link"
 import { headerFont } from "@/app/fonts"
-// import { headerFont } from "@/app/layout"
+import styles from "./ProductCard.module.scss"
+
 
 interface productSlice {
     primary: {
@@ -25,12 +25,18 @@ interface productProps {
             slices: any
         }
 
+    },
+    slice: {
+
     }
 }
 
 
 
-export default function ProductCard({ product }: productProps) {
+export default async function ProductCard({ uid }: any) {
+    const client = createClient();
+    const product = await client.getByUID("product", uid)
+    // console.log(product)
     const { product_name, product_price, main_image } = product.data.slices[0].primary
     // console.log(product)
 
