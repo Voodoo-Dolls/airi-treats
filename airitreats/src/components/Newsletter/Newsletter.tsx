@@ -60,6 +60,7 @@ export default function Newsletter() {
                     Subscribe
                 </button>
                 <p>{email}</p>
+
             </div>
         </form>
     )
