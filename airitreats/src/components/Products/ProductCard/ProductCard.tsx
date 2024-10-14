@@ -32,23 +32,21 @@ interface productProps {
 
 export default function ProductCard({ product }: productProps) {
     const { product_name, product_price, main_image } = product.data.slices[0].primary
-    console.log(product)
+    // console.log(product)
 
 
     return (
         <div className={styles.container}>
-            <div className={styles.wrapper}>
-                <div className={styles.bannerImage}>
-                    <Image src={main_image.url} fill alt="" />
-                </div>
-                <h1 className={`${headerFont.className} ${styles.h1}`}>{product_name}</h1>
-                <p className={styles.p}>${product_price.toFixed(2)}</p>
+            <div className={styles.imgContainer}>
+                <Image src={main_image.url} fill alt="" />
             </div>
-            <div className={styles.buttonWrapper}>
-                <Link href={`${product.url}`}>
-                    <button className={`${styles.btn} ${styles.outline}`}>DETAILS</button>
-                </Link>
-            </div>
+            <p className={styles.title}>{product_name}</p>
+            <p className={styles.price}>${product_price.toFixed(2)}</p>
+
+            <Link href={`${product.url}`}>
+                <button className={`${styles.btn} ${styles.outline}`}>DETAILS</button>
+            </Link>
+
         </div >
 
     )
