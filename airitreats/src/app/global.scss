@@ -1,5 +1,5 @@
 :root {
-    --primaryColor: #00a1e4;
+    --primaryColor: #FF6F91;
     --darkAccent1: #670021;
     --blackText: #4D3D41;
     --headingColor: white;
@@ -22,8 +22,9 @@ ul {
 }
 
 body {
-    background-color: #bde0fe;
-    font-size: 18px;
+    font-size: 16px;
+    font-family: var(--bodyFont);
+    background-image: url("/images/background.webp");
 }
 
 .container {
@@ -35,6 +36,18 @@ body {
 svg {
     height: 36px;
     width: 36px;
+}
+
+
+// Type
+h2 {
+    font-family: var(--headerFont);
+    font-size: 24px;
+}
+
+h3 {
+    font-family: var(--subheadingFont);
+    font-size: 20px;
 }
 
 // Cart Styling
