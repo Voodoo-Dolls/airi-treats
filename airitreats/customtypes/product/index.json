@@ -21,6 +21,20 @@
           "customtypes": ["category"]
         }
       },
+      "product_name": {
+        "type": "Text",
+        "config": {
+          "label": "Product Name",
+          "placeholder": ""
+        }
+      },
+      "price": {
+        "type": "Text",
+        "config": {
+          "label": "Price",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
