@@ -20,8 +20,8 @@ const ImageGrid = ({ slice }: ImageGridProps): JSX.Element => {
     >
       <div className={`contianer ${styles.cardContainer}`}>
         <h2>{slice.primary.section_title}</h2>
-        {slice.primary.repeatable_card.map((item) => (
-          <div className={styles.card}>
+        {slice.primary.repeatable_card.map((item, index) => (
+          <div className={styles.card} key={index}>
             <div className={styles.imgContainer}>
               <PrismicNextImage field={item.image_card} className={styles.img} />
             </div>

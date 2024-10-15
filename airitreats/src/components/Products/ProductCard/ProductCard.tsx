@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image"
 import { createClient } from "@/prismicio";
 import Link from "next/link"
@@ -8,17 +9,17 @@ import { useEffect, useState } from "react";
 
 
 export default function ProductCard({ uid }: any) {
-    const [product, setProduct] = useState(null)
+    const [product, setProduct] = useState<any>(null)
 
     useEffect(() => {
         const fetchData = async () => {
             const client = createClient();
-            const product = await client.getByUID("product", uid)
+            const product: any = await client.getByUID("product", uid)
             setProduct(product);
         };
 
         fetchData();
-    }, []);
+    });
     if (!product) return <div>Loading...</div>
 
     const { product_name, product_price, main_image } = product.data.slices[0].primary

@@ -17,8 +17,8 @@ export type FeaturedProductsProps =
 
 // FeaturedProductsProps
 const FeaturedProducts = ({ slice }: any): JSX.Element => {
-  let list = []
-  slice.primary.product_list.map((item) => {
+  let list: any = []
+  slice.primary.product_list.map((item: any) => {
     list.push(item.product.uid)
   })
   return (

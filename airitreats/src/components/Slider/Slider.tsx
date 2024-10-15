@@ -6,7 +6,7 @@ import 'keen-slider/keen-slider.min.css'
 import ProductCard from "../Products/ProductCard/ProductCard"
 
 
-export default function Slider({ list }) {
+export default function Slider({ list }: any) {
     const [sliderRef] = useKeenSlider(
         {
             loop: true,
@@ -18,7 +18,7 @@ export default function Slider({ list }) {
         },
         [
             (slider) => {
-                let timeout
+                let timeout: any
                 let mouseOver = false
                 function clearNextTimeout() {
                     clearTimeout(timeout)
@@ -50,7 +50,7 @@ export default function Slider({ list }) {
     return (
         <>
             <div ref={sliderRef} className="keen-slider">
-                {list.map((uid, index) => {
+                {list.map((uid: any, index: number) => {
                     return (
                         <div className="keen-slider__slide" key={index} >
                             <ProductCard uid={uid} />
