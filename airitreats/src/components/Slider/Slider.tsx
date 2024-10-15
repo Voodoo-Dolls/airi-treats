@@ -10,6 +10,11 @@ export default function Slider({ list }) {
     const [sliderRef] = useKeenSlider(
         {
             loop: true,
+            mode: "free",
+            slides: {
+                perView: 2,
+                spacing: 16
+            }
         },
         [
             (slider) => {
