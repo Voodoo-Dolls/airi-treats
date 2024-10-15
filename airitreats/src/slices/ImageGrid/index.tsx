@@ -18,17 +18,18 @@ const ImageGrid = ({ slice }: ImageGridProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className={styles.container}
     >
-      <h2>{slice.primary.section_title}</h2>
-      {slice.primary.repeatable_card.map((item) => (
-        <div className={styles.card}>
-
-          <div className={styles.imgContainer}>
-            <PrismicNextImage field={item.image_card} className={styles.img} />
+      <div className={`contianer ${styles.cardContainer}`}>
+        <h2>{slice.primary.section_title}</h2>
+        {slice.primary.repeatable_card.map((item) => (
+          <div className={styles.card}>
+            <div className={styles.imgContainer}>
+              <PrismicNextImage field={item.image_card} className={styles.img} />
+            </div>
+            <h3>{item.heading}</h3>
+            <p>{item.body_text}</p>
           </div>
-          <h3>{item.heading}</h3>
-          <p>{item.body_text}</p>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 };

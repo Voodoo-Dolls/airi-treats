@@ -1,7 +1,14 @@
 .container {
-    padding: 16px;
     text-align: center;
-    width: 100%;
+    background-color: white;
+}
+
+// Main Content
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    // gap: var(--gap);
 }
 
 .card {
@@ -10,12 +17,18 @@
     gap: 8px;
     position: relative;
     width: 100%;
+    padding: var(--gap);
+    text-wrap: balance;
+
+    h3 {
+        text-transform: uppercase;
+    }
 }
 
 .imgContainer {
     height: calc(100vw - 32px);
     position: relative;
-    width: calc(100vw - 32px);
+    width: 100%;
 }
 
 .img {

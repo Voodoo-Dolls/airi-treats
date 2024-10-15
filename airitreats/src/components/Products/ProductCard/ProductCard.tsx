@@ -20,9 +20,9 @@ export default function ProductCard({ uid }: any) {
         fetchData();
     }, []);
     if (!product) return <div>Loading...</div>
-    // console.log(product)
+
     const { product_name, product_price, main_image } = product.data.slices[0].primary
-    // console.log(product)
+
 
     return (
         <Link href={product.url} className={styles.container}>
