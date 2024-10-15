@@ -3,6 +3,7 @@ import { SliceComponentProps } from "@prismicio/react";
 import ProductCard from "@/components/Products/ProductCard/ProductCard";
 
 import styles from "./FeaturedProducts.module.scss"
+import Slider from "@/components/Slider/Slider";
 
 /**
  * Props for `FeaturedProducts`.
@@ -16,7 +17,10 @@ export type FeaturedProductsProps =
 
 // FeaturedProductsProps
 const FeaturedProducts = ({ slice }: any): JSX.Element => {
-
+  let list = []
+  slice.primary.product_list.map((item) => {
+    list.push(item.product.uid)
+  })
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -27,16 +31,7 @@ const FeaturedProducts = ({ slice }: any): JSX.Element => {
         <h2>
           {slice.primary.heading}
         </h2>
-        <div className={styles.slider}>
-          {slice.primary.product_list.map((item: { product: { uid: string; }; }) => {
-            let uid = item.product.uid
-            return (
-              <ProductCard uid={uid} />
-            )
-          }
-          )
-          }
-        </div>
+        <Slider list={list} />
       </div>
     </section >
   );
