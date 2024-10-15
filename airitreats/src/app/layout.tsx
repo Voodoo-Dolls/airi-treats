@@ -8,6 +8,7 @@ import "./global.scss"
 import { bodyFont, headerFont, subheadingFont } from "./fonts";
 import Footer from "@/components/Footer/Footer";
 import { Toaster } from "sonner";
+import Spinner from "@/components/Spinner/Spinner";
 
 
 

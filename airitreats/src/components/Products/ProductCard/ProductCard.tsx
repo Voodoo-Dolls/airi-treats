@@ -5,6 +5,7 @@ import Link from "next/link"
 import { headerFont } from "@/app/fonts"
 import styles from "./ProductCard.module.scss"
 import { useEffect, useState } from "react";
+import Spinner from "@/components/Spinner/Spinner";
 
 
 
@@ -20,7 +21,7 @@ export default function ProductCard({ uid }: any) {
 
         fetchData();
     });
-    if (!product) return <div>Loading...</div>
+    if (!product) return <Spinner />
 
     const { product_name, product_price, main_image } = product.data.slices[0].primary
 

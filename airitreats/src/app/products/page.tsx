@@ -1,4 +1,4 @@
-
+'use client'
 import ProductGrid from "@/components/Products/ProductGrid/ProductGrid";
 import { createClient } from "@/prismicio";
 
