@@ -27,6 +27,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "image_banner": {
+              "type": "SharedSlice"
+            },
             "featured_products": {
               "type": "SharedSlice"
             },

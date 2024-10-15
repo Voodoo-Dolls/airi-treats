@@ -135,6 +135,7 @@ export type FooterDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | ImageBannerSlice
   | FeaturedProductsSlice
   | ImageGridSlice
   | HeroSlice
@@ -517,6 +518,71 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Primary content in *ImageBanner → Default → Primary*
+ */
+export interface ImageBannerSliceDefaultPrimary {
+  /**
+   * Banner Image field in *ImageBanner → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_banner.default.primary.banner_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  banner_image: prismic.ImageField<never>;
+
+  /**
+   * Heading field in *ImageBanner → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_banner.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Body field in *ImageBanner → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_banner.default.primary.body
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  body: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ImageBanner Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageBannerSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ImageBannerSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ImageBanner*
+ */
+type ImageBannerSliceVariation = ImageBannerSliceDefault;
+
+/**
+ * ImageBanner Shared Slice
+ *
+ * - **API ID**: `image_banner`
+ * - **Description**: ImageBanner
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageBannerSlice = prismic.SharedSlice<
+  "image_banner",
+  ImageBannerSliceVariation
+>;
+
+/**
  * Item in *ImageGrid → Default → Primary → Repeatable Card*
  */
 export interface ImageGridSliceDefaultPrimaryRepeatableCardItem {
@@ -789,6 +855,10 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      ImageBannerSlice,
+      ImageBannerSliceDefaultPrimary,
+      ImageBannerSliceVariation,
+      ImageBannerSliceDefault,
       ImageGridSlice,
       ImageGridSliceDefaultPrimaryRepeatableCardItem,
       ImageGridSliceDefaultPrimary,
