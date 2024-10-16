@@ -10,18 +10,22 @@ import Spinner from '@/components/Spinner/Spinner';
 
 interface props {
     tag: string,
-    filter: any[]
+    filter: any[],
+    page: number,
+    setMaxPage: Function
 }
 
 
 
-export default function ProductGrid({ tag, filter }: props) {
+export default function ProductGrid({ tag, filter, page, setMaxPage }: props) {
     const [product, setProduct] = useState<any>(null)
     const [field, direction] = filter
     useEffect(() => {
         const fetchData = async () => {
             const client = createClient();
-            const product: any = await client.getAllByTag(tag, {
+            const product: any = await client.getByTag(tag, {
+                page: page,
+                pageSize: 20,
                 orderings: {
                     field: field,
                     direction: direction
@@ -38,16 +42,17 @@ export default function ProductGrid({ tag, filter }: props) {
                 `
             })
             console.log(product)
-            setProduct(product);
+            setMaxPage(product.total_pages)
+            setProduct(product)
         };
 
         fetchData();
-    }, [filter]);
+    }, [filter, page]);
     if (!product) return <div>Loading</div>
 
     return (
         <div className={`container ${styles.container}`}>
-            {product.map((product: any) => (
+            {product.results.map((product: any) => (
                 <ProductCard uid={product.uid} key={product.uid} />
             ))}
         </div>

@@ -8,6 +8,7 @@ export default async function page() {
     const client = createClient();
 
     let data: any = await client.getAllByType('product', {
+
         orderings: {
             field: "my.product.price",
             direction: "desc"
