@@ -25,7 +25,7 @@ export default function ProductGrid({ tag, filter, page, setMaxPage }: props) {
             const client = createClient();
             const product: any = await client.getByTag(tag, {
                 page: page,
-                pageSize: 20,
+                pageSize: 4,
                 orderings: {
                     field: field,
                     direction: direction

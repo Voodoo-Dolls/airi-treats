@@ -24,11 +24,13 @@ export default async function Page({ params }: { params: Params }) {
     // })
     return (
         <>
+            <SliceZone slices={page.data.slices} components={components} />
             <div className="container">
                 <h2>This is the {params.uid} page.</h2>
             </div>
-            <ProductContainer />
-            {/* <ProductGrid productData={productData} /> */}
+            {params.uid == 'all' ? <ProductContainer category={`product`} /> : <ProductContainer category={params.uid} />}
+
+
         </>
     )
     return <SliceZone slices={page.data.slices} components={components} />;

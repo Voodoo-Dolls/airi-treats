@@ -16,12 +16,13 @@ let filters = [["my.product.price", "asc"], ["my.product.price", "desc"], ["my.p
 
 export default function ProductContainer({ category }: props) {
     const [page, setPage] = useState(1)
-    const [maxPage, setMaxPage] = useState(5)
+    const [maxPage, setMaxPage] = useState(1)
     const [fields, setFields] = useState(["my.product.price", "asc"])
 
     let handleFilter = (e: any) => {
         let index = e.target.value
         setFields(filters[index])
+        setPage(1)
         // console.log(e.target.value)
     }
     return (
@@ -33,7 +34,7 @@ export default function ProductContainer({ category }: props) {
                 <option value="2">2</option>
                 <option value="3">3</option>
             </select>
-            <ProductGrid tag={`gummies`} filter={fields} page={page} setMaxPage={setMaxPage} />
+            <ProductGrid tag={category} filter={fields} page={page} setMaxPage={setMaxPage} />
             {maxPage > 1 && <Pagination page={page} maxPage={maxPage} setPage={setPage} />}
 
         </>
