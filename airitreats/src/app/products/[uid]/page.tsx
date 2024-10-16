@@ -6,6 +6,7 @@ import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 
 import ProductGrid from "@/components/Products/ProductGrid/ProductGrid";
+import ProductContainer from "@/components/ProductContainer/ProductContainer";
 
 type Params = { uid: string };
 
@@ -26,7 +27,8 @@ export default async function Page({ params }: { params: Params }) {
             <div className="container">
                 <h2>This is the {params.uid} page.</h2>
             </div>
-            <ProductGrid productData={productData} />
+            <ProductContainer />
+            {/* <ProductGrid productData={productData} /> */}
         </>
     )
     return <SliceZone slices={page.data.slices} components={components} />;

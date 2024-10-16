@@ -20,7 +20,7 @@ export default function ProductCard({ uid }: any) {
         };
 
         fetchData();
-    });
+    }, [uid]);
     if (!product) return <Spinner />
 
     const { product_name, product_price, main_image } = product.data.slices[0].primary
