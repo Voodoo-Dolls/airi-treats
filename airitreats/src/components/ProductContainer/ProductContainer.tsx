@@ -3,6 +3,8 @@
 import { useState } from "react"
 import ProductGrid from "@/components/Products/ProductGrid/ProductGrid";
 import Pagination from "../Pagination/Pagination";
+import { FaSortAlphaDown } from "react-icons/fa";
+import styles from "./ProductContainer.module.scss"
 
 
 
@@ -27,12 +29,15 @@ export default function ProductContainer({ category }: props) {
     }
     return (
         <>
-            <label htmlFor="filter">Filter By</label>
+            <label htmlFor="filter" className={styles.label}>
+                <FaSortAlphaDown />
+                Filter By
+            </label>
             <select name="filter" id="filter" onChange={handleFilter}>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
+                <option value="0">Price Low To High</option>
+                <option value="1">Price High To Low</option>
+                <option value="2">Alphabetical (A-Z)</option>
+                <option value="3">Alphabetical (Z-A)</option>
             </select>
             <ProductGrid tag={category} filter={fields} page={page} setMaxPage={setMaxPage} />
             {maxPage > 1 && <Pagination page={page} maxPage={maxPage} setPage={setPage} />}

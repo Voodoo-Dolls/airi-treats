@@ -21,8 +21,8 @@ export default async function Header() {
         <header className={styles.header}>
 
             {/* <Link href={"/"}>
-                    <h1 className={`${headerFont.className} `}>{settings.data.site_title}</h1>
-                </Link> */}
+                <h1 className={`${headerFont.className} `}>{settings.data.site_title}</h1>
+            </Link> */}
 
             {/* <Navbar /> */}
             <MobileNav links={settings.data.links} logo={settings.data.site_logo.url} />

@@ -13,14 +13,6 @@
           "placeholder": ""
         }
       },
-      "category": {
-        "type": "Link",
-        "config": {
-          "label": "Category",
-          "select": "document",
-          "customtypes": ["category"]
-        }
-      },
       "product_name": {
         "type": "Text",
         "config": {
@@ -29,21 +21,65 @@
         }
       },
       "price": {
-        "type": "Text",
+        "type": "Number",
         "config": {
           "label": "Price",
           "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "Description",
+          "placeholder": ""
+        }
+      },
+      "main_image": {
+        "type": "Image",
+        "config": {
+          "label": "Main Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "category": {
+        "type": "Link",
+        "config": {
+          "label": "Category",
+          "select": "document",
+          "customtypes": ["category"]
+        }
+      },
+      "product_available": {
+        "type": "Boolean",
+        "config": {
+          "label": "Product Available",
+          "placeholder_false": "out-of-stock",
+          "placeholder_true": "in-stock",
+          "default_value": true
+        }
+      },
+      "product_flag": {
+        "type": "Boolean",
+        "config": {
+          "label": "Product Flag",
+          "placeholder_false": "false",
+          "placeholder_true": "true",
+          "default_value": false
+        }
+      },
+      "flag_text": {
+        "type": "Text",
+        "config": {
+          "label": "Flag Text",
+          "placeholder": "Ex. Top Seller"
         }
       },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
-          "choices": {
-            "product_details": {
-              "type": "SharedSlice"
-            }
-          }
+          "choices": {}
         }
       }
     }

@@ -211,23 +211,12 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-type ProductDocumentDataSlicesSlice = ProductDetailsSlice;
+type ProductDocumentDataSlicesSlice = never;
 
 /**
  * Content for Product documents
  */
 interface ProductDocumentData {
-  /**
-   * Category field in *Product*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: product.category
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  category: prismic.ContentRelationshipField<"category">;
-
   /**
    * Product Name field in *Product*
    *
@@ -242,13 +231,81 @@ interface ProductDocumentData {
   /**
    * Price field in *Product*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Number
    * - **Placeholder**: *None*
    * - **API ID Path**: product.price
    * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  price: prismic.NumberField;
+
+  /**
+   * Description field in *Product*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.description
+   * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  price: prismic.KeyTextField;
+  description: prismic.KeyTextField;
+
+  /**
+   * Main Image field in *Product*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.main_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  main_image: prismic.ImageField<never>;
+
+  /**
+   * Category field in *Product*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.category
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  category: prismic.ContentRelationshipField<"category">;
+
+  /**
+   * Product Available field in *Product*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: true
+   * - **API ID Path**: product.product_available
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  product_available: prismic.BooleanField;
+
+  /**
+   * Product Flag field in *Product*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: product.product_flag
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  product_flag: prismic.BooleanField;
+
+  /**
+   * Flag Text field in *Product*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Ex. Top Seller
+   * - **API ID Path**: product.flag_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  flag_text: prismic.KeyTextField;
 
   /**
    * Slice Zone field in *Product*

@@ -32,6 +32,7 @@ export default async function Page({ params }: { params: { productid: string, ui
     const client = createClient();
     // Grab Product Details Using URL Slug
     let productData: any = await client.getByUID("product", productid)
+    console.log(productData)
     let slug = (productData.data.category.uid)
 
     if (uid != slug) {
@@ -39,7 +40,9 @@ export default async function Page({ params }: { params: { productid: string, ui
     }
     return (
         <>
-            <SliceZone slices={productData.data.slices} components={components} />;
+            <ProductDetails productData={productData} />
+            {/* <SliceZone slices={productData.data.slices} components={components} />; */}
+            {/* <p>Hi</p> */}
         </>
     )
     // return (

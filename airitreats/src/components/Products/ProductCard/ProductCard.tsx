@@ -23,20 +23,22 @@ export default function ProductCard({ uid }: any) {
     }, [uid]);
     if (!product) return <Spinner />
 
-    const { product_name, product_price, main_image } = product.data.slices[0].primary
+    const { data } = product
 
+    // console.log(product)
 
     return (
         <Link href={product.url} className={styles.container}>
 
             <div className={styles.imgContainer}>
-                <Image src={main_image.url} fill alt="" />
+                <Image src={data.main_image.url} fill alt="" />
             </div>
-            <p className={styles.title}>{product_name}</p>
-            <p className={styles.price}>${product_price.toFixed(2)}</p>
+            <p className={styles.title}>{data.product_name}</p>
+            <p className={styles.price}>${data.price.toFixed(2)}</p>
 
 
         </Link >
+
 
     )
 }

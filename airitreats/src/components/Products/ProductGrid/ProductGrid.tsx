@@ -19,7 +19,6 @@ interface props {
 
 export default function ProductGrid({ tag, filter, page, setMaxPage }: props) {
     const [product, setProduct] = useState<any>(null)
-    const [field, direction] = filter
     useEffect(() => {
         const fetchData = async () => {
             const client = createClient();
@@ -27,27 +26,27 @@ export default function ProductGrid({ tag, filter, page, setMaxPage }: props) {
                 page: page,
                 pageSize: 4,
                 orderings: {
-                    field: field,
-                    direction: direction
+                    field: filter[0],
+                    direction: filter[1]
                     // field: "my.product.price",
                     // direction: "asc"
                 },
                 graphQuery: `
                 {
                     product{
-                        price
                         product_name
+                        price
                     }
                 }
                 `
             })
-            console.log(product)
+            // console.log(product)
             setMaxPage(product.total_pages)
             setProduct(product)
         };
 
         fetchData();
-    }, [filter, page]);
+    }, [filter, page, setMaxPage, tag]);
     if (!product) return <div>Loading</div>
 
     return (

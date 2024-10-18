@@ -71,11 +71,13 @@ export default function MobileNav({ links, logo }: any) {
             </div>
             {/* Nav is toggled with the hamburger and receives its link from links prop */}
             <nav className={`${open && styles.active} ${styles.nav}`} ref={navRef}>
-                <ul className={`container`}>
+                <ul className={``}>
                     {/* Get Nav Links in Prismic from Settings Doc */}
                     {links.map((data: any) => {
                         return (
-                            <li key={data.label}><PrismicNextLink field={data.link}>{data.label}</PrismicNextLink></li>
+                            <li className={styles.link} key={data.label}>
+                                <PrismicNextLink field={data.link} onClick={() => setOpen(false)}>{data.label}</PrismicNextLink>
+                            </li>
                         )
                     }
                     )}

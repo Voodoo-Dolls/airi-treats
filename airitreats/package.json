@@ -11,13 +11,15 @@
     "start": "next start",
     "lint": "next lint",
     "slicemachine": "start-slicemachine",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "email": "email dev"
   },
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@prismicio/client": "^7.9.0",
     "@prismicio/next": "^1.6.0",
     "@prismicio/react": "^2.8.0",
+    "@react-email/components": "^0.0.25",
     "axios": "^1.7.7",
     "keen-slider": "^6.8.6",
     "md5": "^2.3.0",
@@ -25,6 +27,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
+    "resend": "^4.0.0",
     "sass": "^1.79.3",
     "sonner": "^1.5.0",
     "spinners-react": "^1.0.7",
@@ -38,6 +41,7 @@
     "concurrently": "^8.2.2",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.4",
+    "react-email": "^3.0.1",
     "slice-machine-ui": "^2.7.1",
     "typescript": "^5.4.5"
   }

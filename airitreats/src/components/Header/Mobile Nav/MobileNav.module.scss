@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     width: 100%;
+    gap: var(--gap);
 }
 
 .right {
@@ -35,14 +36,28 @@
     ul {
         background-color: red;
     }
+
+    .link {
+        a {
+            display: inline-block;
+            width: 100%;
+            background-color: rgb(128, 0, 0);
+            padding: var(--gap);
+
+            &:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
 }
 
 // Logo Styling
 .imageContainer {
     width: 100%;
-    aspect-ratio: 10 / 2;
+    aspect-ratio: 1 / 1;
     position: relative;
-
+    max-width: 70px;
 
     a {
         display: block;

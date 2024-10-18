@@ -30,12 +30,12 @@ interface productProps {
 
 export default function ProductDetails({ productData }: any) {
 
-    const { product_name, product_price, product_description, main_image } = productData
+    const { product_name, price, description, main_image } = productData.data
 
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} container`}>
             <ProductImage mainImage={main_image} />
-            <ProductText productName={product_name} productPrice={product_price} productDescription={product_description} />
+            <ProductText productName={product_name} productPrice={price} productDescription={description} />
         </div>
     )
 }
