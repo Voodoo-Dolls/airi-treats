@@ -9,4 +9,5 @@ export const components = {
   image_grid: dynamic(() => import("./ImageGrid")),
   product_details: dynamic(() => import("./ProductDetails")),
   rich_text: dynamic(() => import("./RichText")),
+  section_title: dynamic(() => import("./SectionTitle")),
 };

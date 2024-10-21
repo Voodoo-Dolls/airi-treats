@@ -900,6 +900,86 @@ export type RichTextSlice = prismic.SharedSlice<
   RichTextSliceVariation
 >;
 
+/**
+ * Item in *SectionTitle → Default → Primary → List*
+ */
+export interface SectionTitleSliceDefaultPrimaryListItem {
+  /**
+   * BulletList field in *SectionTitle → Default → Primary → List*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: List items
+   * - **API ID Path**: section_title.default.primary.list[].bulletlist
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  bulletlist: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *SectionTitle → Default → Primary*
+ */
+export interface SectionTitleSliceDefaultPrimary {
+  /**
+   * Title field in *SectionTitle → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Section title
+   * - **API ID Path**: section_title.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *SectionTitle → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Section description
+   * - **API ID Path**: section_title.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * List field in *SectionTitle → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_title.default.primary.list[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  list: prismic.GroupField<Simplify<SectionTitleSliceDefaultPrimaryListItem>>;
+}
+
+/**
+ * Default variation for SectionTitle Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SectionTitleSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SectionTitleSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SectionTitle*
+ */
+type SectionTitleSliceVariation = SectionTitleSliceDefault;
+
+/**
+ * SectionTitle Shared Slice
+ *
+ * - **API ID**: `section_title`
+ * - **Description**: SectionTitle
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SectionTitleSlice = prismic.SharedSlice<
+  "section_title",
+  SectionTitleSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -963,6 +1043,11 @@ declare module "@prismicio/client" {
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
       RichTextSliceDefault,
+      SectionTitleSlice,
+      SectionTitleSliceDefaultPrimaryListItem,
+      SectionTitleSliceDefaultPrimary,
+      SectionTitleSliceVariation,
+      SectionTitleSliceDefault,
     };
   }
 }
