@@ -4,8 +4,8 @@
     --headingColor: white;
     --overlayColor: #d65674db;
     --primaryColor: #FF6F91;
-
     --darkAccent1: #670021;
+    --lighterPink: #ff9fd93b;
 }
 
 * {
@@ -43,6 +43,9 @@ svg {
 }
 
 // Type
+h1{
+    font-size: 31.25px;
+}
 h2 {
     font-family: var(--headerFont);
     font-size: 24px;

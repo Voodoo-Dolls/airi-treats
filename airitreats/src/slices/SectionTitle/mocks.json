@@ -5,13 +5,13 @@
 		"primary": {
 			"title": {
 				"__TYPE__": "FieldContent",
-				"value": "difficulty",
-				"type": "Text"
+				"type": "Text",
+				"value": "About Airi Treats"
 			},
 			"description": {
 				"__TYPE__": "FieldContent",
-				"value": "threw",
-				"type": "Text"
+				"type": "Text",
+				"value": "While raising our family in a post-pandemic world, the cost of living rising from one week to the next was enough to keep us up at night (it wasn't just the new baby). Like many families, we were looking for ways to get the most bang for our buck. So, we started looking into food preservation. "
 			},
 			"list": {
 				"__TYPE__": "GroupContentType",
@@ -25,6 +25,32 @@
 									"__TYPE__": "FieldContent",
 									"value": "favorite",
 									"type": "Text"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"bulletlist",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "list item 2"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"bulletlist",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "list item 3"
 								}
 							]
 						]

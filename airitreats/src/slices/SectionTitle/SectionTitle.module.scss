@@ -1,0 +1,22 @@
+.container {
+    position: relative;
+}
+
+.title {
+    width: fit-content;
+    padding: 24px;
+    background-color: var(--primaryColor);
+    border: var(--darkAccent1) 1px solid;
+    border-right: var(--darkAccent1) 8px solid;
+    border-left: var(--darkAccent1) 4px solid;
+    border-radius: 0 16px 16px 0;
+    margin-bottom: -25px;
+    z-index: 10;
+}
+
+.description {
+    background-color: var(--lighterPink);
+    padding: 24px 16px;
+    border-top: var(--darkAccent1) 2px solid;
+    border-bottom: var(--darkAccent1) 2px solid;
+}
