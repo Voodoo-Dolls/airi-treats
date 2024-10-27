@@ -48,6 +48,7 @@ export default function Newsletter() {
         <form onSubmit={handleSubscribe} >
             <div >
                 <input
+                    type="email"
                     placeholder="What is your email address?"
                     onChange={(e) => setEmail(e.target.value)}
                     name="email"

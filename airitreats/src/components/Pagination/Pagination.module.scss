@@ -1,9 +1,74 @@
+.container {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
 .page {
+    position: relative;
+    align-items: center;
+    aspect-ratio: 1 / 1;
     background-color: white;
-    padding: 8px;
-    width: fit-content;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    width: 32px;
+}
+
+.arrow {
+    aspect-ratio: 1 / 1;
+    background-color: var(--babyBlue);
+    border-radius: 8px;
+    color: white;
+    height: 36px;
+    padding: 9px;
+    position: relative;
+    width: 36px;
+
+    svg {
+        background-color: var(--darkBlueStroke);
+        border-radius: 8px;
+        height: 27px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 27px;
+    }
+
+    &:last-of-type {
+        background-color: var(--primaryColor);
+
+        svg {
+            background-color: var(--darkAccent1);
+        }
+    }
+}
+
+.buttonContainer {
+    z-index: 1;
 }
 
 .currentPage {
-    background-color: red;
+    background-color: var(--babyBlue);
+    width: 36px;
+    height: 36px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        /* Adjusts the distance to the right */
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: var(--darkBlueStroke);
+        /* Background color for the extra circle */
+        z-index: -1;
+        /* Place it below the main button */
+    }
+
+
 }

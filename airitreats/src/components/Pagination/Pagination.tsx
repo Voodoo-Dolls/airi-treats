@@ -1,4 +1,6 @@
 import styles from "./Pagination.module.scss"
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+
 
 interface props {
     page: number,
@@ -13,32 +15,44 @@ export default function Pagination({ page, setPage, maxPage }: props) {
     // }
 
     const handlePage = (x: number) => {
-        if (x != page) {
-            setPage(x)
-        }
+        setPage(x)
     }
     return (
-        <>
+        <div className={`${styles.container}`}>
+            {page > 1 && <div className={styles.arrow} onClick={() => {
+                handlePage(page - 1)
+            }} >
+                <MdChevronLeft />
+            </div>}
+
             {(() => {
                 const arr = [];
                 for (let x = 1; x <= maxPage; x++) {
                     arr.push(
-                        <div
-                            className={`${styles.page} ${x == page && styles.currentPage}`}
-                            onClick={
-                                () => {
-                                    handlePage(x)
+                        <div className={styles.buttonContainer}>
+                            <div
+                                className={`${styles.page} ${x == page && styles.currentPage}`}
+                                onClick={
+                                    () => {
+                                        handlePage(x)
+                                    }
                                 }
-                            }
-                        >
-                            {x}
+                            >
+                                {x}
+                            </div>
                         </div>
                     )
                 }
                 return arr
             })()}
-            <div>Pagination</div>
+            {page != maxPage && <div className={styles.arrow} onClick={() => {
+                handlePage(page + 1)
+            }}>
+                <MdChevronRight />
+            </div>}
 
-        </>
+
+        </div>
+
     )
 }

@@ -2,22 +2,11 @@
 .container {
     display: flex;
     align-items: center;
-
-    gap: 32px;
+    justify-content: space-between;
+    padding: 16px;
+    height: 80px;
 }
 
-.left {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: var(--gap);
-}
-
-.right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
 
 .nav {
     // display: none;
@@ -57,7 +46,7 @@
     width: 100%;
     aspect-ratio: 1 / 1;
     position: relative;
-    max-width: 70px;
+    max-width: 80px;
 
     a {
         display: block;

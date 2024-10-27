@@ -22,7 +22,7 @@ interface links {
 
 export default function MobileNav({ links, logo }: any) {
     // Hamburger Menu State
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
     const navRef: any = useRef(null)
     const menuRef: any = useRef(null)
     // Handle Menu Toggle on outside click
@@ -43,31 +43,17 @@ export default function MobileNav({ links, logo }: any) {
 
     return (
         <>
-            <div className={`container ${styles.container}`}>
-                {/* Left Nav */}
-                <div className={styles.left}>
-                    {/* Hamburger Menu Toggle */}
-                    <div onClick={() => setOpen(!open)} ref={menuRef}>
-                        <HiMenu />
-                    </div>
-                    {/* Logo */}
-                    <div className={styles.imageContainer}>
-                        <Link href={"/"}>
-                            <Image src={logo} alt={`Airitreats Logo`} fill />
-                        </Link>
-                    </div>
+            <div className={`${styles.container}`}>
+                {/* Hamburger Menu Toggle */}
+                <div onClick={() => setOpen(!open)} ref={menuRef}>
+                    <HiMenu />
                 </div>
-                {/* Right Nav */}
-                <div className={styles.right}>
-                    {/* Search */}
-                    <HiOutlineSearch />
-                    {/* Snipcart */}
-                    <a href="#" className="snipcart-checkout cartContainer">
-                        <HiShoppingCart />
-                        <span className="snipcart-items-count"></span>
-                    </a>
+                {/* Logo */}
+                <div className={styles.imageContainer}>
+                    <Link href={"/"}>
+                        <Image src={logo} alt={`Airitreats Logo`} fill />
+                    </Link>
                 </div>
-
             </div>
             {/* Nav is toggled with the hamburger and receives its link from links prop */}
             <nav className={`${open && styles.active} ${styles.nav}`} ref={navRef}>

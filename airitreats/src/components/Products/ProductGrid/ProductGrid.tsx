@@ -22,6 +22,7 @@ export default function ProductGrid({ tag, filter, page, setMaxPage }: props) {
     useEffect(() => {
         const fetchData = async () => {
             const client = createClient();
+
             const product: any = await client.getByTag(tag, {
                 page: page,
                 pageSize: 4,

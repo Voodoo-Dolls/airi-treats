@@ -31,7 +31,7 @@ export default function ProductContainer({ category }: props) {
         <>
             <label htmlFor="filter" className={styles.label}>
                 <FaSortAlphaDown />
-                Filter By
+                SortBy
             </label>
             <select name="filter" id="filter" onChange={handleFilter}>
                 <option value="0">Price Low To High</option>
