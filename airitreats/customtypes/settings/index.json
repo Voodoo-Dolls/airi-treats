@@ -56,7 +56,7 @@
               "config": {
                 "label": "Position",
                 "placeholder": "",
-                "options": ["Front", "Menu Dropdown", "More Dropdown"]
+                "options": ["Front", "Category", "More"]
               }
             }
           }

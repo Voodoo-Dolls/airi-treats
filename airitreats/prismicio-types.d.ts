@@ -367,7 +367,7 @@ export interface SettingsDocumentDataLinksItem {
    * - **API ID Path**: settings.links[].position
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  position: prismic.SelectField<"Front" | "Menu Dropdown" | "More Dropdown">;
+  position: prismic.SelectField<"Front" | "Category" | "More">;
 }
 
 /**

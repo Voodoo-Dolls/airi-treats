@@ -1,14 +1,15 @@
 'use client'
+import styles from "./MobileNav.module.scss"
 import { IoClose } from "react-icons/io5";
 import { HiMenu } from "react-icons/hi";
-import styles from "./MobileNav.module.scss"
 import { useState, useRef, useEffect } from "react";
 import { PrismicNextLink } from "@prismicio/next";
+import { usePathname } from 'next/navigation'
 import Link from "next/link";
 import Image from "next/image";
 // React Icons
 import { HiShoppingCart } from "react-icons/hi";
-import { HiOutlineSearch } from "react-icons/hi";
+
 
 
 
@@ -21,8 +22,9 @@ interface links {
 }
 
 export default function MobileNav({ links, logo }: any) {
+    console.log(usePathname())
     // Hamburger Menu State
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
     const navRef: any = useRef(null)
     const menuRef: any = useRef(null)
     // Handle Menu Toggle on outside click
@@ -67,17 +69,23 @@ export default function MobileNav({ links, logo }: any) {
                         Your Cart:&nbsp; <span className="snipcart-items-count"> </span>
                     </button>
                 </a>
-                <ul className={``}>
-                    {/* Get Nav Links in Prismic from Settings Doc */}
-                    {links.map((data: any) => {
-                        return (
-                            <li className={styles.link} key={data.label}>
-                                <PrismicNextLink field={data.link} onClick={() => setOpen(false)}>{data.label}</PrismicNextLink>
-                            </li>
-                        )
-                    }
-                    )}
-                </ul>
+                <div className={styles.linksSection}>
+                    <h2>Explore Categories</h2>
+                    <ul className={``}>
+                        {/* Get Nav Links in Prismic from Settings Doc */}
+                        {links.map((data: any) => {
+                            if (data.position == "Category") {
+                                return (
+                                    <li className={styles.link} key={data.label}>
+                                        <PrismicNextLink field={data.link} onClick={() => setOpen(false)} className={`${data.link.url == usePathname() && styles.active}`}><span className={styles.underline}>&gt;</span> {data.label}</PrismicNextLink>
+                                    </li>
+                                )
+                            }
+                        }
+                        )}
+                    </ul>
+                </div>
+
             </nav>
         </>
     )

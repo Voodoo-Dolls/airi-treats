@@ -26,14 +26,21 @@
 
 
     .link {
+        .underline {
+            text-decoration: underline;
+        }
+
         a {
+            color: black;
             display: inline-block;
             width: 100%;
-            background-color: rgba(128, 0, 0, 0);
+            border-left: 4px solid var(--lighterPink);
             padding: var(--gap);
 
-            &:hover {
-                background-color: white;
+            &:hover,
+            &.active {
+                border-left: 4px solid var(--darkBlueStroke);
+                background-color: var(--babyBlue);
                 color: black;
             }
         }
@@ -71,5 +78,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
+.linksSection {
+    margin-top: 32px;
+
+    h2 {
+        color: black;
+        padding-left: 16px;
+        border-bottom: 3px solid black;
+    }
 }
