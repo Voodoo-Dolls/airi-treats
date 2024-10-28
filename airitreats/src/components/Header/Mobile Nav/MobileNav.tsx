@@ -1,5 +1,5 @@
 'use client'
-
+import { IoClose } from "react-icons/io5";
 import { HiMenu } from "react-icons/hi";
 import styles from "./MobileNav.module.scss"
 import { useState, useRef, useEffect } from "react";
@@ -40,13 +40,13 @@ export default function MobileNav({ links, logo }: any) {
             document.removeEventListener("mousedown", handleOutsideClick);
         };
     }, []);
-
+    console.log(links)
     return (
         <>
             <div className={`${styles.container}`}>
                 {/* Hamburger Menu Toggle */}
                 <div onClick={() => setOpen(!open)} ref={menuRef}>
-                    <HiMenu />
+                    {open ? <IoClose /> : <HiMenu />}
                 </div>
                 {/* Logo */}
                 <div className={styles.imageContainer}>
@@ -57,6 +57,16 @@ export default function MobileNav({ links, logo }: any) {
             </div>
             {/* Nav is toggled with the hamburger and receives its link from links prop */}
             <nav className={`${open && styles.active} ${styles.nav}`} ref={navRef}>
+                <a href="#"
+                    className={`snipcart-checkout ${styles.cartLink}`}
+                    onClick={() => {
+                        setOpen(!open)
+                    }}>
+                    <button className={`yellowBtn ${styles.cart}`}>
+                        <HiShoppingCart />
+                        Your Cart:&nbsp; <span className="snipcart-items-count"> </span>
+                    </button>
+                </a>
                 <ul className={``}>
                     {/* Get Nav Links in Prismic from Settings Doc */}
                     {links.map((data: any) => {
