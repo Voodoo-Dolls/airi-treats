@@ -1,6 +1,87 @@
 .container {
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: 2fr 1fr;
-    gap: 24px;
+    position: relative;
+}
+
+.imageContainer {
+    align-items: center;
+    aspect-ratio: 36 / 40;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+
+    .mainImage {
+        border-bottom: 16px solid rgb(77, 77, 77);
+        border-radius: 0 0 16px 16px;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    h2 {
+        background-color: var(--primaryColor);
+        border: 2px solid var(--darkAccent1);
+        border-bottom: 12px solid var(--darkAccent1);
+        border-radius: 16px;
+        margin: 0 16px;
+        padding: var(--gap);
+        position: relative;
+        margin-top: -60px;
+        width: fit-content;
+
+    }
+}
+
+// Price
+
+.price {
+    align-items: center;
+    background-color: var(--babyBlue);
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    line-height: 1;
+    width: 170px;
+    border: 1px solid var(--darkBlueStroke);
+    border-left: 6px solid var(--darkBlueStroke);
+    border-right: 6px solid var(--darkBlueStroke);
+    border-radius: 6px 24px 24px 6px;
+    margin-top: 60px;
+    margin-bottom: 16px;
+}
+
+// Quantity
+
+.controls {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+
+    button {
+        width: 42px;
+        height: 42px;
+    }
+
+    button:first-of-type {
+        border-radius: 6px 0 0 6px;
+        border: solid 1px var(--darkAccent1);
+        background-color: var(--primaryColor);
+    }
+
+    button:last-of-type {
+        border-radius: 0 6px 6px 0;
+        border: solid 1px var(--darkBlueStroke);
+        background-color: var(--babyBlue);
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        height: 42px;
+        background-color: white;
+    }
 }

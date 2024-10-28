@@ -8,6 +8,9 @@
     --overlayColor: #d65674db;
     --primaryColor: #FF6F91;
     --darkAccent1: #670021;
+    --yellow: #FBC851;
+    --orange: #EC8D34;
+
 }
 
 * {
@@ -23,6 +26,10 @@ a {
 
 ul {
     list-style: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 body {
@@ -79,4 +86,16 @@ h3 {
     padding: 8px;
     text-align: center;
     text-transform: uppercase;
+}
+
+
+.yellowBtn {
+    font-family: var(--buttonFont);
+    background-color: var(--yellow);
+    border-radius: 12px;
+    border-top: none;
+    border-left: 1px solid var(--orange);
+    border-right: 1px solid var(--orange);
+    border-bottom: 6px solid var(--orange);
+    padding: 16px;
 }

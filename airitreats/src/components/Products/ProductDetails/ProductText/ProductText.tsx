@@ -43,12 +43,12 @@ export default function ProductText({ productName, productDescription, productPr
             </div>
             <button
                 className="snipcart-add-item"
-                data-item-id={params.productid}
-                data-item-name={productName}
-                data-item-price={productPrice}
-                data-item-url={pathname}
-                data-item-description={productDescription[0].text}
-                data-item-quantity={quantity}
+            // data-item-id={params.productid}
+            // data-item-name={productName}
+            // data-item-price={productPrice}
+            // data-item-url={pathname}
+            // data-item-description={productDescription[0].text}
+            // data-item-quantity={quantity}
             >
                 Add to Cart
             </button>

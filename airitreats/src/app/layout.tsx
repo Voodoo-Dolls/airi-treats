@@ -5,7 +5,7 @@ import Head from "next/head";
 import Header from "@/components/Header/Header";
 import "./snipcart.css"
 import "./global.scss"
-import { bodyFont, headerFont, subheadingFont } from "./fonts";
+import { bodyFont, headerFont, subheadingFont, buttonFont } from "./fonts";
 import Footer from "@/components/Footer/Footer";
 import { Toaster } from "sonner";
 import Spinner from "@/components/Spinner/Spinner";
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bodyFont.variable} ${headerFont.variable} ${subheadingFont.variable}`}>
+    <html lang="en" className={`${bodyFont.variable} ${headerFont.variable} ${subheadingFont.variable} ${buttonFont.variable}`}>
       <Head>
         <link rel="preconnect" href="<https://app.snipcart.com>" />
         <link rel="preconnect" href="<https://cdn.snipcart.com>" />

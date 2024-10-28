@@ -41,8 +41,7 @@ export default async function Page({ params }: { params: { productid: string, ui
     return (
         <>
             <ProductDetails productData={productData} />
-            {/* <SliceZone slices={productData.data.slices} components={components} />; */}
-            {/* <p>Hi</p> */}
+
         </>
     )
     // return (
