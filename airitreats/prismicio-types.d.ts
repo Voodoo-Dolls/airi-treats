@@ -932,12 +932,22 @@ export interface SectionTitleSliceDefaultPrimary {
   /**
    * Description field in *SectionTitle → Default → Primary*
    *
-   * - **Field Type**: Text
-   * - **Placeholder**: Section description
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: description
    * - **API ID Path**: section_title.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * List Intro field in *SectionTitle → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: List introduction
+   * - **API ID Path**: section_title.default.primary.list_intro
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  description: prismic.KeyTextField;
+  list_intro: prismic.KeyTextField;
 
   /**
    * List field in *SectionTitle → Default → Primary*
@@ -948,6 +958,66 @@ export interface SectionTitleSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   list: prismic.GroupField<Simplify<SectionTitleSliceDefaultPrimaryListItem>>;
+
+  /**
+   * Paragraph Title field in *SectionTitle → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Paragraph title
+   * - **API ID Path**: section_title.default.primary.paragraph_title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph_title: prismic.RichTextField;
+
+  /**
+   * Paragraph field in *SectionTitle → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Paragraph content
+   * - **API ID Path**: section_title.default.primary.paragraph
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  paragraph: prismic.KeyTextField;
+
+  /**
+   * Image field in *SectionTitle → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_title.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Paragraph2 field in *SectionTitle → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Paragraph2 content
+   * - **API ID Path**: section_title.default.primary.paragraph2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  paragraph2: prismic.KeyTextField;
+
+  /**
+   * Paragraph3 field in *SectionTitle → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Paragraph 3
+   * - **API ID Path**: section_title.default.primary.paragraph3
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph3: prismic.RichTextField;
+
+  /**
+   * Closing Paragraph field in *SectionTitle → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Closing paragraph
+   * - **API ID Path**: section_title.default.primary.closing_paragraph
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  closing_paragraph: prismic.RichTextField;
 }
 
 /**

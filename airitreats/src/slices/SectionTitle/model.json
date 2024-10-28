@@ -20,10 +20,19 @@
           }
         },
         "description": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "Description",
-            "placeholder": "Section description"
+            "placeholder": "description",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "list_intro": {
+          "type": "Text",
+          "config": {
+            "label": "List Intro",
+            "placeholder": "List introduction"
           }
         },
         "list": {
@@ -40,6 +49,58 @@
                 }
               }
             }
+          }
+        },
+        "paragraph_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Paragraph Title",
+            "placeholder": "Paragraph title",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "paragraph": {
+          "type": "Text",
+          "config": {
+            "label": "Paragraph",
+            "placeholder": "Paragraph content"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "width": 328,
+              "height": 350
+            },
+            "thumbnails": []
+          }
+        },
+        "paragraph2": {
+          "type": "Text",
+          "config": {
+            "label": "Paragraph2",
+            "placeholder": "Paragraph2 content"
+          }
+        },
+        "paragraph3": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Paragraph3",
+            "placeholder": "Paragraph 3",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "closing_paragraph": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Closing Paragraph",
+            "placeholder": "Closing paragraph",
+            "allowTargetBlank": true,
+            "multi": "paragraph,em,hyperlink"
           }
         }
       },

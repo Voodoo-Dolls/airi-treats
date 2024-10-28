@@ -8,11 +8,6 @@
 				"type": "Text",
 				"value": "About Airi Treats"
 			},
-			"description": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "While raising our family in a post-pandemic world, the cost of living rising from one week to the next was enough to keep us up at night (it wasn't just the new baby). Like many families, we were looking for ways to get the most bang for our buck. So, we started looking into food preservation. "
-			},
 			"list": {
 				"__TYPE__": "GroupContentType",
 				"value": [
@@ -23,8 +18,8 @@
 								"bulletlist",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "favorite",
-									"type": "Text"
+									"type": "Text",
+									"value": "The canning process requires high heat that may harm some vitamins in the food yet enhance others."
 								}
 							]
 						]
@@ -37,7 +32,7 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "list item 2"
+									"value": "Freezing food in a tight sealed bag can take up a huge space in the freezer."
 								}
 							]
 						]
@@ -50,10 +45,100 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "list item 3"
+									"value": "The process of dehydrating food can retain about 70% of its nutrients."
 								}
 							]
 						]
+					}
+				]
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+					"width": 4000,
+					"height": 6000
+				},
+				"url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?rect=0%2C866%2C4000%2C4268&w=328&h=350",
+				"width": 328,
+				"height": 350,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 866
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"paragraph": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "The freeze-drying nutrient retention is almost 100% and the shelf-life can go up to 25 years or more when properly stored."
+			},
+			"paragraph2": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Say no more to squished berries in diaper bags or bruised bananas left in backpacks and lunch bags. Airi Treats has now unlocked its new quest: To bring cost-efficient and convenient food for everyone."
+			},
+			"closing_paragraph": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Airi Treats will continue to make these memories with you.\n \nWe thank you for choosing us!\n\nWe know you loved our products not just for the taste, but also for the moments you share them with.\n \n-The Airi Treats Family",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "We have many stories of survival during the pandemic and these stories are the ones we tend to look back on knowing that it is what made us who we are today.\n \nThis is our story.\n \nIt’s post-pandemic when we started Airi Treats. Raising a family during this period has its challenges, especially regarding food costs. Food prices had tremendously risen and thinking about this kept us up at night other than our newborn baby.\n \nThe problem was, ‘How do we find the most efficient way to enjoy our food without sacrificing our healthy choices and savings?’ While searching for answers to our problem, the food preservation idea emerged. We’ve found that some of these common food preservation techniques have pros and cons which did not appeal to our liking.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"list_intro": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Canning, freezing, and dehydrating food all have the same shelf-life of less than a year."
+			},
+			"paragraph_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "ENTER: FREEZE-DRYING",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"paragraph3": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "We are excited to share these affordable and shelf-stable treats you and your family or friends can enjoy anywhere, any time.\n \nFor every purchase you make, remember that you have made it this far in this post-pandemic time so give yourself an Airi Treat to enjoy alone or to share with the people you care.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			}
