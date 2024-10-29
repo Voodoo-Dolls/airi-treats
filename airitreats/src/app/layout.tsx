@@ -9,6 +9,8 @@ import { bodyFont, headerFont, subheadingFont, buttonFont } from "./fonts";
 import Footer from "@/components/Footer/Footer";
 import { Toaster } from "sonner";
 import Spinner from "@/components/Spinner/Spinner";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 
 
@@ -31,7 +33,9 @@ export default function RootLayout({
       </Head>
       <body>
         <Header />
-        {children}
+        <Suspense fallback={<Loading />}>
+          {children}
+        </Suspense>
         <Footer />
         <Toaster position="top-center" richColors duration={2500} />
         <script dangerouslySetInnerHTML={{

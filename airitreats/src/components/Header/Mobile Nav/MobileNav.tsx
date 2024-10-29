@@ -24,7 +24,7 @@ interface links {
 export default function MobileNav({ links, logo }: any) {
 
     // Hamburger Menu State
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
     const navRef: any = useRef(null)
     const menuRef: any = useRef(null)
     // Handle Menu Toggle on outside click

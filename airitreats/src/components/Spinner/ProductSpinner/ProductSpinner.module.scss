@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.title {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 44px;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
+.price {
+    text-align: right;
+}
+
+.imgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid var(--primaryColor);
+    border-left: 4px solid var(--primaryColor);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 7 / 9;
+    background-color: white;
+
+    img {
+        object-fit: cover;
+    }
+}

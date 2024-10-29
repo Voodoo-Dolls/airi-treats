@@ -18,22 +18,21 @@ export default async function Page({ params }: { params: Params }) {
 
     let productData: any = await client.getAllByEveryTag([params.uid, "product"])
 
-
     // productData.map((product) => {
     //     console.log(product)
     // })
     return (
         <>
-            <SliceZone slices={page.data.slices} components={components} />
-            <div className="container">
+            <div>
+                <SliceZone slices={page.data.slices} components={components} />
                 <h2>This is the {params.uid} page.</h2>
+                {params.uid == 'all' ? <ProductContainer category={`product`} /> : <ProductContainer category={params.uid} />}
             </div>
-            {params.uid == 'all' ? <ProductContainer category={`product`} /> : <ProductContainer category={params.uid} />}
 
 
         </>
     )
-    return <SliceZone slices={page.data.slices} components={components} />;
+
 }
 
 export async function generateMetadata({

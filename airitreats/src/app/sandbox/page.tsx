@@ -1,10 +1,17 @@
-import Contact from '@/components/Contact/Contact'
-import React from 'react'
 
-export default function page() {
+import Contact from '@/components/Contact/Contact'
+
+import Loading from '../loading'
+
+
+export default async function page() {
+
+
     return (
-        <div className='container'>
-            <Contact />
-        </div>
+        <Loading />
+        // <div className='container'>
+
+        //     <Contact />
+        // </div>
     )
 }

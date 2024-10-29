@@ -1,0 +1,52 @@
+.loading {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100dvh);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.imageContainer {
+    width: 100px;
+
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+
+    transform: translatey(0px);
+    animation: float 3s ease-in-out infinite;
+
+    img {
+        width: 100%;
+        object-fit: contain;
+        height: auto;
+    }
+
+}
+
+@keyframes float {
+    0% {
+
+        transform: translatey(0px);
+    }
+
+    50% {
+
+        transform: translatey(-20px);
+    }
+
+    100% {
+
+        transform: translatey(0px);
+    }
+}

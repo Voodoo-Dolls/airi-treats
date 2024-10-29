@@ -5,7 +5,7 @@ import Link from "next/link"
 import { headerFont } from "@/app/fonts"
 import styles from "./ProductCard.module.scss"
 import { useEffect, useState } from "react";
-import Spinner from "@/components/Spinner/Spinner";
+import ProductSpinner from "@/components/Spinner/ProductSpinner/ProductSpinner";
 
 
 
@@ -21,7 +21,7 @@ export default function ProductCard({ uid }: any) {
 
         fetchData();
     }, [uid]);
-    if (!product) return <Spinner />
+    if (!product) return <ProductSpinner />
 
     const { data } = product
 
