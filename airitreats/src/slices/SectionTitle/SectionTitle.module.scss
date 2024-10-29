@@ -69,7 +69,11 @@
 .imgContainer {
     width: 80%;
     height: 80%;
-    margin: 32px 16px;
+    margin: auto;
+
+    p {
+        text-align: center;
+    }
 }
 
 .paragraph2,

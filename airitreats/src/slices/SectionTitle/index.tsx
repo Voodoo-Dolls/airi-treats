@@ -36,7 +36,7 @@ const SectionTitle = ({ slice }: SectionTitleProps): JSX.Element => {
           <p>{slice.primary.paragraph}</p>
         </div>
         <div className={styles.imgContainer}>
-          <PrismicNextImage field={slice.primary.image} />
+          <p><PrismicNextImage field={slice.primary.image} /></p>
         </div>
         <div className={styles.paragraph2}>
           <p>{slice.primary.paragraph2}</p>
