@@ -52,6 +52,39 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "heroNoButton",
+      "name": "Hero No Button",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "header": {
+          "type": "Text",
+          "config": {
+            "label": "Header",
+            "placeholder": ""
+          }
+        },
+        "body_text": {
+          "type": "Text",
+          "config": {
+            "label": "Body Text",
+            "placeholder": ""
+          }
+        },
+        "hero_image": {
+          "type": "Image",
+          "config": {
+            "label": "Hero Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
     }
   ]
 }

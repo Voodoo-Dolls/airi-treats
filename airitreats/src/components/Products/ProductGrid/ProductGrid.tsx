@@ -41,7 +41,7 @@ export default function ProductGrid({ tag, filter, page, setMaxPage }: props) {
                 }
                 `
             })
-            console.log(product)
+            // console.log(product)
             setMaxPage(product.total_pages)
             setProduct(product)
         };

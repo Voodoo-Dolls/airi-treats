@@ -25,20 +25,21 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     >
       <div className={styles.imageContainer}>
         <PrismicNextImage field={slice.primary.hero_image} className={styles.image} />
+        <div className={`${styles.textContainer}`}>
+          <h2>{slice.primary.header}</h2>
+          <div className={styles.bodyContainer}>
+            <p>{slice.primary.body_text}</p>
+            <PrismicNextLink field={slice.primary.link_url} className={`yellowBtn`}>
+              {slice.primary.link_label}
+            </PrismicNextLink>
+          </div>
+          {/* <div className={styles.buttonContainer}>
+          </div> */}
+        </div>
       </div>
-      <div className={`container ${styles.textContainer}`}>
 
-        <h2 className={`${styles.header}`}>
-          {slice.primary.header}
-        </h2>
-        <p>
-          {slice.primary.body_text}
-        </p>
-        <PrismicNextLink field={slice.primary.link_url} className="button">
-          {slice.primary.link_label}
-        </PrismicNextLink>
 
-      </div>
+
     </section>
 
   );

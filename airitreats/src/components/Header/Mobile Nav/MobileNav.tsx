@@ -22,7 +22,7 @@ interface links {
 }
 
 export default function MobileNav({ links, logo }: any) {
-    console.log(usePathname())
+
     // Hamburger Menu State
     const [open, setOpen] = useState(true)
     const navRef: any = useRef(null)
@@ -42,7 +42,7 @@ export default function MobileNav({ links, logo }: any) {
             document.removeEventListener("mousedown", handleOutsideClick);
         };
     }, []);
-    console.log(links)
+
     return (
         <>
             <div className={`${styles.container}`}>
