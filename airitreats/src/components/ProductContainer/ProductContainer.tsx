@@ -16,6 +16,7 @@ interface props {
 // Prismic Filters, "my.{type}.dataField"
 let filters = [["my.product.price", "asc"], ["my.product.price", "desc"], ["my.product.product_name", "asc"], ["my.product.product_name", "desc"]]
 
+
 export default function ProductContainer({ category }: props) {
     const [page, setPage] = useState(1)
     const [maxPage, setMaxPage] = useState(1)
@@ -29,16 +30,19 @@ export default function ProductContainer({ category }: props) {
     }
     return (
         <>
-            <label htmlFor="filter" className={styles.label}>
-                <FaSortAlphaDown />
-                SortBy
-            </label>
-            <select name="filter" id="filter" onChange={handleFilter}>
-                <option value="0">Price Low To High</option>
-                <option value="1">Price High To Low</option>
-                <option value="2">Alphabetical (A-Z)</option>
-                <option value="3">Alphabetical (Z-A)</option>
-            </select>
+            <div className={styles.filterContainer}>
+                {/* Sort */}
+                <label htmlFor="filter" className={styles.label}>
+                    <FaSortAlphaDown />
+                    SortBy
+                </label>
+                <select name="filter" id="filter" onChange={handleFilter}>
+                    <option value="0">Price Low To High</option>
+                    <option value="1">Price High To Low</option>
+                    <option value="2">Alphabetical (A-Z)</option>
+                    <option value="3">Alphabetical (Z-A)</option>
+                </select>
+            </div>
             <ProductGrid tag={category} filter={fields} page={page} setMaxPage={setMaxPage} />
             {maxPage > 1 && <Pagination page={page} maxPage={maxPage} setPage={setPage} />}
 

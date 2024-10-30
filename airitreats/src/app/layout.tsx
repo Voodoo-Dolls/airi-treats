@@ -34,7 +34,9 @@ export default function RootLayout({
       <body>
         <Header />
         <Suspense fallback={<Loading />}>
-          {children}
+          <div className="topOffset">
+            {children}
+          </div>
         </Suspense>
         <Footer />
         <Toaster position="top-center" richColors duration={2500} />

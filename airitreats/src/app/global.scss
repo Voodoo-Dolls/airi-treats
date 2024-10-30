@@ -2,6 +2,7 @@
     --babyBlue: #ACD6F0;
     --blackText: #4D3D41;
     --darkBlueStroke: #005FA1;
+    --lighterBlue: #E1EBF8;
     --gap: 16px;
     --headingColor: white;
     --lighterPink: #FFE0F3;
@@ -55,11 +56,16 @@ button {
 }
 
 body {
-    background: linear-gradient(0deg, var(--overlayColor), var(--overlayColor)), url("/images/background.webp");
+    position: relative;
+    background-color: var(--lighterBlue);
     background-attachment: fixed;
     color: var(--blackText);
     font-family: var(--bodyFont);
     font-size: 16px;
+}
+
+.topOffset {
+    padding-top: 80px;
 }
 
 .container {

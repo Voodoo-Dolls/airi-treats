@@ -20,7 +20,8 @@
     background-color: var(--lighterPink);
 
     &.active {
-        max-height: 1000px;
+        max-height: calc(100dvh - 80px);
+        overflow: auto;
         pointer-events: unset;
     }
 
