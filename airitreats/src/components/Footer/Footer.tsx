@@ -12,6 +12,7 @@ export default function Footer() {
             {/* <Map /> */}
 
             <Newsletter />
+
         </footer>
     )
 }
