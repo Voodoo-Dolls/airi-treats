@@ -6,7 +6,7 @@ export default function Loading() {
         <div className={styles.loading}>
             <div className={styles.container}>
                 <div className={styles.imageContainer}>
-                    <Image src="/images/Image.png" fill alt="Loading Image Icon" />
+                    <Image src="/images/candy.webp" fill alt="Floating Candy" />
                 </div>
                 <h2>Loading...</h2>
             </div>

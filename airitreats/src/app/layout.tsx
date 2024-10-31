@@ -64,8 +64,8 @@ export default function RootLayout({
           `
         }} />
 
+        <PrismicPreview repositoryName={repositoryName} />
       </body>
-      <PrismicPreview repositoryName={repositoryName} />
     </html>
   );
 }
