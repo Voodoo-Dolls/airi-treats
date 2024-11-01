@@ -6,6 +6,7 @@ import styles from "./ProductDetails.module.scss"
 import { PrismicNextImage } from "@prismicio/next";
 import { useState } from "react";
 import { PrismicRichText } from "@prismicio/react";
+import { toast } from "sonner";
 
 
 
@@ -50,6 +51,7 @@ export default function ProductDetails({ productData }: any) {
                     data-item-url={main_image.url}
                     data-item-description={description[0].text}
                     data-item-quantity={quantity}
+                    onClick={() => toast.success(`${product_name} x${quantity} Added`)}
                 >
                     Add to Cart
                 </button>

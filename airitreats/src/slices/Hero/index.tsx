@@ -29,12 +29,11 @@ const Hero = ({ slice }: any): JSX.Element => {
           <h2>{slice.primary.header}</h2>
           <div className={styles.bodyContainer}>
             <p>{slice.primary.body_text}</p>
-            <PrismicNextLink field={slice.primary.link_url} className={`yellowBtn`}>
-              {slice.primary.link_label}
-            </PrismicNextLink>
           </div>
-          {/* <div className={styles.buttonContainer}>
-          </div> */}
+          <PrismicNextLink field={slice.primary.link_url} className={`yellowBtn`}>
+            {slice.primary.link_label}
+          </PrismicNextLink>
+
         </div>
       </div>
 

@@ -1,6 +1,12 @@
 .hero {
     width: 100%;
     position: relative;
+
+
+    a {
+        display: inline-block;
+
+    }
 }
 
 .imageContainer {
@@ -21,8 +27,10 @@
 .textContainer {
     width: 100%;
     position: absolute;
-    margin-top: 32px;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h2 {
         display: block;
@@ -35,7 +43,8 @@
 
     .bodyContainer {
         color: black;
-        background-color: #acd6f0ea;
+        background-color: #acd6f0a6;
+        margin-bottom: 16px;
 
         p {
             padding: 16px;
@@ -50,9 +59,7 @@
         }
     }
 
-    .buttonContainer {
-        display: flex;
-        justify-content: center;
-    }
+
+
 
 }
