@@ -5,6 +5,7 @@ import Image from 'next/image'
 import styles from "./ProductDetails.module.scss"
 import { PrismicNextImage } from "@prismicio/next";
 import { useState } from "react";
+import { PrismicRichText } from "@prismicio/react";
 
 
 
@@ -21,9 +22,9 @@ export default function ProductDetails({ productData }: any) {
         setQuantity(newQuantity)
 
     }
-
+    // console.log(productData.data)
     const { product_name, price, description, main_image } = productData.data
-
+    console.log(main_image)
     return (
         <div className={`${styles.container}`}>
             <div className={styles.imageContainer}>
@@ -32,9 +33,7 @@ export default function ProductDetails({ productData }: any) {
             </div>
             <h3 className={styles.price}>${price.toFixed(2)}</h3>
             <div className={`container`}>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem natus unde deserunt officiis enim numquam excepturi, quas possimus tenetur eveniet a eligendi id soluta consequuntur dolor expedita eum repudiandae?
-                </p>
+                <PrismicRichText field={description} />
             </div>
             <div className={`${styles.quantity} container`}>
                 <h3>Quantity</h3>
@@ -45,12 +44,12 @@ export default function ProductDetails({ productData }: any) {
                 </div>
                 <button
                     className="snipcart-add-item yellowBtn"
-                // data-item-id={params.productid}
-                // data-item-name={productName}
-                // data-item-price={productPrice}
-                // data-item-url={pathname}
-                // data-item-description={productDescription[0].text}
-                // data-item-quantity={quantity}
+                    data-item-id={product_name}
+                    data-item-name={product_name}
+                    data-item-price={price}
+                    data-item-url={main_image.url}
+                    data-item-description={description[0].text}
+                    data-item-quantity={quantity}
                 >
                     Add to Cart
                 </button>

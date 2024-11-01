@@ -6,6 +6,13 @@
   "status": true,
   "json": {
     "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Product_ID",
+          "placeholder": ""
+        }
+      },
       "product_name": {
         "type": "Text",
         "config": {
@@ -25,9 +32,7 @@
         "config": {
           "label": "Category",
           "select": "document",
-          "customtypes": [
-            "category"
-          ]
+          "customtypes": ["category"]
         }
       },
       "description": {
@@ -63,13 +68,6 @@
           "default_value": false
         }
       },
-      "uid": {
-        "type": "UID",
-        "config": {
-          "label": "Product_ID",
-          "placeholder": ""
-        }
-      },
       "product_available": {
         "type": "Boolean",
         "config": {
@@ -84,6 +82,33 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": ""
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": ""
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Meta Image",
+          "constraint": {
+            "width": 2400,
+            "height": 1260
+          },
+          "thumbnails": []
         }
       }
     }

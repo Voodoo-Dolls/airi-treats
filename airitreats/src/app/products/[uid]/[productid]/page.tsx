@@ -1,38 +1,18 @@
-import { SliceZone } from "@prismicio/react";
-import { components } from "@/slices";
+import { Metadata } from "next";
 import { createClient } from "@/prismicio";
 import ProductDetails from "@/components/Products/ProductDetails/ProductDetails";
 import { notFound } from "next/navigation";
 
+type Params = { productid: string };
 
 
-interface productData {
-    data: {
-        slices: productSlice[]
-        category: string
-    }
-    uid: string
-}
-
-interface productSlice {
-    primary: {
-        product_id: string,
-        product_name: string,
-        product_price: number,
-        product_description: [],
-        main_image: {
-            url: string
-            alt: string
-        }
-    }
-}
 
 export default async function Page({ params }: { params: { productid: string, uid: string } }) {
     const { productid, uid } = params
     const client = createClient();
     // Grab Product Details Using URL Slug
     let productData: any = await client.getByUID("product", productid)
-    console.log(productData)
+    // console.log(productData)
     let slug = (productData.data.category.uid)
 
     if (uid != slug) {
@@ -41,12 +21,22 @@ export default async function Page({ params }: { params: { productid: string, ui
     return (
         <>
             <ProductDetails productData={productData} />
-
         </>
     )
-    // return (
-    //     <div className={`container`}>
-    //         <ProductDetails productData={productData} />
-    //     </div>
-    // )
+
+}
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Params;
+}): Promise<Metadata> {
+    const client = createClient();
+    const page = await client
+        .getByUID("product", params.productid)
+        .catch(() => notFound());
+    return {
+        title: page.data.meta_title || page.data.product_name,
+        description: page.data.meta_description,
+    };
 }

@@ -50,7 +50,7 @@ export default function ProductGrid({ tag, filter, page, setMaxPage }: props) {
     if (!product) return <Loading />
 
     return (
-        <div className={`${styles.container}`}>
+        <div className={`${styles.container} container`}>
             {product.results.map((product: any) => (
                 <ProductCard uid={product.uid} key={product.uid} />
             ))}
