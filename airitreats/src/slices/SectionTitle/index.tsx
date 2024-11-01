@@ -25,8 +25,8 @@ const SectionTitle = ({ slice }: SectionTitleProps): JSX.Element => {
         </div>
         <div className={styles.paragraphList}>
           <p>{slice.primary.list_intro}</p>
-          {slice.primary.list.map((item) => (
-            <p>{item.bulletlist}</p>
+          {slice.primary.list.map((item, index) => (
+            <p key={index}>{item.bulletlist}</p>
           ))}
         </div>
         <div className={styles.freezeDry}>

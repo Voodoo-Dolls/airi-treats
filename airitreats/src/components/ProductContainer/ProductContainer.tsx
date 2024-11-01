@@ -30,7 +30,7 @@ export default function ProductContainer({ category }: props) {
     }
     return (
         <>
-            <div className={styles.filterContainer}>
+            <div className={`${styles.filterContainer} container`}>
                 {/* Sort */}
                 <label htmlFor="filter" className={styles.label}>
                     <FaSortAlphaDown />

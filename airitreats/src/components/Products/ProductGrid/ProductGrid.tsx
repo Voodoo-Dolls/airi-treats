@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard'
 import styles from "./ProductGrid.module.scss"
 import { createClient } from "@/prismicio";
-import * as prismic from "@prismicio/client";
-import Spinner from '@/components/Spinner/Spinner';
 import Loading from '@/app/loading';
 
 
@@ -52,7 +50,7 @@ export default function ProductGrid({ tag, filter, page, setMaxPage }: props) {
     if (!product) return <Loading />
 
     return (
-        <div className={`container ${styles.container}`}>
+        <div className={`${styles.container}`}>
             {product.results.map((product: any) => (
                 <ProductCard uid={product.uid} key={product.uid} />
             ))}

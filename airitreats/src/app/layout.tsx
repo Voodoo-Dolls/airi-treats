@@ -46,9 +46,7 @@ export default function RootLayout({
       <body>
         <Header />
         <Suspense fallback={<Loading />}>
-          <div className="topOffset">
-            {children}
-          </div>
+          {children}
         </Suspense>
         <Footer />
         <Toaster position="top-center" richColors duration={2500} />
@@ -64,8 +62,8 @@ export default function RootLayout({
           `
         }} />
 
-        <PrismicPreview repositoryName={repositoryName} />
       </body>
+      <PrismicPreview repositoryName={repositoryName} />
     </html>
   );
 }

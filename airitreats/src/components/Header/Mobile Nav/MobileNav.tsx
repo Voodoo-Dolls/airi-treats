@@ -42,7 +42,7 @@ export default function MobileNav({ links, logo }: any) {
             document.removeEventListener("mousedown", handleOutsideClick);
         };
     }, []);
-
+    let path = usePathname()
     return (
         <>
             <div className={`${styles.container}`}>
@@ -77,7 +77,7 @@ export default function MobileNav({ links, logo }: any) {
                             if (data.position == "Category") {
                                 return (
                                     <li className={styles.link} key={data.label}>
-                                        <PrismicNextLink field={data.link} onClick={() => setOpen(false)} className={`${data.link.url == usePathname() && styles.active}`}><span className={styles.underline}>&gt;</span> {data.label}</PrismicNextLink>
+                                        <PrismicNextLink field={data.link} onClick={() => setOpen(false)} className={`${data.link.url == path && styles.active}`}><span className={styles.underline}>&gt;</span> {data.label}</PrismicNextLink>
                                     </li>
                                 )
                             }
