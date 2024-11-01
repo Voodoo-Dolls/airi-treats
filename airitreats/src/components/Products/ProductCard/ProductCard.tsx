@@ -31,7 +31,7 @@ export default function ProductCard({ uid }: any) {
         <Link href={product.url} className={styles.container}>
 
             <div className={styles.imgContainer}>
-                <Image src={data.main_image.url} fill alt="" />
+                <Image src={data.main_image.url} fill alt="" sizes="300px" priority={false} />
             </div>
             <p className={styles.title}>{data.product_name}</p>
             <p className={styles.price}>${data.price.toFixed(2)}</p>

@@ -33,6 +33,7 @@
     align-items: center;
 
     h2 {
+        width: 100%;
         display: block;
         text-transform: uppercase;
         background-color: var(--primaryColor);
@@ -42,6 +43,7 @@
     }
 
     .bodyContainer {
+        width: 100%;
         color: black;
         background-color: #acd6f0a6;
         margin-bottom: 16px;

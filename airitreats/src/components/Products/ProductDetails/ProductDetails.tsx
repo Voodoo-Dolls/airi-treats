@@ -25,11 +25,11 @@ export default function ProductDetails({ productData }: any) {
     }
     // console.log(productData.data)
     const { product_name, price, description, main_image } = productData.data
-    console.log(main_image)
+    // console.log(main_image)
     return (
         <div className={`${styles.container}`}>
             <div className={styles.imageContainer}>
-                <PrismicNextImage field={main_image} className={styles.mainImage} />
+                <PrismicNextImage field={main_image} className={styles.mainImage} alt="" priority />
                 <h2>{product_name}</h2>
             </div>
             <h3 className={styles.price}>${price.toFixed(2)}</h3>
@@ -44,7 +44,7 @@ export default function ProductDetails({ productData }: any) {
                     <button onClick={() => { handleQuantity(1) }}>+</button>
                 </div>
                 <button
-                    className="snipcart-add-item yellowBtn"
+                    className={`snipcart-add-item yellowBtn ${styles.yellowBtn}`}
                     data-item-id={product_name}
                     data-item-name={product_name}
                     data-item-price={price}

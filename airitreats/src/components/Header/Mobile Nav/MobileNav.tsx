@@ -22,6 +22,10 @@ interface links {
 }
 
 export default function MobileNav({ links, logo }: any) {
+    const [isClient, setIsClient] = useState(false)
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
 
     // Hamburger Menu State
     const [open, setOpen] = useState(false)
@@ -53,7 +57,7 @@ export default function MobileNav({ links, logo }: any) {
                 {/* Logo */}
                 <div className={styles.imageContainer}>
                     <Link href={"/"}>
-                        <Image src={logo} alt={`Airitreats Logo`} fill />
+                        <Image src={logo} alt={`Airitreats Logo`} fill priority sizes="80px" />
                     </Link>
                 </div>
             </div>
@@ -66,7 +70,9 @@ export default function MobileNav({ links, logo }: any) {
                     }}>
                     <button className={`yellowBtn ${styles.cart}`}>
                         <HiShoppingCart />
-                        Your Cart:&nbsp; <span className="snipcart-items-count"> </span>
+                        Your Cart:&nbsp;
+                        {isClient ? <span className="snipcart-items-count"> </span> : 'Prerendered'}
+
                     </button>
                 </a>
                 <div className={styles.linksSection}>
@@ -90,3 +96,7 @@ export default function MobileNav({ links, logo }: any) {
         </>
     )
 }
+function setIsClient(arg0: boolean) {
+    throw new Error("Function not implemented.");
+}
+

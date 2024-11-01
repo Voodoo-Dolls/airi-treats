@@ -58,6 +58,7 @@
     width: 100%;
     height: fit-content;
     position: relative;
+    margin-bottom: 24px;
 
     button {
         width: 42px;
@@ -84,4 +85,8 @@
         height: 42px;
         background-color: white;
     }
+}
+
+.yellowBtn {
+    width: 100%;
 }
