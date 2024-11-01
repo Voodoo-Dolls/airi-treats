@@ -6,13 +6,6 @@
   "status": true,
   "json": {
     "Main": {
-      "uid": {
-        "type": "UID",
-        "config": {
-          "label": "Product_ID",
-          "placeholder": ""
-        }
-      },
       "product_name": {
         "type": "Text",
         "config": {
@@ -27,11 +20,23 @@
           "placeholder": ""
         }
       },
-      "description": {
-        "type": "Text",
+      "category": {
+        "type": "Link",
         "config": {
-          "label": "Description",
-          "placeholder": ""
+          "label": "Category",
+          "select": "document",
+          "customtypes": [
+            "category"
+          ]
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "description",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "multi": "paragraph,strong,em"
         }
       },
       "main_image": {
@@ -42,21 +47,11 @@
           "thumbnails": []
         }
       },
-      "category": {
-        "type": "Link",
+      "flag_text": {
+        "type": "Text",
         "config": {
-          "label": "Category",
-          "select": "document",
-          "customtypes": ["category"]
-        }
-      },
-      "product_available": {
-        "type": "Boolean",
-        "config": {
-          "label": "Product Available",
-          "placeholder_false": "out-of-stock",
-          "placeholder_true": "in-stock",
-          "default_value": true
+          "label": "Flag Text",
+          "placeholder": "Ex. Top Seller"
         }
       },
       "product_flag": {
@@ -68,11 +63,20 @@
           "default_value": false
         }
       },
-      "flag_text": {
-        "type": "Text",
+      "uid": {
+        "type": "UID",
         "config": {
-          "label": "Flag Text",
-          "placeholder": "Ex. Top Seller"
+          "label": "Product_ID",
+          "placeholder": ""
+        }
+      },
+      "product_available": {
+        "type": "Boolean",
+        "config": {
+          "label": "Product Available",
+          "placeholder_false": "out-of-stock",
+          "placeholder_true": "in-stock",
+          "default_value": true
         }
       },
       "slices": {
