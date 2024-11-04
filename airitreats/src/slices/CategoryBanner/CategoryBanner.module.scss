@@ -9,7 +9,6 @@
     
 }
 
-
 .desc{
     color: black;
     position: absolute;
@@ -27,5 +26,20 @@
         padding: var(--gap);
         background-color: #ffe0f2d8;
     }
+}
+
+$breakpoint-tablet: 760px;
+@media (min-width: $breakpoint-tablet) {
+  
+    .desc{
+        max-width: 760px;
+        
+
+        h2 {
+            max-width: 85%;
+            text-align: center;
+        }
+    }
+
 }
 

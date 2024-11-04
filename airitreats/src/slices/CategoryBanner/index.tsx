@@ -22,10 +22,12 @@ const CategoryBanner = ({ slice }: CategoryBannerProps): JSX.Element => {
     >
       <div className={styles.imageContainer}>
 
-        <PrismicNextImage
-          field={slice.primary.banner_image}
-          className={styles.banner}
-        />
+        <div>
+          <PrismicNextImage
+            field={slice.primary.banner_image}
+            className={styles.banner}
+          />
+        </div>
         
         <div className={styles.desc}>
           <h2>
