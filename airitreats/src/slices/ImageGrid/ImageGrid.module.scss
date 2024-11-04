@@ -6,39 +6,84 @@
 // Main Content
 
 .cardContainer {
-    // display: flex;
-    // flex-direction: column;
-    // gap: var(--gap);
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto;
+    margin: 1rem 0;
+
+    h2 {
+        align-self: center;
+    }
 }
 
 .card {
-    // display: flex;
-    // flex-direction: column;
-    // gap: 8px;
-    // position: relative;
-    // width: 100%;
-    // padding: var(--gap);
-    // text-wrap: balance;
-
-    // h3 {
-    //     text-transform: uppercase;
-    // }
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    margin-top: 1.5rem;
 }
+
 
 .imgContainer {
-    // height: calc(100vw - 32px);
-    // position: relative;
-    // width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+
+    .img {
+        height: 100%;
+        width: 90vw;
+    }
+
 }
 
-.img {
-    height: 100%;
-    width: 90vw;
+.titleContainer {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    z-index: 10;
+    align-self: end;
+
+    .cardTitle {
+        text-transform: uppercase;
+        grid-column: 2;
+        padding: 0.5rem 1rem;
+        color: white;
+        background-color: var(--primaryColor);
+        border-top: #670021 1px solid;
+        border-right: #670021 4px solid;
+        border-left: #670021 4px solid;
+        border-radius: 1rem 1rem 0 0;
+    }
 }
 
-.catLink {
-    border: black 2px solid;
+
+
+.cardDescription {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+    padding: 2rem 1rem 2rem 1rem;
+    background-color: var(--lighterBlue);
+    margin-bottom: 1rem;
+    border-bottom: #005FA1 2px solid;
+    border-right: #005FA1 2px solid;
+    border-left: #005FA1 2px solid;
+    border-radius: 0 0 1rem 1rem;
+}
+
+
+.catLinkContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-row: 3 / span 2;
+    grid-column: 1;
+    z-index: 10;
+
+    .catLink {
+        align-self: center;
+        grid-column: 2;
+        margin-top: 1.5rem;
+        padding: 0.5rem 2rem;
+        background-color: var(--yellow);
+        border-bottom: #EC8D34 2px solid;
+        border-right: #EC8D34 6px solid;
+        border-left: #EC8D34 6px solid;
+        border-radius: 1rem;
+    }
 }
