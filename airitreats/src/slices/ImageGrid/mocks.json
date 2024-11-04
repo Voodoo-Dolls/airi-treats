@@ -55,6 +55,25 @@
 									"type": "Text",
 									"value": "No more rotten fruits! No more mess! Freeze-dried fruits gives you the same benefits and nutrition as natural fruits and can stay longer for years."
 								}
+							],
+							[
+								"category_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com",
+										"text": "google.ca"
+									}
+								}
+							],
+							[
+								"category_link_label",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Find Fruit"
+								}
 							]
 						]
 					}

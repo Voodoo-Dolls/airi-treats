@@ -774,6 +774,26 @@ export interface ImageGridSliceDefaultPrimaryRepeatableCardItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   body_text: prismic.KeyTextField;
+
+  /**
+   * Category Link field in *ImageGrid → Default → Primary → Repeatable Card*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_grid.default.primary.repeatable_card[].category_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  category_link: prismic.LinkField;
+
+  /**
+   * Category Link Label field in *ImageGrid → Default → Primary → Repeatable Card*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_grid.default.primary.repeatable_card[].category_link_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  category_link_label: prismic.KeyTextField;
 }
 
 /**

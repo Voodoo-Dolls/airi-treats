@@ -2,7 +2,7 @@ import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import styles from "./ImageGrid.module.scss"
 
-import { PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 /**
  * Props for `ImageGrid`.
  */
@@ -18,18 +18,25 @@ const ImageGrid = ({ slice }: ImageGridProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className={styles.container}
     >
-      <div className={`contianer ${styles.cardContainer}`}>
+      <div className={`container ${styles.cardContainer}`}>
         <h2>{slice.primary.section_title}</h2>
         {slice.primary.repeatable_card.map((item, index) => (
           <div className={styles.card} key={index}>
             <div className={styles.imgContainer}>
+              {/* card image */}
               <PrismicNextImage field={item.image_card} className={styles.img} />
             </div>
-            <h3>{item.heading}</h3>
-            <p>{item.body_text}</p>
+            {/* card title */}
+            <h3 className={styles.cardTitle}>{item.heading}</h3>
+            {/* card content */}
+            <p className={styles.cardContent}>{item.body_text}</p>
+            <p className={styles.catLink}><PrismicNextLink field={item.category_link}>
+              {item.category_link_label}
+            </PrismicNextLink></p>
           </div>
         ))}
       </div>
+
     </section>
   );
 };

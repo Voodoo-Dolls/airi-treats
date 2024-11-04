@@ -46,6 +46,23 @@
                   "label": "Body Text",
                   "placeholder": "Lorem Ipsum"
                 }
+              },
+              "category_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Category Link",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              },
+              "category_link_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Category Link Label",
+                  "placeholder": ""
+                }
               }
             }
           }
