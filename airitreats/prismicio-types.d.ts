@@ -475,6 +475,71 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
+ * Primary content in *CategoryBanner → Default → Primary*
+ */
+export interface CategoryBannerSliceDefaultPrimary {
+  /**
+   * Heading field in *CategoryBanner → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: category_banner.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Description field in *CategoryBanner → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: category_banner.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * Banner Image field in *CategoryBanner → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: category_banner.default.primary.banner_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  banner_image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for CategoryBanner Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CategoryBannerSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CategoryBannerSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *CategoryBanner*
+ */
+type CategoryBannerSliceVariation = CategoryBannerSliceDefault;
+
+/**
+ * CategoryBanner Shared Slice
+ *
+ * - **API ID**: `category_banner`
+ * - **Description**: CategoryBanner
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CategoryBannerSlice = prismic.SharedSlice<
+  "category_banner",
+  CategoryBannerSliceVariation
+>;
+
+/**
  * Item in *FeaturedProducts → Default → Primary → Product List*
  */
 export interface FeaturedProductsSliceDefaultPrimaryProductListItem {
@@ -1186,6 +1251,10 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       SettingsDocumentDataLinksItem,
       AllDocumentTypes,
+      CategoryBannerSlice,
+      CategoryBannerSliceDefaultPrimary,
+      CategoryBannerSliceVariation,
+      CategoryBannerSliceDefault,
       FeaturedProductsSlice,
       FeaturedProductsSliceDefaultPrimaryProductListItem,
       FeaturedProductsSliceDefaultPrimary,
