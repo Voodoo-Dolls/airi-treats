@@ -20,17 +20,25 @@ const CategoryBanner = ({ slice }: CategoryBannerProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div>
-        <PrismicNextImage field={slice.primary.banner_image} />
-      </div>
-      
-      <h2>
-        {slice.primary.heading}
-      </h2>
+      <div className={styles.imageContainer}>
 
-      <p>
-        {slice.primary.description}
-      </p>
+        <PrismicNextImage
+          field={slice.primary.banner_image}
+          className={styles.banner}
+        />
+        
+        <div className={styles.desc}>
+          <h2>
+            {slice.primary.heading}
+          </h2>
+          <p>
+            {slice.primary.description}
+          </p>
+        </div>
+        {/* description ends */}
+
+      </div>
+      {/* banner ends */}
 
     </section>
   );
