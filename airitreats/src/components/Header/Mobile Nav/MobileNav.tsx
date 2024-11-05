@@ -8,18 +8,13 @@ import { usePathname } from 'next/navigation'
 import Link from "next/link";
 import Image from "next/image";
 // React Icons
-import { HiShoppingCart } from "react-icons/hi";
+import { RiShoppingBasketLine } from "react-icons/ri";
 
 
 
 
-interface links {
-    links: [{
-        link: any,
-        label: string
-        position: string
-    }]
-}
+
+
 
 export default function MobileNav({ links, logo }: any) {
     const [isClient, setIsClient] = useState(false)
@@ -50,15 +45,15 @@ export default function MobileNav({ links, logo }: any) {
     return (
         <>
             <div className={`${styles.container}`}>
-                {/* Hamburger Menu Toggle */}
-                <div onClick={() => setOpen(!open)} ref={menuRef}>
-                    {open ? <IoClose /> : <HiMenu />}
-                </div>
                 {/* Logo */}
                 <div className={styles.imageContainer}>
                     <Link href={"/"}>
                         <Image src={logo} alt={`Airitreats Logo`} fill priority sizes="80px" />
                     </Link>
+                </div>
+                {/* Hamburger Menu Toggle */}
+                <div onClick={() => setOpen(!open)} ref={menuRef}>
+                    {open ? <IoClose /> : <HiMenu />}
                 </div>
             </div>
             {/* Nav is toggled with the hamburger and receives its link from links prop */}
@@ -69,9 +64,9 @@ export default function MobileNav({ links, logo }: any) {
                         setOpen(!open)
                     }}>
                     <button className={`yellowBtn ${styles.cart}`}>
-                        <HiShoppingCart />
+                        <RiShoppingBasketLine />
                         Your Cart:&nbsp;
-                        {isClient ? <span className="snipcart-items-count"> </span> : 'Prerendered'}
+                        {isClient ? <span className="snipcart-items-count"> </span> : ''}
 
                     </button>
                 </a>
