@@ -1,3 +1,32 @@
+.container {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+
+    @media(min-width: 768px) {
+        display: flex;
+    }
+}
+
+// Logo styling
+.imageContainer {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    max-width: 80px;
+
+    a {
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    &>img {
+        object-fit: contain;
+    }
+}
+
 .ul {
     display: flex;
     gap: 12px;
