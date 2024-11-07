@@ -2,10 +2,16 @@
     display: none;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
 
     @media(min-width: 768px) {
         display: flex;
     }
+}
+
+.nav {
+    // background-color: red;
+    height: 100%;
 }
 
 // Logo styling
@@ -29,5 +35,51 @@
 
 .ul {
     display: flex;
+    align-items: center;
     gap: 12px;
+}
+
+// Dropdown
+
+.dropContainer {
+    position: relative;
+    cursor: pointer;
+
+    &:hover .dropContent,
+    &:active .dropContent {
+        display: block;
+    }
+
+}
+
+
+.dropContent {
+    display: none;
+    color: black;
+    min-width: 100%;
+    max-width: fit-content;
+    background-color: var(--lighterPink);
+    position: absolute;
+
+    a {
+        border-left: 4px solid var(--lighterPink);
+        text-wrap: nowrap;
+        padding: 8px;
+        display: inline-block;
+        width: 100%;
+
+        &:hover,
+        &.active {
+            border-left: 4px solid var(--darkBlueStroke);
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+// Cart
+
+.cart {
+    display: flex;
+    align-items: center;
 }
