@@ -24,24 +24,16 @@ const Hero = ({ slice }: any): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <div className={styles.hero}>
-
-      </div>
-      {/* <div className={styles.imageContainer}>
-        <PrismicNextImage field={slice.primary.hero_image} className={styles.image} />
-        <div className={`${styles.textContainer}`}>
-          <h2>{slice.primary.header}</h2>
-          <div className={styles.bodyContainer}>
+        <div className="container">
+          <div className={`${styles.textContainer}`}>
+            <h2>{slice.primary.header}</h2>
             <p>{slice.primary.body_text}</p>
+            <PrismicNextLink field={slice.primary.link_url} className={`yellowBtn`}>
+              {slice.primary.link_label}
+            </PrismicNextLink>
           </div>
-          <PrismicNextLink field={slice.primary.link_url} className={`yellowBtn`}>
-            {slice.primary.link_label}
-          </PrismicNextLink>
-
         </div>
-      </div> */}
-
-
-
+      </div>
     </section>
 
   );
