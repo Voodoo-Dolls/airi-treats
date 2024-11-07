@@ -1,6 +1,7 @@
 'use client'
 import { useState, FormEvent } from "react";
 import { Toaster, toast } from "sonner";
+import styles from "./Newsletter.module.scss";
 
 export default function Newsletter() {
     const [email, setEmail] = useState("");
@@ -45,24 +46,23 @@ export default function Newsletter() {
     };
 
     return (
-        <form onSubmit={handleSubscribe} >
-            <div >
-                <input
-                    type="email"
-                    placeholder="What is your email address?"
-                    onChange={(e) => setEmail(e.target.value)}
-                    name="email"
-                />
-                {/* CHECK FOR INVALID EMAIL LATER */}
-                <button
-                    type="submit"
+        <form onSubmit={handleSubscribe} className={styles.newsletterField}>
+            <input
+                type="email"
+                placeholder="What is your email address?"
+                onChange={(e) => setEmail(e.target.value)}
+                name="email"
+            />
+            {/* CHECK FOR INVALID EMAIL LATER */}
+            <button
+                type="submit"
 
-                >
-                    Subscribe
-                </button>
-                <p>{email}</p>
+            >
+                Send
+            </button>
+            <p>{email}</p>
 
-            </div>
+
         </form>
     )
 

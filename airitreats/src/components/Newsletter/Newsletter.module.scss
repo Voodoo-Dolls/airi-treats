@@ -1,0 +1,17 @@
+.newsletterField {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    input {
+        grid-column: 1;
+        height: 4rem;
+        background-color: var(--lighterBlue);
+        padding: 0.5rem;
+    }
+
+    button {
+        grid-column: 2;
+        background-color: var(--babyBlue);
+
+    }
+}
