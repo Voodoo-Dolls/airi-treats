@@ -19,11 +19,14 @@ const Hero = ({ slice }: any): JSX.Element => {
 
   return (
 
-    <section className={styles.hero}
+    <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div className={styles.imageContainer}>
+      <div className={styles.hero}>
+
+      </div>
+      {/* <div className={styles.imageContainer}>
         <PrismicNextImage field={slice.primary.hero_image} className={styles.image} />
         <div className={`${styles.textContainer}`}>
           <h2>{slice.primary.header}</h2>
@@ -35,7 +38,7 @@ const Hero = ({ slice }: any): JSX.Element => {
           </PrismicNextLink>
 
         </div>
-      </div>
+      </div> */}
 
 
 
