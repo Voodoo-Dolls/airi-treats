@@ -1,5 +1,4 @@
 'use client'
-
 import { PrismicNextLink } from "@prismicio/next";
 import styles from "./Navbar.module.scss"
 import { useEffect, useState } from "react";
