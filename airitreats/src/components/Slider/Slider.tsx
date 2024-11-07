@@ -11,7 +11,17 @@ export default function Slider({ list }: any) {
             slides: {
                 perView: 2,
                 spacing: 16
-            }
+            },
+            breakpoints: {
+                '(min-width: 1000px)': {
+                    loop: true,
+                    mode: "free",
+                    slides: {
+                        perView: 4,
+                        spacing: 24
+                    }
+                },
+            },
         },
         [
             (slider) => {

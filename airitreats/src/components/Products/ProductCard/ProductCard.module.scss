@@ -23,10 +23,10 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-
+    background-color: white;
     aspect-ratio: 7 / 9;
 
     img {
-        object-fit: cover;
+        object-fit: contain;
     }
 }
