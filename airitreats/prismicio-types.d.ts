@@ -1057,6 +1057,16 @@ export interface SectionTitleSliceDefaultPrimary {
   description: prismic.RichTextField;
 
   /**
+   * Description Two field in *SectionTitle → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Description
+   * - **API ID Path**: section_title.default.primary.description_two
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description_two: prismic.RichTextField;
+
+  /**
    * List Intro field in *SectionTitle → Default → Primary*
    *
    * - **Field Type**: Text

@@ -18,15 +18,17 @@ const SectionTitle = ({ slice }: SectionTitleProps): JSX.Element => {
     >
       <div className={styles.container}>
         <div className={styles.introWrapper}>
+          {/* .introWrapper contains title, description 1 and description 2 */}
           <h2 className={styles.title}>{slice.primary.title}</h2>
           <div className={styles.description}>
-            <PrismicRichText field={slice.primary.description} />
+            <p className={styles.descriptionOne}><PrismicRichText field={slice.primary.description} /></p>
+            <p className={styles.descriptionTwo}><PrismicRichText field={slice.primary.description_two} /></p>
           </div>
         </div>
         <div className={styles.paragraphList}>
           <p>{slice.primary.list_intro}</p>
           {slice.primary.list.map((item, index) => (
-            <p key={index}>{item.bulletlist}</p>
+            <li key={index}>{item.bulletlist}</li>
           ))}
         </div>
         <div className={styles.freezeDry}>
@@ -51,7 +53,7 @@ const SectionTitle = ({ slice }: SectionTitleProps): JSX.Element => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
