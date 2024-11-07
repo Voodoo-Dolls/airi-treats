@@ -1,5 +1,6 @@
 .imageContainer{
     position: relative;
+    // max-height: 800px;
 }
 
 .banner{
@@ -28,18 +29,33 @@
     }
 }
 
+// tablet breakpoint
 $breakpoint-tablet: 760px;
 @media (min-width: $breakpoint-tablet) {
   
     .desc{
-        max-width: 760px;
+        max-width: 500px;
         
-
         h2 {
-            max-width: 85%;
+            position: relative;
+            margin: -1rem auto;
+            width: 85%;
             text-align: center;
+            border-radius: 6px;
+
+        }
+        p{
+            z-index: 1;
+            padding: 2rem;
         }
     }
 
 }
 
+// desktop breakpoint
+$breakpoint-desktop: 1280px;
+@media (min-width: $breakpoint-tablet) {
+    .desc{
+        left: 33%;
+    }
+}
