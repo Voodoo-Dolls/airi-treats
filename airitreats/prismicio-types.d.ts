@@ -680,57 +680,9 @@ export type HeroSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *Hero → Hero No Button → Primary*
- */
-export interface HeroSliceHeroNoButtonPrimary {
-  /**
-   * Header field in *Hero → Hero No Button → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.heroNoButton.primary.header
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  header: prismic.KeyTextField;
-
-  /**
-   * Body Text field in *Hero → Hero No Button → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.heroNoButton.primary.body_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  body_text: prismic.KeyTextField;
-
-  /**
-   * Hero Image field in *Hero → Hero No Button → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.heroNoButton.primary.hero_image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  hero_image: prismic.ImageField<never>;
-}
-
-/**
- * Hero No Button variation for Hero Slice
- *
- * - **API ID**: `heroNoButton`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type HeroSliceHeroNoButton = prismic.SharedSliceVariation<
-  "heroNoButton",
-  Simplify<HeroSliceHeroNoButtonPrimary>,
-  never
->;
-
-/**
  * Slice variation for *Hero*
  */
-type HeroSliceVariation = HeroSliceDefault | HeroSliceHeroNoButton;
+type HeroSliceVariation = HeroSliceDefault;
 
 /**
  * Hero Shared Slice
@@ -1272,10 +1224,8 @@ declare module "@prismicio/client" {
       FeaturedProductsSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
-      HeroSliceHeroNoButtonPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
-      HeroSliceHeroNoButton,
       ImageBannerSlice,
       ImageBannerSliceDefaultPrimary,
       ImageBannerSliceVariation,
