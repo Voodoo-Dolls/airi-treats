@@ -138,7 +138,7 @@
 
 // media queries
 
-@media screen and (min-width: 1080px) {
+@media (min-width: 980px) {
     .description {
         display: grid;
         grid-template-columns: auto auto;
@@ -155,4 +155,6 @@
     .descriptionTwo {
         padding-top: unset;
     }
+
+
 }
