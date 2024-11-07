@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react"
 import { Toaster, toast } from "sonner";
+import styles from "./Contact.module.scss";
 
 
 export default function Contact() {
@@ -42,53 +43,61 @@ export default function Contact() {
     };
     return (
 
-        <div style={{ background: "white" }}>
-            <form onSubmit={handleSubmit} >
-                {/* Email */}
-                <div>
-                    <p>Email</p>
-                    <input
-                        type="text"
-                        placeholder="What is your email address?"
-                        onChange={(e) => setEmail(e.target.value)}
-                        name="email"
-                    />
+        <div className={styles.contactContainer}>
+            <div className={styles.contactIntro}>
+                <h2>Contact Us</h2>
+                <p>We are open to suggestions and questions. Please feel free to contact us by filling in the form below.</p>
+            </div>
+            <form onSubmit={handleSubmit} className={styles.formContainer}>
+                <div className={styles.fieldContainer}>
+                    {/* Email */}
+                    <div>
+                        <h3>Email</h3>
+                        <input
+                            type="text"
+                            placeholder="What is your email address?"
+                            onChange={(e) => setEmail(e.target.value)}
+                            name="email"
+                        />
+                    </div>
+                    {/* Subject */}
+                    <div>
+                        <h3>Subject</h3>
+                        <input
+                            type="text"
+                            placeholder="What is your email address?"
+                            onChange={(e) => setSubject(e.target.value)}
+                            name="subject"
+                        />
+                    </div>
+                    {/* Name */}
+                    <div>
+                        <h3>Name</h3>
+                        <input
+                            type="text"
+                            placeholder="What is your name?"
+                            onChange={(e) => setName(e.target.value)}
+                            name="name"
+                        />
+                    </div>
+                    {/* Message */}
+                    <div>
+                        <h3>Message</h3>
+                        <textarea
+                            placeholder="What is your email address?"
+                            onChange={(e) => setMessage(e.target.value)}
+                            name="message"
+                        />
+                    </div>
+                    {/* CHECK FOR INVALID EMAIL LATER */}
                 </div>
-                {/* Subject */}
-                <div>
-                    <p>Subject</p>
-                    <input
-                        type="text"
-                        placeholder="What is your email address?"
-                        onChange={(e) => setSubject(e.target.value)}
-                        name="subject"
-                    />
+                <div className={styles.buttonContainer}>
+                    <button
+                        type="submit"
+                    >
+                        Send!
+                    </button>
                 </div>
-                {/* Name */}
-                <div>
-                    <p>Name</p>
-                    <input
-                        type="text"
-                        placeholder="What is your name?"
-                        onChange={(e) => setName(e.target.value)}
-                        name="name"
-                    />
-                </div>
-                {/* Message */}
-                <div>
-                    <p>Message</p>
-                    <textarea
-                        placeholder="What is your email address?"
-                        onChange={(e) => setMessage(e.target.value)}
-                        name="message"
-                    />
-                </div>
-                {/* CHECK FOR INVALID EMAIL LATER */}
-                <button
-                    type="submit"
-                >
-                    Send!
-                </button>
             </form>
             <div>
                 <h2>Debugging</h2>
