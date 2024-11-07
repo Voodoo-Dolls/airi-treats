@@ -28,6 +28,15 @@
             "multi": "paragraph,strong,em"
           }
         },
+        "description_two": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description Two",
+            "placeholder": "Description",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
         "list_intro": {
           "type": "Text",
           "config": {

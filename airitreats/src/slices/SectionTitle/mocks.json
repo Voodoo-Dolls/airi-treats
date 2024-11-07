@@ -104,7 +104,7 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "We have many stories of survival during the pandemic and these stories are the ones we tend to look back on knowing that it is what made us who we are today.\n \nThis is our story.\n \nIt’s post-pandemic when we started Airi Treats. Raising a family during this period has its challenges, especially regarding food costs. Food prices had tremendously risen and thinking about this kept us up at night other than our newborn baby.\n \nThe problem was, ‘How do we find the most efficient way to enjoy our food without sacrificing our healthy choices and savings?’ While searching for answers to our problem, the food preservation idea emerged. We’ve found that some of these common food preservation techniques have pros and cons which did not appeal to our liking.",
+							"text": "We have many stories of survival during the pandemic and these stories are the ones we tend to look back on knowing that it is what made us who we are today.\n \nThis is our story.\n \nIt’s post-pandemic when we started Airi Treats. Raising a family during this period has its challenges, especially regarding food costs. Food prices had tremendously risen and thinking about this kept us up at night other than our newborn baby.",
 							"spans": []
 						},
 						"direction": "ltr"
@@ -136,6 +136,19 @@
 						"type": "paragraph",
 						"content": {
 							"text": "We are excited to share these affordable and shelf-stable treats you and your family or friends can enjoy anywhere, any time.\n \nFor every purchase you make, remember that you have made it this far in this post-pandemic time so give yourself an Airi Treat to enjoy alone or to share with the people you care.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"description_two": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "The problem was, ‘How do we find the most efficient way to enjoy our food without sacrificing our healthy choices and savings?’ While searching for answers to our problem, the food preservation idea emerged. We’ve found that some of these common food preservation techniques have pros and cons which did not appeal to our liking.",
 							"spans": []
 						},
 						"direction": "ltr"
