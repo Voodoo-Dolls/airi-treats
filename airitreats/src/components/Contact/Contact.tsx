@@ -95,7 +95,7 @@ export default function Contact() {
                     <button
                         type="submit"
                     >
-                        Send!
+                        Let's Chat!
                     </button>
                 </div>
             </form>
