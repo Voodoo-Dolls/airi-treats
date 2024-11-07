@@ -57,7 +57,7 @@ export default function MobileNav({ links, logo }: any) {
                 </div>
             </div>
             {/* Nav is toggled with the hamburger and receives its link from links prop */}
-            <nav className={`${open && styles.active} ${styles.nav}`} ref={navRef}>
+            <nav className={`${open && `${styles.active} noScroll`} ${styles.nav}`} ref={navRef}>
                 <a href="#"
                     className={`snipcart-checkout ${styles.cartLink}`}
                     onClick={() => {
@@ -76,6 +76,22 @@ export default function MobileNav({ links, logo }: any) {
                         {/* Get Nav Links in Prismic from Settings Doc */}
                         {links.map((data: any) => {
                             if (data.position == "Category") {
+                                return (
+                                    <li className={styles.link} key={data.label}>
+                                        <PrismicNextLink field={data.link} onClick={() => setOpen(false)} className={`${data.link.url == path && styles.active}`}><span className={styles.underline}>&gt;</span> {data.label}</PrismicNextLink>
+                                    </li>
+                                )
+                            }
+                        }
+                        )}
+                    </ul>
+                </div>
+                <div className={styles.linksSection}>
+                    <h2>Learn More</h2>
+                    <ul className={``}>
+                        {/* Get Nav Links in Prismic from Settings Doc */}
+                        {links.map((data: any) => {
+                            if (data.position != "Category") {
                                 return (
                                     <li className={styles.link} key={data.label}>
                                         <PrismicNextLink field={data.link} onClick={() => setOpen(false)} className={`${data.link.url == path && styles.active}`}><span className={styles.underline}>&gt;</span> {data.label}</PrismicNextLink>

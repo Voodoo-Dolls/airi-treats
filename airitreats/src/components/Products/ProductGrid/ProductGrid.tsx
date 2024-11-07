@@ -24,7 +24,7 @@ export default function ProductGrid({ tag, filter, page, setMaxPage }: props) {
             const product: any = await client.getByTag(tag, {
                 // filters: [prismic.filter.any('document.tags', ['fruits'])],
                 page: page,
-                pageSize: 4,
+                pageSize: 8,
                 orderings: {
                     field: filter[0],
                     direction: filter[1]
