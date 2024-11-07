@@ -41,14 +41,6 @@
             "label": "Link Label",
             "placeholder": ""
           }
-        },
-        "hero_image": {
-          "type": "Image",
-          "config": {
-            "label": "Hero Image",
-            "constraint": {},
-            "thumbnails": []
-          }
         }
       },
       "items": {}
