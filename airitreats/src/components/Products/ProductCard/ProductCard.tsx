@@ -25,7 +25,7 @@ export default function ProductCard({ uid }: any) {
 
     const { data } = product
 
-    console.log(product)
+
 
     return (
         <Link href={product.url} className={styles.container}>
@@ -38,7 +38,7 @@ export default function ProductCard({ uid }: any) {
             <div className={styles.imgContainer}>
                 <Image src={data.main_image.url} fill alt="" sizes="300px" priority={false} />
             </div>
-            <p className={styles.title}>{data.product_name}</p>
+            <h3 className={styles.title}>{data.product_name}</h3>
             <p className={styles.price}>${data.price.toFixed(2)}</p>
 
 

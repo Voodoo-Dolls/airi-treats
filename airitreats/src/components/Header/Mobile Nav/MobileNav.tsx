@@ -58,6 +58,7 @@ export default function MobileNav({ links, logo }: any) {
             </div>
             {/* Nav is toggled with the hamburger and receives its link from links prop */}
             <nav className={`${open && `${styles.active} noScroll`} ${styles.nav}`} ref={navRef}>
+                <h2 className="sr-only">Mobile Navigation</h2>
                 <a href="#"
                     className={`snipcart-checkout ${styles.cartLink}`}
                     onClick={() => {
@@ -71,7 +72,7 @@ export default function MobileNav({ links, logo }: any) {
                     </button>
                 </a>
                 <div className={styles.linksSection}>
-                    <h2>Explore Categories</h2>
+                    <p>Explore Categories</p>
                     <ul className={``}>
                         {/* Get Nav Links in Prismic from Settings Doc */}
                         {links.map((data: any) => {
@@ -87,7 +88,7 @@ export default function MobileNav({ links, logo }: any) {
                     </ul>
                 </div>
                 <div className={styles.linksSection}>
-                    <h2>Learn More</h2>
+                    <p>Learn More</p>
                     <ul className={``}>
                         {/* Get Nav Links in Prismic from Settings Doc */}
                         {links.map((data: any) => {

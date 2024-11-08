@@ -1,28 +1,27 @@
 // Entire Nav Styles
 .container {
-    width: 100%;
-    display: flex;
     align-items: center;
+    display: flex;
+    height: 80px;
     justify-content: space-between;
     padding: 16px;
-    height: 80px;
+    width: 100%;
 
     @media(min-width: 768px) {
         display: none;
     }
 }
 
-
 .nav {
-    // display: none;
-    position: absolute;
-    width: 100%;
-    transition: all 300ms ease-in-out;
+    background-color: var(--lighterPink);
     max-height: 0px;
     overflow: hidden;
     pointer-events: none;
-    background-color: var(--lighterPink);
+    position: absolute;
+    transition: all 300ms ease-in-out;
+    width: 100%;
 
+    // display: none;
     @media(min-width: 768px) {
         display: none;
     }
@@ -33,24 +32,21 @@
         pointer-events: unset;
     }
 
-
-
-
     .link {
         .underline {
             text-decoration: underline;
         }
 
         a {
-            display: inline-block;
-            width: 100%;
             border-left: 4px solid var(--lighterPink);
+            display: inline-block;
             padding: var(--gap);
+            width: 100%;
 
             &:hover,
             &.active {
-                border-left: 4px solid var(--darkBlueStroke);
                 background-color: var(--babyBlue);
+                border-left: 4px solid var(--darkBlueStroke);
                 color: black;
             }
         }
@@ -59,15 +55,15 @@
 
 // Logo Styling
 .imageContainer {
-    width: 100%;
     aspect-ratio: 1 / 1;
-    position: relative;
     max-width: 80px;
+    position: relative;
+    width: 100%;
 
     a {
         display: block;
-        position: relative;
         height: 100%;
+        position: relative;
         width: 100%;
     }
 
@@ -80,22 +76,24 @@
 .cartLink {
     display: block;
     margin: 16px;
-
 }
 
 .cart {
-    width: 100%;
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 
 .linksSection {
     margin-top: 32px;
 
-    h2 {
-        color: black;
-        padding-left: 16px;
+    p {
         border-bottom: 3px solid black;
+        color: black;
+        font-family: var(--headerFont);
+        font-size: 24px;
+        font-weight: bold;
+        padding-left: 16px;
     }
 }

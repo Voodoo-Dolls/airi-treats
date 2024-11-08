@@ -20,12 +20,14 @@ export default function Navbar({ links, logo }: any) {
 
     return (
         <div className={`${styles.container} container`}>
+
             <div className={styles.imageContainer}>
                 <Link href={"/"}>
                     <Image src={logo} alt={`Airitreats Logo`} fill priority sizes="80px" />
                 </Link>
             </div>
             <nav className={styles.nav}>
+                <h2 className="sr-only">Main Navigation</h2>
                 <ul className={styles.ul}>
                     {/* Get Nav Links in Prismic from Settings */}
                     {links.map((data: any) => {

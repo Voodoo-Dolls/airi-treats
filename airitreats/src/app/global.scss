@@ -56,6 +56,14 @@ button {
     cursor: pointer;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    left: -100px;
+}
+
 body {
     position: relative;
     background-color: var(--lighterBlue);
