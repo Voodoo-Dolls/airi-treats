@@ -23,7 +23,7 @@ export default function ProductDetails({ productData }: any) {
         setQuantity(newQuantity)
 
     }
-    // console.log(productData.data)
+    // console.log(productData)
     const { product_name, price, description, main_image } = productData.data
     // console.log(main_image)
     return (
@@ -48,7 +48,8 @@ export default function ProductDetails({ productData }: any) {
                     data-item-id={product_name}
                     data-item-name={product_name}
                     data-item-price={price}
-                    data-item-url={main_image.url}
+                    data-item-image={main_image.url}
+                    data-item-url={productData.url}
                     data-item-description={description[0].text}
                     data-item-quantity={quantity}
                     onClick={() => toast.success(`${product_name} x${quantity} Added`)}
