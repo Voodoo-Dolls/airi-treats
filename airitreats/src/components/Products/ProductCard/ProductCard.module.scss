@@ -30,3 +30,12 @@
         object-fit: contain;
     }
 }
+
+.flag {
+    position: absolute;
+    background-color: var(--primaryColor);
+    padding: 8px;
+    border-radius: 8px 0 0 0;
+    z-index: 1;
+    color: white;
+}

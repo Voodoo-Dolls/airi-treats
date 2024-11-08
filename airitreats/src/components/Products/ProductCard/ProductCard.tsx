@@ -25,10 +25,15 @@ export default function ProductCard({ uid }: any) {
 
     const { data } = product
 
-    // console.log(product)
+    console.log(product)
 
     return (
         <Link href={product.url} className={styles.container}>
+            {data.product_flag &&
+                <div className={styles.flag}>
+                    {data.flag_text}
+                </div>
+            }
 
             <div className={styles.imgContainer}>
                 <Image src={data.main_image.url} fill alt="" sizes="300px" priority={false} />
