@@ -16,7 +16,7 @@ export default async function Header() {
     const client = createClient();
 
     const settings = await client.getSingle('settings')
-    console.log(settings)
+    // console.log(settings)
     return (
         <header className={styles.header}>
             <h1 className="sr-only">{settings.data.site_title}</h1>
