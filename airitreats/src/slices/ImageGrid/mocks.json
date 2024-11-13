@@ -17,25 +17,26 @@
 							[
 								"image_card",
 								{
+									"provider": "imgix",
+									"url": "https://images.unsplash.com/photo-1467887633195-23e82423e499?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyM3x8ZnJ1aXRzfGVufDB8fHx8MTczMTUzNDA5N3ww&ixlib=rb-4.0.3&q=85&rect=2299%2C1218%2C1728%2C1152&w=5184&h=3456",
+									"alt": "focus photography of strawberries and cherries on blue bowl",
 									"origin": {
-										"id": "main",
-										"url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
-										"width": 4000,
-										"height": 6000
+										"id": "psuWeghs_CM",
+										"url": "https://images.unsplash.com/photo-1467887633195-23e82423e499?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyM3x8ZnJ1aXRzfGVufDB8fHx8MTczMTUzNDA5N3ww&ixlib=rb-4.0.3&q=85",
+										"width": 5184,
+										"height": 3456
 									},
-									"url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
-									"width": 4000,
-									"height": 6000,
+									"width": 5184,
+									"height": 3456,
 									"edit": {
-										"zoom": 1,
+										"background": "transparent",
+										"zoom": 3,
 										"crop": {
-											"x": 0,
-											"y": 0
-										},
-										"background": "transparent"
+											"x": 2299,
+											"y": 1218
+										}
 									},
 									"credits": null,
-									"alt": null,
 									"__TYPE__": "ImageContent",
 									"thumbnails": {}
 								}
@@ -63,7 +64,7 @@
 									"value": {
 										"__TYPE__": "ExternalLink",
 										"url": "http://google.com",
-										"text": "google.ca"
+										"text": "Fruits"
 									}
 								}
 							],
@@ -72,7 +73,208 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "Find Fruit"
+									"value": "All Fruits"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"heading",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Candies"
+								}
+							],
+							[
+								"body_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Sweet, airy, and crunchy new way to enjoy your favourite candies. These freeze-dried candies won’t stick on or chip your teeth. It’s perfect for all ages!"
+								}
+							],
+							[
+								"category_link_label",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "All Candies"
+								}
+							],
+							[
+								"category_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://www.google.com/",
+										"text": "Candies"
+									}
+								}
+							],
+							[
+								"image_card",
+								{
+									"provider": "imgix",
+									"url": "https://images.unsplash.com/photo-1627494113508-9ba5b63d9d5c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxNHx8Y2FuZGllc3xlbnwwfHx8fDE3MzE1MzQwODF8MA&ixlib=rb-4.0.3&q=85",
+									"alt": "assorted color of m ms candies",
+									"origin": {
+										"id": "U21WOE0jB0E",
+										"url": "https://images.unsplash.com/photo-1627494113508-9ba5b63d9d5c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxNHx8Y2FuZGllc3xlbnwwfHx8fDE3MzE1MzQwODF8MA&ixlib=rb-4.0.3&q=85",
+										"width": 5616,
+										"height": 3744
+									},
+									"width": 5616,
+									"height": 3744,
+									"edit": {
+										"background": "transparent",
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										}
+									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"category_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://www.google.com/",
+										"text": "Chocolates"
+									}
+								}
+							],
+							[
+								"category_link_label",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "All Chocolates"
+								}
+							],
+							[
+								"body_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Freeze-dried chocolates will never be the one that melted away again. You can enjoy the same flavourful treat even during the scorching heat."
+								}
+							],
+							[
+								"heading",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Chocolates"
+								}
+							],
+							[
+								"image_card",
+								{
+									"provider": "imgix",
+									"url": "https://images.unsplash.com/photo-1623660053975-cf75a8be0908?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxN3x8Y2hvY29sYXRlc3xlbnwwfHx8fDE3MzE1MzQwNDN8MA&ixlib=rb-4.0.3&q=85&rect=362%2C2177%2C2222%2C1667&w=3333&h=2500",
+									"alt": "chocolate bar on white table",
+									"origin": {
+										"id": "TzN2odwnesg",
+										"url": "https://images.unsplash.com/photo-1623660053975-cf75a8be0908?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxN3x8Y2hvY29sYXRlc3xlbnwwfHx8fDE3MzE1MzQwNDN8MA&ixlib=rb-4.0.3&q=85",
+										"width": 3333,
+										"height": 5000
+									},
+									"width": 3333,
+									"height": 2500,
+									"edit": {
+										"background": "transparent",
+										"zoom": 1.4999999999999996,
+										"crop": {
+											"x": 362,
+											"y": 2177
+										}
+									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"category_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://www.google.com/",
+										"text": "Gummies"
+									}
+								}
+							],
+							[
+								"body_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Some like it fluffy and crunchy. Freeze-dried gummies have the same burst of flavours your chewy gummies have. It’s just a different kind of gummy."
+								}
+							],
+							[
+								"heading",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Gummies"
+								}
+							],
+							[
+								"category_link_label",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "All Gummies"
+								}
+							],
+							[
+								"image_card",
+								{
+									"provider": "imgix",
+									"url": "https://images.unsplash.com/photo-1507696460378-fc372bb90ed3?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxndW1taWVzfGVufDB8fHx8MTczMTUzNDIwNnww&ixlib=rb-4.0.3&q=85&rect=1086%2C979%2C1936%2C1296&w=3872&h=2592",
+									"alt": "assorted-color sweet treats in red and blue plastic trays",
+									"origin": {
+										"id": "SmZWvAkKRVM",
+										"url": "https://images.unsplash.com/photo-1507696460378-fc372bb90ed3?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxndW1taWVzfGVufDB8fHx8MTczMTUzNDIwNnww&ixlib=rb-4.0.3&q=85",
+										"width": 3872,
+										"height": 2592
+									},
+									"width": 3872,
+									"height": 2592,
+									"edit": {
+										"background": "transparent",
+										"zoom": 2,
+										"crop": {
+											"x": 1086,
+											"y": 979
+										}
+									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
 								}
 							]
 						]

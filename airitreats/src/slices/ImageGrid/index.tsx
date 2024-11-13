@@ -18,9 +18,10 @@ const ImageGrid = ({ slice }: ImageGridProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className={styles.container}
     >
-      <div className={`container ${styles.cardContainer}`}>
-        <h2>{slice.primary.section_title}</h2>
+      <div className={styles.cardContainer}>
+        <div className={styles.catTitleContainer}><h2 className={styles.categoryTitle}>{slice.primary.section_title}</h2></div>
         {slice.primary.repeatable_card.map((item, index) => (
+          // repeatable card
           <div className={styles.card} key={index}>
             <div className={styles.imgContainer}>
               {/* card image */}
