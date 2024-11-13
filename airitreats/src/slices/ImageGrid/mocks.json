@@ -73,7 +73,7 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "All Fruits"
+									"value": "Find Fruits"
 								}
 							]
 						]
@@ -102,7 +102,7 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "All Candies"
+									"value": "Find Candies"
 								}
 							],
 							[
@@ -164,7 +164,7 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "All Chocolates"
+									"value": "Find Chocolates"
 								}
 							],
 							[
@@ -247,7 +247,7 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "All Gummies"
+									"value": "Find Gummies"
 								}
 							],
 							[
