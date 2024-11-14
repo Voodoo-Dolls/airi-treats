@@ -82,6 +82,7 @@ body {
 }
 
 .container {
+    position: relative;
     margin: 0 auto;
     padding: var(--gap);
     width: min(100%, 1280px);
@@ -153,4 +154,25 @@ li[data-sonner-toast] {
 // Disables body scroll when menu open
 :root:has(.noScroll) {
     overflow: hidden;
+}
+
+// Keen Slider
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    fill: #000000;
+    cursor: pointer;
+}
+
+.arrow--left {
+    left: -30px;
+}
+
+.arrow--right {
+    right: -30px;
 }
