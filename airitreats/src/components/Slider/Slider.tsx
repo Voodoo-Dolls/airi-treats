@@ -89,14 +89,14 @@ export default function Slider({ list }: any) {
                     <>
                         <Arrow
                             left
-                            onClick={(e) =>
+                            onClick={(e: any) =>
                                 e.stopPropagation() || instanceRef.current?.prev()
                             }
                             disabled={currentSlide === 0}
                         />
 
                         <Arrow
-                            onClick={(e) =>
+                            onClick={(e: any) =>
                                 e.stopPropagation() || instanceRef.current?.next()
                             }
                             disabled={
