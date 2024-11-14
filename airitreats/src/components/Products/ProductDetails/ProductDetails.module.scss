@@ -1,5 +1,26 @@
 .container {
     position: relative;
+
+    @media(min-width:768px) {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        padding: 16px;
+        width: min(100%, 1280px);
+    }
+
+    // padding: 2rem;
+}
+
+.productName {
+    color: white;
+    background-color: var(--primaryColor);
+    border: 2px solid var(--darkAccent1);
+    border-bottom: 12px solid var(--darkAccent1);
+    padding: var(--gap);
+    position: relative;
+    width: fit-content;
 }
 
 .imageContainer {
@@ -8,6 +29,7 @@
     color: white;
     display: flex;
     flex-direction: column;
+    max-height: 450px;
     text-align: center;
     width: 100%;
 
@@ -20,16 +42,13 @@
     }
 
     h2 {
-        background-color: var(--primaryColor);
-        border: 2px solid var(--darkAccent1);
-        border-bottom: 12px solid var(--darkAccent1);
         border-radius: 16px;
         margin: 0 16px;
-        padding: var(--gap);
-        position: relative;
         margin-top: -60px;
-        width: fit-content;
 
+        @media(min-width: 768px) {
+            display: none;
+        }
     }
 }
 
@@ -38,55 +57,77 @@
 .price {
     align-items: center;
     background-color: var(--babyBlue);
+    border: 1px solid var(--darkBlueStroke);
+    border-left: 6px solid var(--darkBlueStroke);
+    border-radius: 6px 24px 24px 6px;
+    border-right: 6px solid var(--darkBlueStroke);
     display: flex;
     height: 36px;
     justify-content: center;
     line-height: 1;
-    width: 170px;
-    border: 1px solid var(--darkBlueStroke);
-    border-left: 6px solid var(--darkBlueStroke);
-    border-right: 6px solid var(--darkBlueStroke);
-    border-radius: 6px 24px 24px 6px;
-    margin-top: 60px;
     margin-bottom: 16px;
+    margin-top: 60px;
+    width: 170px;
+
+    @media(min-width:768px) {
+        border-radius: 0 24px 24px 0;
+        border-left: unset;
+        margin: unset;
+    }
 }
 
 // Quantity
 
 .controls {
     display: flex;
-    width: 100%;
     height: fit-content;
-    position: relative;
     margin-bottom: 24px;
+    position: relative;
+    width: 100%;
 
     button {
-        width: 42px;
         height: 42px;
+        width: 42px;
     }
 
     button:first-of-type {
-        border-radius: 6px 0 0 6px;
-        border: solid 1px var(--darkAccent1);
         background-color: var(--primaryColor);
+        border: solid 1px var(--darkAccent1);
+        border-radius: 6px 0 0 6px;
     }
 
     button:last-of-type {
-        border-radius: 0 6px 6px 0;
-        border: solid 1px var(--darkBlueStroke);
         background-color: var(--babyBlue);
+        border: solid 1px var(--darkBlueStroke);
+        border-radius: 0 6px 6px 0;
     }
 
     p {
-        display: flex;
         align-items: center;
-        justify-content: center;
+        background-color: white;
+        display: flex;
         flex-grow: 1;
         height: 42px;
-        background-color: white;
+        justify-content: center;
     }
 }
 
 .yellowBtn {
     width: 100%;
+}
+
+
+.content {
+
+    h2 {
+        margin-bottom: 16px;
+        border-radius: 0 16px 16px 0;
+        border-left: unset;
+    }
+
+    @media(max-width: 768px) {
+        h2 {
+            display: none;
+        }
+    }
 }
