@@ -25,7 +25,6 @@ export default async function Page({ params }: { params: Params }) {
         <>
             <div>
                 <SliceZone slices={page.data.slices} components={components} />
-                <h2>This is the {params.uid} page.</h2>
                 {params.uid == 'all' ? <ProductContainer category={`product`} /> : <ProductContainer category={params.uid} />}
             </div>
 
