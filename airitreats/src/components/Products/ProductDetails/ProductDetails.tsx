@@ -23,8 +23,8 @@ export default function ProductDetails({ productData }: any) {
         setQuantity(newQuantity)
 
     }
-    // console.log(productData)
-    const { product_name, price, description, main_image } = productData.data
+    console.log(productData)
+    const { product_name, price, description, main_image, product_available } = productData.data
     // console.log(main_image)
     return (
         <div className={`${styles.container}`}>
@@ -45,7 +45,7 @@ export default function ProductDetails({ productData }: any) {
                         <p>{quantity}</p>
                         <button onClick={() => { handleQuantity(1) }}>+</button>
                     </div>
-                    <button
+                    {product_available ? <button
                         className={`snipcart-add-item yellowBtn ${styles.yellowBtn}`}
                         data-item-id={product_name}
                         data-item-name={product_name}
@@ -58,6 +58,10 @@ export default function ProductDetails({ productData }: any) {
                     >
                         Add to Cart
                     </button>
+                        :
+                        <button className={`${styles.yellowBtn} yellowBtn`} disabled>SOLD OUT</button>
+                    }
+
                 </div>
             </div>
 
