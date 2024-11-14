@@ -36,7 +36,7 @@ export default function ProductContainer({ category }: props) {
                     <FaSortAlphaDown />
                     SortBy
                 </label>
-                <select name="filter" id="filter" onChange={handleFilter}>
+                <select className={styles.filterDropDown} name="filter" id="filter" onChange={handleFilter}>
                     <option value="0">Price Low To High</option>
                     <option value="1">Price High To Low</option>
                     <option value="2">Alphabetical (A-Z)</option>
