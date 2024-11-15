@@ -1070,6 +1070,16 @@ export interface SectionTitleSliceDefaultPrimary {
   description: prismic.RichTextField;
 
   /**
+   * Description One field in *SectionTitle → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_title.default.primary.description_one
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description_one: prismic.RichTextField;
+
+  /**
    * Description Two field in *SectionTitle → Default → Primary*
    *
    * - **Field Type**: Rich Text
@@ -1078,6 +1088,16 @@ export interface SectionTitleSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   description_two: prismic.RichTextField;
+
+  /**
+   * Paragraph Title field in *SectionTitle → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Paragraph title
+   * - **API ID Path**: section_title.default.primary.paragraph_title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph_title: prismic.RichTextField;
 
   /**
    * List Intro field in *SectionTitle → Default → Primary*
@@ -1098,16 +1118,6 @@ export interface SectionTitleSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   list: prismic.GroupField<Simplify<SectionTitleSliceDefaultPrimaryListItem>>;
-
-  /**
-   * Paragraph Title field in *SectionTitle → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Paragraph title
-   * - **API ID Path**: section_title.default.primary.paragraph_title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  paragraph_title: prismic.RichTextField;
 
   /**
    * Paragraph field in *SectionTitle → Default → Primary*

@@ -104,7 +104,7 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "We have many stories of survival during the pandemic and these stories are the ones we tend to look back on knowing that it is what made us who we are today.\n \nThis is our story.\n \nIt’s post-pandemic when we started Airi Treats. Raising a family during this period has its challenges, especially regarding food costs. Food prices had tremendously risen and thinking about this kept us up at night other than our newborn baby.",
+							"text": "We have many stories of survival during the pandemic and these stories are the ones we tend to look back on knowing that it is what made us who we are today.\n ",
 							"spans": []
 						},
 						"direction": "ltr"
@@ -149,6 +149,19 @@
 						"type": "paragraph",
 						"content": {
 							"text": "The problem was, ‘How do we find the most efficient way to enjoy our food without sacrificing our healthy choices and savings?’ While searching for answers to our problem, the food preservation idea emerged. We’ve found that some of these common food preservation techniques have pros and cons which did not appeal to our liking.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"description_one": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "This is our story.\n \nIt’s post-pandemic when we started Airi Treats. Raising a family during this period has its challenges, especially regarding food costs. Food prices had tremendously risen and thinking about this kept us up at night other than our newborn baby.",
 							"spans": []
 						},
 						"direction": "ltr"
