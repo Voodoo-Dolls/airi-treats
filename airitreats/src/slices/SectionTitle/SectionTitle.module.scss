@@ -24,7 +24,7 @@
     z-index: 10;
 }
 
-.description {
+.descriptionContainer {
     grid-area: 1/1/span 2/span 3;
     background-color: var(--lighterPink);
     border-top: var(--darkAccent1) 0.125rem solid;
@@ -139,7 +139,7 @@
 // media queries
 
 @media (min-width: 980px) {
-    .description {
+    .descriptionContainer {
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto;

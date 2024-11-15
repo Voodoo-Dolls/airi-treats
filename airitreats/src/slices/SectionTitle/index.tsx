@@ -20,8 +20,9 @@ const SectionTitle = ({ slice }: SectionTitleProps): JSX.Element => {
         <div className={styles.introWrapper}>
           {/* .introWrapper contains title, description 1 and description 2 */}
           <h2 className={styles.title}>{slice.primary.title}</h2>
-          <div className={styles.description}>
-            <p className={styles.descriptionOne}><PrismicRichText field={slice.primary.description} /></p>
+          <div className={styles.descriptionContainer}>
+            <p className={styles.description}><PrismicRichText field={slice.primary.description} /></p>
+            <p className={styles.descriptionOne}><PrismicRichText field={slice.primary.description_one} /></p>
             <p className={styles.descriptionTwo}><PrismicRichText field={slice.primary.description_two} /></p>
           </div>
         </div>
