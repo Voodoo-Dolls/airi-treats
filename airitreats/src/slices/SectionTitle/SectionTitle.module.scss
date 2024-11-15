@@ -1,4 +1,4 @@
-.container {
+.sectionContainer {
     position: relative;
     padding: 2rem 0;
     background-color: var(--lighterBlue);
@@ -138,23 +138,23 @@
 
 // media queries
 
-@media (min-width: 980px) {
-    .descriptionContainer {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto;
-        gap: 1.5rem;
-        padding: 3rem 1.5rem;
-    }
+// @media (min-width: 980px) {
+//     .descriptionContainer {
+//         display: grid;
+//         grid-template-columns: auto auto;
+//         grid-template-rows: auto;
+//         gap: 1.5rem;
+//         padding: 3rem 1.5rem;
+//     }
 
-    .title {
-        grid-column: 1;
-        text-align: center;
-    }
+//     .title {
+//         grid-column: 1;
+//         text-align: center;
+//     }
 
-    .descriptionTwo {
-        padding-top: unset;
-    }
+//     .descriptionTwo {
+//         padding-top: unset;
+//     }
 
 
-}
+// }

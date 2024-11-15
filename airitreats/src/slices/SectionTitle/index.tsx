@@ -15,8 +15,9 @@ const SectionTitle = ({ slice }: SectionTitleProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className={styles.sectionContainer}
     >
-      <div className={styles.container}>
+      <div className={styles.contentWrapper}>
         <div className={styles.introWrapper}>
           {/* .introWrapper contains title, description 1 and description 2 */}
           <h2 className={styles.title}>{slice.primary.title}</h2>
