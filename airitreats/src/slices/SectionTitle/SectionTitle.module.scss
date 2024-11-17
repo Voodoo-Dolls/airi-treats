@@ -31,6 +31,7 @@
 
 
 .paragraphList {
+    right: 0;
     margin: 2rem 1rem;
     padding: 1rem;
     background-color: var(--lighterPink);
@@ -187,13 +188,12 @@ $breakpoint-desktop: 1280px;
 
     .pListContainer {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto auto;
 
         .paragraphList {
             grid-column: 2;
             margin: 2rem 0;
             border-right: unset;
-            width: 60vw;
         }
     }
 
@@ -261,5 +261,77 @@ $breakpoint-desktop: 1280px;
         width: 80vw;
         margin: auto;
     }
+
+}
+
+@media (min-width:$breakpoint-desktop) {
+
+    .sectionContainer {
+        margin: auto;
+        max-width: $breakpoint-desktop;
+    }
+
+    .title {
+        text-align: center;
+        grid-column: 2;
+        border-left: var(--darkAccent1) 0.5rem solid;
+        border-radius: 1rem;
+    }
+
+    .descriptionContainer {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 1rem;
+
+        p:nth-of-type(2) {
+            grid-column: 2;
+
+        }
+
+        p:nth-of-type(3) {
+            grid-column: 3;
+        }
+    }
+
+    .pListContainer {
+
+        .paragraphList {
+            background-color: unset;
+            width: 70%;
+            margin: 2rem auto;
+            border-right: unset;
+            border-left: unset;
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+
+            div:nth-of-type(1) {
+                grid-column: 1;
+                border: 0.125rem var(--darkAccent1) solid;
+                background-color: var(--lighterPink);
+                align-content: center;
+
+                p {
+                    padding: 1rem;
+                    grid-row: 2;
+                }
+            }
+
+
+            div:nth-of-type(2) {
+                grid-column: 2;
+
+                li {
+                    padding: 1rem;
+                    margin: 1rem 0;
+                    background-color: var(--babyBlue);
+                    border-right: var(--darkAccent1) 0.5rem solid;
+                    border-radius: 0 1rem 1rem 0;
+                }
+
+            }
+        }
+    }
+
 
 }
