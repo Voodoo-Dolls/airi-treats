@@ -37,7 +37,7 @@ const SectionTitle = ({ slice }: SectionTitleProps): JSX.Element => {
         </div>
         <div className={styles.freezeDryContainer}>
           <div className={styles.freezeDryIntro}>
-            <h3 className={styles.freezeDry}><PrismicRichText field={slice.primary.paragraph_title} /></h3>
+            <div className={styles.freezeDry}><h3><PrismicRichText field={slice.primary.paragraph_title} /></h3></div>
             <div className={styles.freezeDryDesc}>
               <p>{slice.primary.paragraph}</p>
             </div>
