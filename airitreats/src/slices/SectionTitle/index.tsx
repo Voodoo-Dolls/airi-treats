@@ -30,9 +30,13 @@ const SectionTitle = ({ slice }: SectionTitleProps): JSX.Element => {
         <div className={styles.pListContainer}>
           <div className={styles.paragraphList}>
             <div><p>{slice.primary.list_intro}</p></div>
-            <div>{slice.primary.list.map((item, index) => (
-              <ul><li key={index}>{item.bulletlist}</li></ul>
-            ))}</div>
+            <div>
+              <ul>
+              {slice.primary.list.map((item, index) => (
+                <li key={index}>{item.bulletlist}</li>
+              ))}
+            </ul>
+            </div>
           </div>
         </div>
         <div className={styles.freezeDryContainer}>
