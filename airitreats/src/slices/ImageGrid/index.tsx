@@ -18,28 +18,33 @@ const ImageGrid = ({ slice }: ImageGridProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className={styles.container}
     >
-      <div className={styles.cardContainer}>
-        <div className={styles.catTitleContainer}><h2 className={styles.categoryTitle}>{slice.primary.section_title}</h2></div>
-        {slice.primary.repeatable_card.map((item, index) => (
-          // repeatable card
-          <div className={styles.card} key={index}>
-            <div className={styles.imgContainer}>
-              {/* card image */}
-              <PrismicNextImage field={item.image_card} className={styles.img} />
+      <div className={styles.sectionContainer}>
+        <div className={styles.catTitleContainer}>
+          <h2 className={styles.categoryTitle}>{slice.primary.section_title}</h2>
+        </div>
+
+        <div className={styles.card}>
+          {slice.primary.repeatable_card.map((item, index) => (
+            // repeatable card
+            <div className={styles.cardContents} key={index}>
+              <div className={styles.imgContainer}>
+                {/* card image */}
+                <PrismicNextImage field={item.image_card} className={styles.img} />
+              </div>
+              {/* card title */}
+              <div className={styles.titleContainer}>
+                <h3 className={styles.cardTitle}>{item.heading}</h3>
+              </div>
+              {/* card content */}
+              <p className={styles.cardDescription}>{item.body_text}</p>
+              <div className={styles.catLinkContainer}>
+                <p className={styles.catLink}><PrismicNextLink field={item.category_link}>
+                  {item.category_link_label}
+                </PrismicNextLink></p>
+              </div>
             </div>
-            {/* card title */}
-            <div className={styles.titleContainer}>
-              <h3 className={styles.cardTitle}>{item.heading}</h3>
-            </div>
-            {/* card content */}
-            <p className={styles.cardDescription}>{item.body_text}</p>
-            <div className={styles.catLinkContainer}>
-              <p className={styles.catLink}><PrismicNextLink field={item.category_link}>
-                {item.category_link_label}
-              </PrismicNextLink></p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
     </section>
