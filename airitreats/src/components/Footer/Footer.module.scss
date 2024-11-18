@@ -7,8 +7,8 @@
 .address {
     padding: 1rem;
     color: white;
-    border: 2px white solid;
-    margin: 1rem 0;
+    // border: 2px white solid;
+    
 
     // div{
     //     h3{
@@ -31,7 +31,7 @@
 
 .socialMedia {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     grid-template-rows: auto;
     padding: 1rem;
     margin: 1rem 0;
@@ -43,6 +43,10 @@
     p {
         text-align: center;
     }
+    h3{
+        grid-column: 1 / span 2;
+    }
+    
 }
 
 .subscription {
@@ -55,7 +59,6 @@
 }
 
 .legalese {
-    margin: 1rem 0;
     display: flex;
     gap: 1rem;
     color: white;
@@ -71,6 +74,7 @@ $breakpoint-desktop: 1280px;
     .footer{
         display: grid;
         gap: 1rem;
+        align-items: center;
     }
     .address {
         grid-column: 1 / 2;

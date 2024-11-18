@@ -24,9 +24,23 @@
 }
 
 // breakpoints
+$breakpoint-map-toTablet: 570px;
 $breakpoint-tablet: 760px;
-$breakpoint-desktop: 1280px;
+$breakpoint-desktop: 1100px;
 
+@media (min-width: $breakpoint-map-toTablet) {
+    .local{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+@media (min-width: $breakpoint-tablet) {
+    .local{
+        display: block;
+    }
+}
 @media (min-width: $breakpoint-desktop) {
     .local{
         display: grid;
