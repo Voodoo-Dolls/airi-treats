@@ -30,19 +30,22 @@ export default function ProductContainer({ category }: props) {
     }
     return (
         <>
-            <div className={`${styles.filterContainer} container`}>
+            <div className={`${styles.filterContainer}`}>
                 {/* Sort */}
-                <label htmlFor="filter" className={styles.label}>
-                    <FaSortAlphaDown />
-                    SortBy
-                </label>
-                <select className={styles.filterDropDown} name="filter" id="filter" onChange={handleFilter}>
-                    <option value="0">Price Low To High</option>
-                    <option value="1">Price High To Low</option>
-                    <option value="2">Alphabetical (A-Z)</option>
-                    <option value="3">Alphabetical (Z-A)</option>
-                </select>
+                <div className={`container ${styles.filter}`}>
+                    <label htmlFor="filter" className={styles.label}>
+                        <FaSortAlphaDown />
+                        SortBy:
+                    </label>
+                    <select className={styles.filterDropDown} name="filter" id="filter" onChange={handleFilter}>
+                        <option value="0">Price Low To High</option>
+                        <option value="1">Price High To Low</option>
+                        <option value="2">Alphabetical (A-Z)</option>
+                        <option value="3">Alphabetical (Z-A)</option>
+                    </select>
+                </div>
             </div>
+            
             <ProductGrid tag={category} filter={fields} page={page} setMaxPage={setMaxPage} />
             {maxPage > 1 && <Pagination page={page} maxPage={maxPage} setPage={setPage} />}
 

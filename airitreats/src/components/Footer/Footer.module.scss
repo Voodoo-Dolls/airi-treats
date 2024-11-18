@@ -4,6 +4,11 @@
     padding: 1rem 0 1.5rem 0;
 }
 
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 .address {
     padding: 1rem;
     color: white;
@@ -71,7 +76,7 @@ $breakpoint-tablet: 760px;
 $breakpoint-desktop: 1280px;
 
 @media (min-width: $breakpoint-tablet) {
-    .footer{
+    .container{
         display: grid;
         gap: 1rem;
         align-items: center;
@@ -92,7 +97,7 @@ $breakpoint-desktop: 1280px;
 }
 
 @media (min-width:$breakpoint-desktop) {
-    .footer{
+    .container{
         align-items: center;
     }
 }

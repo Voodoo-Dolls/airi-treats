@@ -8,7 +8,8 @@ export default function Footer() {
 
     return (
         <footer className={styles.footer}>
-            
+            <div className={styles.container}>
+
             <div className={styles.address}>
                 <Map />
                 {/* <div>
@@ -43,6 +44,7 @@ export default function Footer() {
                 <a href="">Privacy Policy</a>
                 <span>|</span>
                 <a href="">Terms and Conditions</a>
+            </div>
             </div>
 
         </footer>

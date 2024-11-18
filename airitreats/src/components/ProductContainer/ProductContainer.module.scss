@@ -9,10 +9,20 @@
     color: var(--lighterBlue);
 }
 
-.filterDropDown{
-    background-color: var(--yellow);
-    margin-top: 1rem;
-    padding: 6px;
+.filter{
+    display: flex;
+    gap: 1rem;
 
 }
 
+.filterDropDown{
+    display: inline-block;
+    background-color: var(--yellow);
+    padding: 6px;
+    border-radius: 6px;
+    width: 320px;
+}
+
+.filterDropDown > * {
+    padding: 1rem;
+}
