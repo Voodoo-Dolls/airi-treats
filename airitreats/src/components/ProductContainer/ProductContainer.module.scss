@@ -5,13 +5,14 @@
 }
 
 .filterContainer {
-    background-color: var(--greyBlue);
-    color: var(--lighterBlue);
+    background-color: var(--darkBlueStroke);
+    color: var(--headingColor);
 }
 
 .filter{
     display: flex;
     gap: 1rem;
+    justify-content: right;
 
 }
 

@@ -41,11 +41,3 @@ $breakpoint-desktop: 1100px;
         display: block;
     }
 }
-@media (min-width: $breakpoint-desktop) {
-    .local{
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 1rem;
-        align-items: center;
-    }
-}
