@@ -8,14 +8,14 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 
 export async function POST(req: NextRequest) {
-    const { email, subject, name, message } = await req.json();
-    console.log(email, subject, message);
+    const { email, name, message, phone } = await req.json();
+    // console.log(email, message);
     try {
         const data = await resend.emails.send({
             from: 'Acme <onboarding@resend.dev>',
             to: ['edmontonwebweavers@gmail.com'],
-            subject: subject,
-            react: EmailTemplate({ email, name, message }),
+            subject: "Airitreats",
+            react: EmailTemplate({ email, name, message, phone }),
         });
         return NextResponse.json(data);
     } catch (error) {

@@ -7,22 +7,22 @@ import styles from "./Contact.module.scss";
 export default function Contact() {
     // States
     const [email, setEmail] = useState("")
-    const [subject, setSubject] = useState("")
+    const [phone, setPhone] = useState("")
     const [name, setName] = useState("")
     const [message, setMessage] = useState("")
     // SUBMIT EVENT HANDLER
     async function handleSubmit(e: any) {
         e.preventDefault()
-        // console.log(sendEmail(email, subject, name, message))
+        console.log(sendEmail(email, phone, name, message))
         toast.success("")
     }
 
     // RESEND ENDPOINT
-    const sendEmail = async (email: string, subject: string, name: string, message: string) => {
+    const sendEmail = async (email: string, phone: string, name: string, message: string) => {
         let load = toast.loading('Sending Email')
         let emailObj = {
             email: email,
-            subject: subject,
+            phone: phone,
             name: name,
             message: message
         }
@@ -62,11 +62,11 @@ export default function Contact() {
                     </div>
                     {/* Subject */}
                     <div>
-                        <h3>Subject</h3>
+                        <h3>Phone</h3>
                         <input
-                            type="text"
-                            placeholder="What is your email address?"
-                            onChange={(e) => setSubject(e.target.value)}
+                            type="phone"
+                            placeholder="What is your phone number?"
+                            onChange={(e) => setPhone(e.target.value)}
                             name="subject"
                         />
                     </div>
@@ -102,7 +102,7 @@ export default function Contact() {
             <div>
                 <h2>Debugging</h2>
                 <p>Name:{name}</p>
-                <p>Subject:{subject}</p>
+                <p>Phone:{phone}</p>
                 <p>Email:{email}</p>
                 <p>Message:{message}</p>
             </div>
