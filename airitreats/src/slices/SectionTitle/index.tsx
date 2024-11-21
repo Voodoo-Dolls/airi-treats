@@ -1,7 +1,8 @@
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import styles from "./SectionTitle.module.scss"
-import { PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+
 /**
  * Props for `SectionTitle`.
  */
@@ -61,7 +62,9 @@ const SectionTitle = ({ slice }: SectionTitleProps): JSX.Element => {
         <div className={styles.closingWrapper}>
           <div className={styles.closingParagraph}><PrismicRichText field={slice.primary.closing_paragraph} /></div>
           <div className={styles.closingButton}>
-            ButtonHere
+            <PrismicNextLink field={slice.primary.link_to_products} className="yellowBtn">
+              Browse All Products
+            </PrismicNextLink>
           </div>
         </div>
       </div>
