@@ -32,10 +32,10 @@ const SectionTitle = ({ slice }: SectionTitleProps): JSX.Element => {
             <div><p>{slice.primary.list_intro}</p></div>
             <div>
               <ul>
-              {slice.primary.list.map((item, index) => (
-                <li key={index}>{item.bulletlist}</li>
-              ))}
-            </ul>
+                {slice.primary.list.map((item, index) => (
+                  <li key={index}>{item.bulletlist}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

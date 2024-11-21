@@ -120,6 +120,16 @@
             "allowTargetBlank": true,
             "multi": "paragraph,em,hyperlink"
           }
+        },
+        "link_to_products": {
+          "type": "Link",
+          "config": {
+            "label": "Link to products",
+            "placeholder": "All Products",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
+          }
         }
       },
       "items": {}

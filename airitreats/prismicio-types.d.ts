@@ -1168,6 +1168,16 @@ export interface SectionTitleSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   closing_paragraph: prismic.RichTextField;
+
+  /**
+   * Link to products field in *SectionTitle → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: All Products
+   * - **API ID Path**: section_title.default.primary.link_to_products
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link_to_products: prismic.LinkField;
 }
 
 /**

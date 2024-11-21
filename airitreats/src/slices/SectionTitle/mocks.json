@@ -167,6 +167,14 @@
 						"direction": "ltr"
 					}
 				]
+			},
+			"link_to_products": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "google.ca",
+					"text": "All Products"
+				}
 			}
 		},
 		"items": []
