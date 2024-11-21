@@ -5,8 +5,9 @@
 }
 
 .filterContainer {
-    background-color: var(--darkBlueStroke);
-    color: var(--headingColor);
+    // background-color: var(--darkBlueStroke);
+    // color: var(--headingColor);
+    border-bottom: 2px var(--darkBlueStroke) solid;
 }
 
 .filter{
