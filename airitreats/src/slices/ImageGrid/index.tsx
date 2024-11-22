@@ -19,8 +19,8 @@ const ImageGrid = ({ slice }: ImageGridProps): JSX.Element => {
       className={styles.container}
     >
       <div className={styles.sectionContainer}>
-        <div className={styles.catTitleContainer}>
-          <h2 className={styles.categoryTitle}>{slice.primary.section_title}</h2>
+        <div className={styles.secTitleContainer}>
+          <h2 className={styles.sectionTitle}>{slice.primary.section_title}</h2>
         </div>
 
         <div className={styles.card}>
@@ -36,7 +36,7 @@ const ImageGrid = ({ slice }: ImageGridProps): JSX.Element => {
                 <h3 className={styles.cardTitle}>{item.heading}</h3>
               </div>
               {/* card content */}
-              <p className={styles.cardDescription}>{item.body_text}</p>
+              <div className={styles.cardDescription}>{item.body_text}</div>
               <div className={styles.catLinkContainer}>
                 <PrismicNextLink field={item.category_link} className="yellowBtn">
                   {item.category_link_label}
