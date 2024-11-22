@@ -13,9 +13,9 @@ export default async function Page({ params }: { params: { productid: string, ui
     // Grab Product Details Using URL Slug
     let productData: any = await client.getByUID("product", productid).catch(() => notFound());
     let slug = (productData.data.category.uid)
-    if (uid != slug) {
-        notFound()
-    }
+    // if (uid != slug) {
+    //     notFound()
+    // }
 
     // console.log(productData)
     console.log(params)
