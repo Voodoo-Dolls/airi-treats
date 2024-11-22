@@ -8,10 +8,6 @@ import { useState } from "react";
 import { PrismicRichText } from "@prismicio/react";
 import { toast } from "sonner";
 
-
-
-
-
 export default function ProductDetails({ productData }: any) {
     const [quantity, setQuantity] = useState(1);
 
@@ -23,7 +19,7 @@ export default function ProductDetails({ productData }: any) {
         setQuantity(newQuantity)
 
     }
-    console.log(productData)
+    // console.log(productData)
     const { product_name, price, description, main_image, product_available } = productData.data
     // console.log(main_image)
     return (
