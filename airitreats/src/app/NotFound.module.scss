@@ -1,0 +1,26 @@
+.error{
+    background-color: var(--primaryColor);
+    height: 70vh;
+    text-align: center;
+    color: var(--headingColor);
+    padding: 1rem;
+    
+    .yellowBtn {
+        display: inline-block;
+        font-family: var(--buttonFont);
+        font-size: 16px;
+        background-color: var(--yellow);
+        border-radius: 12px;
+        border-top: none;
+        border-left: 1px solid var(--orange);
+        border-right: 1px solid var(--orange);
+        border-bottom: 6px solid var(--orange);
+        padding: 16px;
+    }
+
+    p{
+        padding: 1rem;
+    }
+
+    
+}
