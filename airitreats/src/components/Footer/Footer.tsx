@@ -46,7 +46,7 @@ export default function Footer() {
                     <span>|</span>
                     <a href="https://www.iubenda.com/privacy-policy/70842258/cookie-policy">Cookie Policy</a>
                     <span>|</span>
-                    {/* <a href="https://www.iubenda.com/terms-and-conditions/70842258">Terms and Conditions</a> */}
+                    <a href="https://www.iubenda.com/terms-and-conditions/70842258">Terms and Conditions</a>
                 </div>
             </div>
 
