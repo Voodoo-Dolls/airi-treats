@@ -144,6 +144,18 @@ h3 {
     padding: 16px;
 }
 
+
+// hover styles for .yellowBtn
+
+.yellowBtn:hover {
+    background-color: var(--orange);
+    border: 0.3rem white dashed;
+    color: #fff;
+    padding: 14px;
+    box-shadow: 0 0 1.5rem var(--overlayColor);
+    text-shadow: -2px 2px 0 var(--blackText);
+}
+
 // Sonner
 
 li[data-sonner-toast] {
@@ -176,3 +188,7 @@ li[data-sonner-toast] {
 .arrow--right {
     right: -30px;
 }
+
+
+
+// snipcart sytling override
