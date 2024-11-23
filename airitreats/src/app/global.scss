@@ -192,12 +192,24 @@ li[data-sonner-toast] {
 }
 
 // ************************* snipcart sytling override *************
-.snipcart {
+.snipcart,
+.snipcart-modal__close,
+.snipcart__actions--link,
+.snipcart-button-link,
+.snipcart-cart-summary-expanded-item {
     font-family: var(--bodyFont);
+    letter-spacing: 1px;
+}
+
+.snipcart__font--secondary,
+.snipcart__font--subtitle,
+.snipcart__font--subtitle-small {
+    font-family: var(--headerFont);
 }
 
 .snipcart__font--std {
     font-family: var(--bodyFont);
+    font-weight: bold;
 }
 
 .snipcart-cart-header,
