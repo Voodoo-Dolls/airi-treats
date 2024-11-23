@@ -32,6 +32,21 @@
     }
 }
 
+// ******************** card selection -- hover ****************
+.imgContainer:hover,
+.imgContainer:focus {
+    background-color: var(--primaryColor);
+    border: 0.5rem var(--darkAccent1) dashed;
+
+    img {
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 1.5rem;
+    }
+}
+
+// ******************** END of card selection -- hover ************************
+
 .flag {
     position: absolute;
     background-color: var(--primaryColor);
