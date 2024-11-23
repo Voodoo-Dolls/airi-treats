@@ -1,7 +1,7 @@
 :root {
     --babyBlue: #ACD6F0;
     --blackText: #4D3D41;
-    --darkBlueStroke: #005FA1;
+    --darkBlueStroke: rgb(0, 95, 161);
     --greyBlue: #2F3945;
     --lighterBlue: #E1EBF8;
     --gap: 16px;
@@ -134,7 +134,8 @@ h3 {
 .yellowBtn {
     display: inline-block;
     font-family: var(--buttonFont);
-    font-size: 16px;
+    letter-spacing: 0.1rem;
+    font-size: 1.1rem;
     background-color: var(--yellow);
     border-radius: 12px;
     border-top: none;
@@ -147,7 +148,8 @@ h3 {
 
 // hover styles for .yellowBtn
 
-.yellowBtn:hover {
+.yellowBtn:hover,
+.yellowBtn:focus {
     background-color: var(--orange);
     border: 0.3rem white dashed;
     color: #fff;
@@ -189,6 +191,82 @@ li[data-sonner-toast] {
     right: -30px;
 }
 
+// ************************* snipcart sytling override *************
+.snipcart {
+    font-family: var(--bodyFont);
+}
+
+.snipcart__font--std {
+    font-family: var(--bodyFont);
+}
+
+.snipcart-cart-header,
+.snipcart-cart__secondary-header {
+    background-color: var(--lighterPink);
+}
+
+.snipcart__font--secondary,
+.snipcart-cart__secondary-header-title {
+    font-family: var(--headerFont);
+}
+
+.snipcart-cart-header__title,
+.snipcart-cart__secondary-header-title {
+    text-transform: uppercase;
+}
+
+.snipcart-item-line__container,
+.snipcart-cart-summary {
+    border: 0.3rem var(--darkBlueStroke) dashed;
+    background-color: var(--lighterBlue);
+    border-bottom: 0.3rem var(--darkBlueStroke) solid;
+    border-left: 0.3rem var(--darkBlueStroke) solid;
+    border-radius: 0.5rem;
+}
+
+.snipcart-cart__footer {
+    background-color: var(--lighterPink);
+    padding: 1rem;
+
+}
 
 
-// snipcart sytling override
+.snipcart-base-button__label {
+    font-family: var(--buttonFont);
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+}
+
+.snipcart-button-primary {
+    border-radius: 1rem;
+    color: #000;
+    background-color: var(--yellow);
+    border-top: none;
+    border-left: 1px solid var(--orange);
+    border-right: 1px solid var(--orange);
+    border-bottom: 6px solid var(--orange);
+}
+
+.snipcart-button-primary:hover,
+.snipcart-button-primary:focus {
+    background-color: var(--orange);
+    border: 0.3rem white dashed;
+    color: #fff;
+    padding: 14px;
+    box-shadow: 0 0 1.5rem var(--overlayColor);
+    text-shadow: -2px 2px 0 var(--blackText);
+}
+
+$breakpoint-mobile: 360px;
+$breakpoint-tablet: 760px;
+$breakpoint-desktop: 1280px;
+
+@media (min-width:$breakpoint-tablet) {
+
+    .snipcart-layout__content,
+    .snipcart-cart-header {
+        max-width: $breakpoint-tablet;
+    }
+}
+
+// ************* End of Snipcart styling ****************************************
