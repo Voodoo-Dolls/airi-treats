@@ -6,17 +6,17 @@ import { FaInstagram, FaFacebookF, FaPhone, FaMapMarkerAlt } from "react-icons/f
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { createClient } from "@/prismicio";
 
-
+import Link from "next/link";
 export default function Footer() {
-    
+
 
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
 
                 {/* <div className={styles.address}> */}
-                    {/* <Map /> */}
-                    {/* <div>
+                {/* <Map /> */}
+                {/* <div>
                     <h3> Come Find Us!</h3>
                     <div>
                         <FaMapMarkerAlt title="our store"/>
@@ -39,7 +39,7 @@ export default function Footer() {
                             <p><a href="https://www.instagram.com/airitreats/" target="_blank"><FaInstagram title="our instagram" /></a></p>
                             <p><a href="https://www.facebook.com/profile.php?id=61553694755284" target="_blank"><FaFacebookF title="our facebook" /></a></p>
                         </div>
-                        
+
                     </div>
 
                     <div className={styles.subscription}>
@@ -51,11 +51,9 @@ export default function Footer() {
 
                 <div className={styles.legalese}>
 
-                    <a href="https://www.iubenda.com/privacy-policy/70842258">Privacy Policy</a>
+                    <Link href={`/privacy-policy.txt`} target="_blank">Privacy Policy</Link>
                     <span>|</span>
-                    <a href="https://www.iubenda.com/privacy-policy/70842258/cookie-policy">Cookie Policy</a>
-                    <span>|</span>
-                    <a href="https://www.iubenda.com/terms-and-conditions/70842258">Terms and Conditions</a>
+                    <Link href={`/cookie-policy.txt`} target="_blank">Cookie Policy</Link>
                 </div>
             </div>
 
