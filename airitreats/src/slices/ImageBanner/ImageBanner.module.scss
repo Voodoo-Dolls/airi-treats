@@ -2,6 +2,12 @@
     background-color: var(--babyBlue);
     display: flex;
 }
+.banner{
+    width: 50%;
+    max-height: 500px;
+    object-fit: cover;
+    
+}
 .textContainer {
     text-align: center;
     width: 100%;
