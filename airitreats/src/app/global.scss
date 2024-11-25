@@ -118,16 +118,16 @@ h3 {
 // Reususable Button
 
 .button {
-    background-color: var(--darkAccent1);
-    border-bottom: var(--primaryColor) solid 4px;
-    border-left: var(--primaryColor) solid 4px;
-    border-radius: 10000px;
-    font-family: var(--headerFont);
-    font-size: 24px;
-    font-weight: 700;
-    padding: 8px;
-    text-align: center;
-    text-transform: uppercase;
+    // background-color: var(--darkAccent1);
+    // border-bottom: var(--primaryColor) solid 4px;
+    // border-left: var(--primaryColor) solid 4px;
+    // border-radius: 10000px;
+    // font-family: var(--headerFont);
+    // font-size: 24px;
+    // font-weight: 700;
+    // padding: 8px;
+    // text-align: center;
+    // text-transform: uppercase;
 }
 
 
@@ -143,6 +143,7 @@ h3 {
     border-right: 1px solid var(--orange);
     border-bottom: 6px solid var(--orange);
     padding: 16px;
+    transition: all .2s ease-out;
 }
 
 
@@ -151,11 +152,7 @@ h3 {
 .yellowBtn:hover,
 .yellowBtn:focus {
     background-color: var(--orange);
-    border: 0.3rem white dashed;
     color: #fff;
-    padding: 14px;
-    box-shadow: 0 0 1.5rem var(--overlayColor);
-    text-shadow: -2px 2px 0 var(--blackText);
 }
 
 // Sonner
@@ -251,6 +248,7 @@ li[data-sonner-toast] {
     border-left: 1px solid var(--orange);
     border-right: 1px solid var(--orange);
     border-bottom: 6px solid var(--orange);
+
 }
 
 .snipcart-button-primary:not([disabled]):hover,
