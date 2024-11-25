@@ -4,6 +4,12 @@
     position: relative;
 }
 
+.container:hover .title,
+.container:active .title,
+.container:focus .title {
+    text-decoration: underline;
+}
+
 .title {
     font-family: var(--headerFont);
     -webkit-box-orient: vertical;
@@ -33,17 +39,19 @@
 }
 
 // ******************** card selection -- hover ****************
-.imgContainer:hover,
-.imgContainer:focus {
-    background-color: var(--primaryColor);
-    border: 0.5rem var(--darkAccent1) dashed;
 
-    img {
-        object-fit: cover;
-        border-radius: 50%;
-        padding: 0.5rem;
-    }
-}
+
+// .imgContainer:hover,
+// .imgContainer:focus {
+//     background-color: var(--primaryColor);
+//     border: 0.5rem var(--darkAccent1) dashed;
+
+//     img {
+//         object-fit: cover;
+//         border-radius: 50%;
+//         padding: 0.5rem;
+//     }
+// }
 
 // ******************** END of card selection -- hover ************************
 

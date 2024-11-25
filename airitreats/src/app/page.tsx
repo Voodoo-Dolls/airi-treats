@@ -17,10 +17,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const home = await client.getByUID("page", "home");
 
   return {
-    title: prismic.asText(home.data.title),
+    title: `${prismic.asText(home.data.title)} | Airi Treats`,
     description: home.data.meta_description,
     openGraph: {
-      title: home.data.meta_title ?? undefined,
+      title: `${home.data.meta_title} | Airi Treats` ?? undefined,
       images: [{ url: home.data.meta_image.url ?? "" }],
     },
   };

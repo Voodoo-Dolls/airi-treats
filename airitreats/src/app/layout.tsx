@@ -17,11 +17,9 @@ import Loading from "./loading";
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient()
-
   const page = await client.getSingle("settings")
-
   return {
-    title: page.data.site_title || "Airitreats",
+    title: `${page.data.site_title} || Airi Treats` || "Airi Treats",
     // description: page.data.me,
     openGraph: {
       images: [page.data.og_image.url || ""],
