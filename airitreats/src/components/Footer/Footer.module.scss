@@ -75,28 +75,23 @@
 $breakpoint-tablet: 760px;
 $breakpoint-desktop: 1100px;
 
-@media (min-width: $breakpoint-tablet) {
-    
+// @media (min-width:$breakpoint-desktop) {
+//     .container{
+//         display: grid;
+//         gap: 1rem;
+//         align-items: center;
+//     }
+//     .address {
+//         grid-column: 1 / 2;
+//         grid-row: 1;
+//     }
 
-}
-
-@media (min-width:$breakpoint-desktop) {
-    .container{
-        display: grid;
-        gap: 1rem;
-        align-items: center;
-    }
-    .address {
-        grid-column: 1 / 2;
-        grid-row: 1;
-    }
-
-    .legalese{
-        grid-column: 1 / 3;
-    }
-    .container{
-        align-items: center;
-        grid-column: 2 / 3;
-        grid-row: 1;
-    }
-}
+//     .legalese{
+//         grid-column: 1 / 3;
+//     }
+//     .container{
+//         align-items: center;
+//         grid-column: 2 / 3;
+//         grid-row: 1;
+//     }
+// }

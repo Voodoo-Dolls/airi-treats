@@ -1,5 +1,4 @@
 .textContainer {
-    color: white;
     text-align: center;
     width: 100%;
     margin: 0 auto;
@@ -8,4 +7,9 @@
     display: flex;
     flex-direction: column;
     gap: var(--gap);
+    color: var(--darkAccent1);
+
+    h2{
+        color: red;
+    }
 }

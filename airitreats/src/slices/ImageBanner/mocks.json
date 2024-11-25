@@ -28,13 +28,13 @@
 			},
 			"heading": {
 				"__TYPE__": "FieldContent",
-				"value": "birthday",
-				"type": "Text"
+				"type": "Text",
+				"value": "\nFREEZE-DRIED TREATS ARE THE CLOSEST THING TO AN EDIBLE TIME CAPSULE "
 			},
 			"body": {
 				"__TYPE__": "FieldContent",
-				"value": "please",
-				"type": "Text"
+				"type": "Text",
+				"value": "They're like the 'Jurassic Park' of snacks, bringing the past back to life - one delicious crunch at a time."
 			}
 		},
 		"items": []

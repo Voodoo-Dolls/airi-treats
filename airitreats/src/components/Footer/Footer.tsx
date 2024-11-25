@@ -3,15 +3,19 @@ import Map from "./Map/Map";
 import styles from "./Footer.module.scss"
 import { FaInstagram, FaFacebookF, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { createClient } from "@/prismicio";
+
 
 export default function Footer() {
+    
 
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
 
-                <div className={styles.address}>
-                    <Map />
+                {/* <div className={styles.address}> */}
+                    {/* <Map /> */}
                     {/* <div>
                     <h3> Come Find Us!</h3>
                     <div>
@@ -24,15 +28,20 @@ export default function Footer() {
                         <p>(XXX) XXX-XXXX</p>
                     </div>
                 </div> */}
-                </div>
+                {/* </div> */}
 
                 <div className={styles.community}>
-                    <div className={styles.socialMedia}>
-                        <h3>Follow Us</h3>
-                        <p><a href="https://www.instagram.com/airitreats/" target="_blank"><FaInstagram title="our instagram" /></a></p>
-                        <p><a href="https://www.facebook.com/profile.php?id=61553694755284" target="_blank"><FaFacebookF title="our facebook" /></a></p>
+                    <div>
+                        {/* <Map /> */}
 
+                        <div className={styles.socialMedia}>
+                            <h3>Follow Us</h3>
+                            <p><a href="https://www.instagram.com/airitreats/" target="_blank"><FaInstagram title="our instagram" /></a></p>
+                            <p><a href="https://www.facebook.com/profile.php?id=61553694755284" target="_blank"><FaFacebookF title="our facebook" /></a></p>
+                        </div>
+                        
                     </div>
+
                     <div className={styles.subscription}>
                         <h3>Newsletter</h3>
                         <p>Do you want to know the latest deals, new arrivals, limited edition treats? Subscribe to our newsletter!</p>
