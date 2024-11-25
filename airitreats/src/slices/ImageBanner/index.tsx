@@ -18,7 +18,7 @@ const ImageBanner = ({ slice }: ImageBannerProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div>
+      <div className={styles.microBanner}>
         <PrismicNextImage field={slice.primary.banner_image} />
 
         <div className={styles.textContainer}>
