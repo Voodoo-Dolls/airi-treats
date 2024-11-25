@@ -16,7 +16,7 @@ export default async function Page({ params }: { params: Params }) {
         .getByUID("category", params.uid)
         .catch(() => notFound());
 
-    let productData: any = await client.getAllByEveryTag([params.uid, "product"])
+    // let productData: any = await client.getAllByEveryTag([params.uid, "product"])
 
     // productData.map((product) => {
     //     console.log(product)
@@ -45,7 +45,7 @@ export async function generateMetadata({
         .catch(() => notFound());
 
     return {
-        title: page.data.meta_title,
+        title: `${page.data.meta_title} | Airi Treats`,
         description: page.data.meta_description,
     };
 }

@@ -18,8 +18,8 @@ export default async function Page({ params }: { params: { productid: string, ui
     }
 
     // console.log(productData)
-    console.log(params)
-    console.log(slug)
+    // console.log(params)
+    // console.log(slug)
     return (
         <>
             <ProductDetails productData={productData} />
@@ -38,7 +38,7 @@ export async function generateMetadata({
         .getByUID("product", params.productid)
         .catch(() => notFound());
     return {
-        title: page.data.meta_title || page.data.product_name,
+        title: `${page.data.meta_title} | Airi Treats` || page.data.product_name,
         description: page.data.meta_description,
     };
 }

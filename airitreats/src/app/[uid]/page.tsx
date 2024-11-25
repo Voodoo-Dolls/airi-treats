@@ -26,10 +26,10 @@ export async function generateMetadata({
     .getByUID("page", params.uid)
     .catch(() => notFound());
   return {
-    title: page.data.meta_title || page.uid,
+    title: `${page.data.meta_title} | Airi Treats` || page.uid,
     description: page.data.meta_description,
     openGraph: {
-      title: page.data.meta_title ?? undefined,
+      title: `${page.data.meta_title} | Airi Treats` ?? undefined,
       images: [{ url: page.data.meta_image.url ?? "" }],
     },
   };
