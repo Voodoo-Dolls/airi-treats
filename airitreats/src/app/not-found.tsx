@@ -10,7 +10,7 @@ export default function Notfound() {
                 <p>could not find the page you where looking for</p>
                 <p>
 
-                <Link href={"/"} className={styles.yellowBtn}> 
+                <Link href={"/"} className={`yellowBtn`}> 
                     Go back home
                 </Link>
                 </p>
