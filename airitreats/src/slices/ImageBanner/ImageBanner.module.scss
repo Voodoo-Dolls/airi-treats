@@ -20,8 +20,18 @@
     order: 1;
     
     div{
-        max-width: 400px;
+        max-width: 500px;
         margin: 0 auto;
+
+        h2{
+            font-size: clamp(1rem, 0.7273rem + 1.3636vw, 1.75rem);
+            word-spacing: 4px;
+            line-height: 1.5;
+            
+        }
+        p {
+            font-size: clamp(0.875rem, 0.7386rem + 0.6818vw, 1.25rem);
+        }
     }
     div > * {
         margin-bottom: 1rem;
