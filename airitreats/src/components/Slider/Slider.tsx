@@ -74,6 +74,7 @@ export default function Slider({ list }: any) {
     )
     return (
         <>
+
             <div className="navigation-wrapper">
                 <div ref={sliderRef} className="keen-slider">
                     {list.map((uid: any, index: number) => {
@@ -106,18 +107,9 @@ export default function Slider({ list }: any) {
                         />
                     </>
                 )}
+                <div className="sr-only">&#160;</div>
             </div>
 
-            {/* <div ref={sliderRef} className="keen-slider">
-                {list.map((uid: any, index: number) => {
-                    return (
-                        <div className="keen-slider__slide" key={index} >
-                            <ProductCard uid={uid} />
-                        </div>
-                    )
-                }
-                )}
-            </div > */}
         </>
     )
 }
