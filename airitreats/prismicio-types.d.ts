@@ -309,29 +309,6 @@ interface ProductDocumentData {
   product_available: prismic.BooleanField;
 
   /**
-   * Sale Price field in *Product*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: *None*
-   * - **API ID Path**: product.sale_price
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#number
-   */
-  sale_price: prismic.NumberField;
-
-  /**
-   * Sale Active field in *Product*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: product.sale_active
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  sale_active: prismic.BooleanField;
-
-  /**
    * Slice Zone field in *Product*
    *
    * - **Field Type**: Slice Zone
