@@ -48,7 +48,7 @@ export default function RootLayout({
         <script defer dangerouslySetInnerHTML={{
           __html: `
           window.SnipcartSettings = {
-            publicApiKey: "NTkxMTg1ZDgtNGMwYy00NzM5LTlhZDUtNGEyNTcwM2UyM2Y0NjM4NjIzNzk4MjQ5NTU3MTQ2",
+            publicApiKey: "${process.env.SNIPCART_API_KEY}",
             loadStrategy: "on-user-interaction",
             modalStyle: "side",
             addProductBehavior: "none",
