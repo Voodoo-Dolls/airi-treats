@@ -63,98 +63,78 @@ export default function Contact() {
 
     return (
 
-        <div className={styles.contactContainer}>
-            <div className={styles.contactForm}>
-                <div className={styles.contactIntro}>
+        <>
+            <form onSubmit={handleSubmit} className={styles.formContainer}>
+                <div>
                     <h2>Contact Us</h2>
                     <p>We are open to suggestions and questions. Please feel free to contact us by filling in the form below.</p>
                 </div>
-                <form onSubmit={handleSubmit} className={styles.formContainer}>
-                    <div className={styles.fieldContainer}>
-                        {/* Email */}
-                        <div>
-                            <h3>*Email</h3>
-                            <input
-                                type="text"
-                                placeholder="What is your email address?"
-                                onChange={(e) => setEmail(e.target.value)}
-                                name="email"
-                                required
-                            />
-                        </div>
-                        {/* Subject */}
-                        <div>
-                            <h3>Phone (Optional)</h3>
-                            <input
-                                type="tel"
-                                placeholder="What is your phone number?"
-                                onChange={(e) => setPhone(e.target.value)}
-                                name="subject"
-                            />
-                        </div>
-                        {/* Name */}
-                        <div>
-                            <h3>*Name</h3>
-                            <input
-                                type="text"
-                                placeholder="What is your name?"
-                                onChange={(e) => setName(e.target.value)}
-                                name="name"
-                                required
-                            />
-                        </div>
-                        {/* Message */}
-                        <div>
-                            <h3>*Message</h3>
-                            <textarea
-                                placeholder="What's your message?"
-                                onChange={(e) => setMessage(e.target.value)}
-                                name="message"
-                                minLength={20}
-                                required
-                            />
-                        </div>
-                        {/* CHECK FOR INVALID EMAIL LATER */}
-                    </div>
-                    <div className={styles.buttonContainer}>
-                        {!sent ?
-                            <button
-                                type="submit"
-                                className="yellowBtn"
-                            >
-                                Let&apos;s Chat!
-                            </button>
-                            :
-                            <button
-                                disabled
-                                className="yellowBtn"
-                            >
-                                Message Sent!
-                            </button>
-                        }
-                    </div>
-                </form>
-            </div>
-
-            <div className={styles.hoursContainer}>
-                <h2>Hours of Operation</h2>
+                {/* Email */}
                 <div>
-                    <h3>Monday to Friday</h3>
-                    <p>9:00 A.M. to 5:00 P.M.</p>
+                    <h3>*Email</h3>
+                    <input
+                        type="text"
+                        placeholder="What is your email address?"
+                        onChange={(e) => setEmail(e.target.value)}
+                        name="email"
+                        required
+                    />
                 </div>
+                {/* Subject */}
                 <div>
-                    <h3>Saturday and Sunday</h3>
-                    <p>10:00 A.M. to 6:00 P.M.</p>
+                    <h3>Phone (Optional)</h3>
+                    <input
+                        type="tel"
+                        placeholder="What is your phone number?"
+                        onChange={(e) => setPhone(e.target.value)}
+                        name="subject"
+                    />
                 </div>
+                {/* Name */}
                 <div>
-                    <p>We’d love to see you! Check out our <a href="https://www.instagram.com/airitreats/" target="_blank">Instagram</a> or <a href="https://www.facebook.com/profile.php?id=61553694755284" target="_blank">Facebook</a> for the latest updates.</p>
+                    <h3>*Name</h3>
+                    <input
+                        type="text"
+                        placeholder="What is your name?"
+                        onChange={(e) => setName(e.target.value)}
+                        name="name"
+                        required
+                    />
                 </div>
-            </div>
+                {/* Message */}
+                <div>
+                    <h3>*Message</h3>
+                    <textarea
+                        placeholder="What's your message?"
+                        onChange={(e) => setMessage(e.target.value)}
+                        name="message"
+                        minLength={20}
+                        required
+                    />
+                </div>
+                {/* CHECK FOR INVALID EMAIL LATER */}
+
+                <div className={styles.buttonContainer}>
+                    {!sent ?
+                        <button
+                            type="submit"
+                            className="yellowBtn"
+                        >
+                            Let&apos;s Chat!
+                        </button>
+                        :
+                        <button
+                            disabled
+                            className="yellowBtn"
+                        >
+                            Message Sent!
+                        </button>
+                    }
+                </div>
+            </form>
 
 
-        </div>
-
-
+        </>
 
     )
 }

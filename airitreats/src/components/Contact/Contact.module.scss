@@ -1,137 +1,43 @@
-.contactContainer {
-    background-color: var(--lighterPink);
-    padding: 2rem 0;
-}
-
-.contactIntro {
-    // grid template for the .contactIntro contents
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr;
-
-    h2 {
-        text-align: center;
-        padding: 1rem;
-        grid-row: 1;
-        grid-column: 3 / span 2;
-        background-color: var(--primaryColor);
-        border: var(--darkAccent1) 1px solid;
-        border-right: var(--darkAccent1) 0.25rem solid;
-        border-left: var(--darkAccent1) 0.5rem solid;
-        border-radius: 1rem 0 0 1rem;
-        z-index: 10;
-    }
-
-    p {
-        text-align: right;
-        padding: 2.5rem 1rem;
-        color: white;
-        background-color: var(--darkAccent1);
-        grid-row: 1/ -1;
-        grid-column: 1 / -1;
-        margin: 2rem 1rem 0 1rem;
-
-    }
-}
-
 .formContainer {
-    grid-row: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--lighterPink);
+    border-radius: 8px;
+    padding: 32px;
+    height: fit-content;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
-    // grid template for the .fieldContainer
-    display: grid;
-    grid-template-columns: auto;
-    margin-bottom: 2rem;
+    div:first-of-type {
+        h2 {
+            font-size: clamp(24px, 4vw, 44px);
+        }
 
-    h3 {
-        letter-spacing: 0.1rem;
-        padding: 0.3rem;
-    }
-}
-
-.fieldContainer {
-    //grid area for the .fieldContainer
-    grid-row: 1 / span 2;
-    grid-column: 1;
-    background-color: var(--primaryColor);
-    padding: 3rem 1rem;
-    margin-bottom: 1.5rem;
-    border: 0.2rem var(--darkAccent1) solid;
-    border-width: 0.125rem 0.375rem;
-    border-radius: 1rem;
-
-    div {
-        padding: 0.5rem 0;
+        margin-bottom: 16px;
     }
 
     input,
     textarea {
-        width: 100%;
-        height: 4rem;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
         border-bottom: 0.25rem black solid;
         border-left: 0.25rem black solid;
-        background-color: var(--lighterBlue);
+        border-radius: 0.5rem;
+        height: 4rem;
+        padding: 0.5rem;
+        width: 100%;
     }
 
     textarea {
         height: 8rem;
     }
-}
-
-.buttonContainer {
-    // grid area for the .buttonContainer
-    grid-row: 2;
-    grid-column: 1;
-
-    // grid template for the button
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    z-index: 10;
 
     button {
-        padding: 1rem;
-        grid-column: 2;
-        border-radius: 1rem;
+        width: 100%;
+        background-color: var(--yellow);
         border: 0.125rem var(--orange) solid;
         border-bottom: 0.375rem var(--orange) solid;
-        background-color: var(--yellow);
-    }
-}
-
-
-.hoursContainer {
-    border: 0.2rem var(--darkBlueStroke) solid;
-    margin: 1rem;
-    background-color: var(--lighterBlue);
-}
-
-.hoursContainer>* {
-    padding: 1rem;
-    text-align: center;
-}
-
-$breakpoint-mobile: 360px;
-$breakpoint-tablet: 760px;
-$breakpoint-desktop: 1280px;
-
-@media (min-width:$breakpoint-tablet) {
-    .contactContainer {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: auto;
-        gap: 1rem;
+        border-radius: 1rem;
+        grid-column: 2;
         padding: 1rem;
-        max-width: $breakpoint-desktop;
-        margin: auto;
     }
 
-    .hoursContainer {
-        margin: auto;
-    }
-}
-
-.success {
-    color: red;
-    font-size: 32px;
 }
