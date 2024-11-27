@@ -80,7 +80,7 @@
 }
 
 .buttonContainer {
-    //grid area for the .buttonContainer
+    // grid area for the .buttonContainer
     grid-row: 2;
     grid-column: 1;
 
@@ -129,4 +129,9 @@ $breakpoint-desktop: 1280px;
     .hoursContainer {
         margin: auto;
     }
+}
+
+.success {
+    color: red;
+    font-size: 32px;
 }

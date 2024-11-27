@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react"
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import styles from "./Contact.module.scss";
 
 
@@ -10,15 +10,32 @@ export default function Contact() {
     const [phone, setPhone] = useState("")
     const [name, setName] = useState("")
     const [message, setMessage] = useState("")
+    const [sending, setSending] = useState(false)
+    const [sent, setSent] = useState(false)
+
     // SUBMIT EVENT HANDLER
     async function handleSubmit(e: any) {
         e.preventDefault()
-
-        let res = await sendEmail(email, phone, name, message)
-        if (res.status === 200) {
-            toast.success(res.message)
+        // Checks for Valid Email and Not in Progress
+        if (validateEmail(email) && !sending) {
+            setSending(true)
+            if (!sent) {
+                // Sends params to endpoint for Resend API then displays results
+                let res = await sendEmail(email, phone, name, message)
+                if (res.status === 200) {
+                    toast.success(res.message)
+                    setSent(true)
+                } else {
+                    toast.error(res.message)
+                    setSending(false)
+                }
+            } else {
+                toast.warning("Sending in Progress")
+            }
+        } else if (sent) {
+            toast.warning("Email Already Sent")
         } else {
-            toast.error(res.message)
+            toast.warning("Error")
         }
     }
 
@@ -39,13 +56,11 @@ export default function Contact() {
         return response.json()
     }
     // EMAIL VALIDATION
-    const validateEmail = (email: string) => {
-        return String(email)
-            .toLowerCase()
-            .match(
-                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-            );
-    };
+    function validateEmail(email: string) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
     return (
 
         <div className={styles.contactContainer}>
@@ -71,7 +86,7 @@ export default function Contact() {
                         <div>
                             <h3>Phone (Optional)</h3>
                             <input
-                                type="phone"
+                                type="tel"
                                 placeholder="What is your phone number?"
                                 onChange={(e) => setPhone(e.target.value)}
                                 name="subject"
@@ -102,12 +117,21 @@ export default function Contact() {
                         {/* CHECK FOR INVALID EMAIL LATER */}
                     </div>
                     <div className={styles.buttonContainer}>
-                        <button
-                            type="submit"
-                            className="yellowBtn"
-                        >
-                            Let&apos;s Chat!
-                        </button>
+                        {!sent ?
+                            <button
+                                type="submit"
+                                className="yellowBtn"
+                            >
+                                Let&apos;s Chat!
+                            </button>
+                            :
+                            <button
+                                disabled
+                                className="yellowBtn"
+                            >
+                                Message Sent!
+                            </button>
+                        }
                     </div>
                 </form>
             </div>
@@ -126,13 +150,6 @@ export default function Contact() {
                     <p>We’d love to see you! Check out our <a href="https://www.instagram.com/airitreats/" target="_blank">Instagram</a> or <a href="https://www.facebook.com/profile.php?id=61553694755284" target="_blank">Facebook</a> for the latest updates.</p>
                 </div>
             </div>
-            {/* <div>
-                <h2>Debugging</h2>
-                <p>Name:{name}</p>
-                <p>Phone:{phone}</p>
-                <p>Email:{email}</p>
-                <p>Message:{message}</p>
-            </div> */}
 
 
         </div>

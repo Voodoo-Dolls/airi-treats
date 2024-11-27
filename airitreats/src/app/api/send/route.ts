@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-// const fromEmail = process.env.FROM_EMAIL;
+const fromEmail = process.env.FROM_EMAIL;
 
 
 
@@ -15,8 +15,8 @@ export async function POST(req: NextRequest) {
         }
         await resend.emails.send({
             from: 'Acme <onboarding@resend.dev>',
-            to: ['edmontonwebweavers@gmail.com'],
-            subject: "Airi Treats",
+            to: [`${fromEmail}`],
+            subject: `Airi Treats | ${name}`,
             react: EmailTemplate({ email, name, message, phone }),
         });
         return NextResponse.json({ message: "Email Sent!", status: 200 });

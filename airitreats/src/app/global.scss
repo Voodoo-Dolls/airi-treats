@@ -149,8 +149,9 @@ h3 {
 
 // hover styles for .yellowBtn
 
-.yellowBtn:hover,
-.yellowBtn:focus {
+.yellowBtn:not([disabled]):hover,
+.yellowBtn:not([disabled]):active,
+.yellowBtn:not([disabled]):focus {
     background-color: var(--orange);
     color: #fff;
 }

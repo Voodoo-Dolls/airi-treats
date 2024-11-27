@@ -56,7 +56,6 @@ export default function Newsletter() {
             {/* CHECK FOR INVALID EMAIL LATER */}
             <button
                 type="submit"
-
             >
                 Send
             </button>

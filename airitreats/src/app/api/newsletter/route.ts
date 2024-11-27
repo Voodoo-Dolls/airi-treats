@@ -8,7 +8,7 @@ mailchimp.setConfig({
 });
 
 // UPDATE LIST ID FOR CLIENT
-let listId = "96e5289e84"
+let listId = process.env.MAILCHIMP_AUDIENCE_ID
 
 
 export async function POST(req: NextRequest) {
