@@ -13,8 +13,13 @@ export default function Contact() {
     // SUBMIT EVENT HANDLER
     async function handleSubmit(e: any) {
         e.preventDefault()
-        console.log(sendEmail(email, phone, name, message))
-        toast.success("")
+
+        let res = await sendEmail(email, phone, name, message)
+        if (res.status === 200) {
+            toast.success(res.message)
+        } else {
+            toast.error(res.message)
+        }
     }
 
     // RESEND ENDPOINT
@@ -53,17 +58,18 @@ export default function Contact() {
                     <div className={styles.fieldContainer}>
                         {/* Email */}
                         <div>
-                            <h3>Email</h3>
+                            <h3>*Email</h3>
                             <input
                                 type="text"
                                 placeholder="What is your email address?"
                                 onChange={(e) => setEmail(e.target.value)}
                                 name="email"
+                                required
                             />
                         </div>
                         {/* Subject */}
                         <div>
-                            <h3>Phone</h3>
+                            <h3>Phone (Optional)</h3>
                             <input
                                 type="phone"
                                 placeholder="What is your phone number?"
@@ -73,21 +79,24 @@ export default function Contact() {
                         </div>
                         {/* Name */}
                         <div>
-                            <h3>Name</h3>
+                            <h3>*Name</h3>
                             <input
                                 type="text"
                                 placeholder="What is your name?"
                                 onChange={(e) => setName(e.target.value)}
                                 name="name"
+                                required
                             />
                         </div>
                         {/* Message */}
                         <div>
-                            <h3>Message</h3>
+                            <h3>*Message</h3>
                             <textarea
-                                placeholder="What is your email address?"
+                                placeholder="What's your message?"
                                 onChange={(e) => setMessage(e.target.value)}
                                 name="message"
+                                minLength={20}
+                                required
                             />
                         </div>
                         {/* CHECK FOR INVALID EMAIL LATER */}

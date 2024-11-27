@@ -5,7 +5,6 @@ import { SliceZone } from "@prismicio/react";
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 
-import ProductGrid from "@/components/Products/ProductGrid/ProductGrid";
 import ProductContainer from "@/components/ProductContainer/ProductContainer";
 
 type Params = { uid: string };

@@ -9,17 +9,19 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
     const { email, name, message, phone } = await req.json();
-    // console.log(email, message);
     try {
-        const data = await resend.emails.send({
+        if (name == "" || email == "") {
+            throw new Error("Missing Fields")
+        }
+        await resend.emails.send({
             from: 'Acme <onboarding@resend.dev>',
             to: ['edmontonwebweavers@gmail.com'],
-            subject: "Airitreats",
+            subject: "Airi Treats",
             react: EmailTemplate({ email, name, message, phone }),
         });
-        return NextResponse.json(data);
-    } catch (error) {
-        return NextResponse.json({ error });
+        return NextResponse.json({ message: "Email Sent!", status: 200 });
+    } catch (error: any) {
+        return NextResponse.json({ message: "Email Failed", status: 400 });
     }
 
 }
