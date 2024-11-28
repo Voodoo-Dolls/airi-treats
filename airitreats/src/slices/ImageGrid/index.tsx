@@ -29,7 +29,7 @@ const ImageGrid = ({ slice }: ImageGridProps): JSX.Element => {
             <div className={styles.cardContents} key={index}>
               <div className={styles.imgContainer}>
                 {/* card image */}
-                <PrismicNextImage field={item.image_card} className={styles.img} />
+                <PrismicNextImage field={item.image_card} className={styles.img} fill />
               </div>
               {/* card title */}
               <div className={styles.titleContainer}>
