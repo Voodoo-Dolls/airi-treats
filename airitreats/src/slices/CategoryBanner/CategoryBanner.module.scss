@@ -1,16 +1,16 @@
-.imageContainer{
+.imageContainer {
     position: relative;
-    max-height: 500px;
+    height: 500px;
 }
 
-.banner{
+.banner {
     width: 100%;
-    max-height: 500px;
+    height: 100%;
     object-fit: cover;
-    
+
 }
 
-.desc{
+.desc {
     color: black;
     position: absolute;
     width: 100%;
@@ -23,6 +23,7 @@
         background-color: #ff6f91e0;
         text-align: center;
     }
+
     p {
         padding: var(--gap);
         background-color: #ffe0f2d8;
@@ -32,10 +33,10 @@
 // tablet breakpoint
 $breakpoint-tablet: 760px;
 @media (min-width: $breakpoint-tablet) {
-  
-    .desc{
+
+    .desc {
         max-width: 500px;
-        
+
         h2 {
             position: relative;
             margin: -1rem auto;
@@ -44,7 +45,8 @@ $breakpoint-tablet: 760px;
             border-radius: 6px;
 
         }
-        p{
+
+        p {
             z-index: 1;
             padding: 2rem;
         }
@@ -55,7 +57,7 @@ $breakpoint-tablet: 760px;
 // desktop breakpoint
 $breakpoint-desktop: 1280px;
 @media (min-width: $breakpoint-tablet) {
-    .desc{
+    .desc {
         left: 33%;
     }
 }
