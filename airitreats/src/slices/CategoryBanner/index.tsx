@@ -26,9 +26,12 @@ const CategoryBanner = ({ slice }: CategoryBannerProps): JSX.Element => {
           <PrismicNextImage
             field={slice.primary.banner_image}
             className={styles.banner}
+            fill
+            priority={true}
+            sizes="100vw"
           />
         </div>
-        
+
         <div className={styles.desc}>
           <h2>
             {slice.primary.heading}
