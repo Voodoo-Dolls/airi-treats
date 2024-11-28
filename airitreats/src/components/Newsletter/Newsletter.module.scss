@@ -14,4 +14,9 @@
         background-color: var(--babyBlue);
 
     }
+
+    button:hover{
+        background-color: var(--yellow);
+        border: solid 4px var(--orange);
+    }
 }

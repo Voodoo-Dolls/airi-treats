@@ -36,13 +36,13 @@ export default function Footer() {
 
                         <div className={styles.socialMedia}>
                             <h3>Follow Us</h3>
-                            <p><a href="https://www.instagram.com/airitreats/" target="_blank"><FaInstagram title="our instagram" /></a></p>
-                            <p><a href="https://www.facebook.com/profile.php?id=61553694755284" target="_blank"><FaFacebookF title="our facebook" /></a></p>
+                            <p><a href="https://www.instagram.com/airitreats/" target="_blank"><FaInstagram title="our instagram" className={styles.socialicon}/></a></p>
+                            <p><a href="https://www.facebook.com/profile.php?id=61553694755284" target="_blank"><FaFacebookF title="our facebook" className={styles.socialicon}/></a></p>
                         </div>
 
                     </div>
 
-                    <div className={styles.susbscription}>
+                    <div className={styles.subscription}>
                         <h3>Newsletter</h3>
                         <p>Do you want to know the latest deals, new arrivals, limited edition treats? Subscribe to our newsletter!</p>
                         <Newsletter />

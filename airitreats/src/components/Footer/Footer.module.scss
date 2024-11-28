@@ -51,6 +51,13 @@
     h3{
         grid-column: 1 / span 2;
     }
+
+    
+    a:hover > .socialicon{
+        color: var(--yellow);
+        fill: var(--yellow);
+        border-radius: 6px;
+    }
     
 }
 
