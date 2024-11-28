@@ -2,7 +2,7 @@ import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { SliceComponentProps } from "@prismicio/react";
 import styles from "./ImageBanner.module.scss"
-import { text } from "stream/consumers";
+
 
 /**
  * Props for `ImageBanner`.
@@ -20,13 +20,10 @@ const ImageBanner = ({ slice }: ImageBannerProps): JSX.Element => {
     >
       <div className={styles.microBanner}>
         <div className={styles.textContainer}>
-          <div>
-            <h2>{slice.primary.heading}</h2>
-            <p>{slice.primary.body}</p>
-          </div>
+          <h2>{slice.primary.heading}</h2>
+          <p>{slice.primary.body}</p>
         </div>
-        
-        <PrismicNextImage field={slice.primary.banner_image} className={styles.banner}/>
+        <PrismicNextImage field={slice.primary.banner_image} className={styles.banner} />
       </div>
     </section>
   );

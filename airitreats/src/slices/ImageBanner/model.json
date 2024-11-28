@@ -16,7 +16,10 @@
           "type": "Image",
           "config": {
             "label": "Banner Image",
-            "constraint": {},
+            "constraint": {
+              "width": 1000,
+              "height": 1000
+            },
             "thumbnails": []
           }
         },
