@@ -30,7 +30,10 @@
           "type": "Image",
           "config": {
             "label": "Banner Image",
-            "constraint": {},
+            "constraint": {
+              "width": 0,
+              "height": 500
+            },
             "thumbnails": []
           }
         }
