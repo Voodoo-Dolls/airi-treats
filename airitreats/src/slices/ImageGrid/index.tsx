@@ -41,9 +41,6 @@ const ImageGrid = ({ slice }: ImageGridProps): JSX.Element => {
                 <PrismicNextLink field={item.category_link} className="yellowBtn">
                   {item.category_link_label}
                 </PrismicNextLink>
-                {/* <p className={styles.catLink}><PrismicNextLink field={item.category_link}>
-                  {item.category_link_label}
-                </PrismicNextLink></p> */}
               </div>
             </div>
           ))}
