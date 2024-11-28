@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const page = await client.getSingle("settings")
   return {
     title: `${page.data.site_title}` || "Airi Treats",
-    // description: page.data.me,
+    // description: page.data.,
     openGraph: {
       images: [page.data.og_image.url || ""],
     },

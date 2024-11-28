@@ -26,6 +26,8 @@
         position: relative;
         height: 100%;
         width: 100%;
+
+
     }
 
     &>img {
@@ -36,7 +38,11 @@
 .ul {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 3rem;
+
+    a:hover {
+        color: white;
+    }
 }
 
 // Dropdown
