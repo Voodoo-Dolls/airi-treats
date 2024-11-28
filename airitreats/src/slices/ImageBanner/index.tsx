@@ -23,7 +23,9 @@ const ImageBanner = ({ slice }: ImageBannerProps): JSX.Element => {
           <h2>{slice.primary.heading}</h2>
           <p>{slice.primary.body}</p>
         </div>
-        <PrismicNextImage field={slice.primary.banner_image} className={styles.banner} />
+        <div className={styles.banner}>
+          <PrismicNextImage field={slice.primary.banner_image} />
+        </div>
       </div>
     </section>
   );

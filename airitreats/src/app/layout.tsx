@@ -2,7 +2,6 @@ import type { Metadata, ResolvingMetadata } from 'next'
 import { PrismicPreview } from "@prismicio/next";
 import { createClient, repositoryName } from "@/prismicio";
 import Header from "@/components/Header/Header";
-import "./snipcart.css"
 import "./global.scss"
 import { bodyFont, headerFont, subheadingFont, buttonFont } from "./fonts";
 import Footer from "@/components/Footer/Footer";
