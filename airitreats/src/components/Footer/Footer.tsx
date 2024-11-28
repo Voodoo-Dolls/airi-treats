@@ -42,7 +42,7 @@ export default function Footer() {
 
                     </div>
 
-                    <div className={styles.subscription}>
+                    <div className={styles.susbscription}>
                         <h3>Newsletter</h3>
                         <p>Do you want to know the latest deals, new arrivals, limited edition treats? Subscribe to our newsletter!</p>
                         <Newsletter />
