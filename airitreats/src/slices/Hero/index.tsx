@@ -24,6 +24,7 @@ const Hero = ({ slice }: any): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <div className={styles.hero}>
+        <link rel="preload" as="image" href="/images/hero.webp" />
         <div className="container">
           <div className={`${styles.textContainer}`}>
             <h2>{slice.primary.header}</h2>
