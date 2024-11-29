@@ -27,12 +27,11 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 }) => (
     <Html>
         <Head />
-
         <Body style={main}>
             <Container style={container}>
                 <Section>
                     <Img
-                        src={`${baseUrl}/images/logo.webp`}
+                        src={`${baseUrl}/images/logo.png`}
                         width="150"
                         height="150"
                         alt="Airi Treats"
