@@ -31,11 +31,12 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
             <Container style={container}>
                 <Section>
                     <Img
-                        src={`${baseUrl}/images/logo.png`}
+                        src={`https://airi-treats.vercel.app/images/logo.png`}
                         width="150"
                         height="150"
                         alt="Airi Treats"
                     />
+                    <img src="https://airi-treats.vercel.app/images/logo.png" width={150} height={150} alt="vanilla" />
                 </Section>
                 <Section style={{ paddingBottom: "20px" }}>
                     <Row>
