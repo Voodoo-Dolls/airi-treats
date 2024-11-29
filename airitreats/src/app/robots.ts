@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: "*",
             allow: ["/"]
         },
-        sitemap: ["https://dminhvu.com/sitemap.xml"]
+        sitemap: ["https://airi-treats.vercel.app/"]
     };
 }
