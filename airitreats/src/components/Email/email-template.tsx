@@ -1,4 +1,15 @@
-import * as React from 'react';
+
+import {
+    Body,
+    Container,
+    Head,
+    Html,
+    Img,
+    Row,
+    Section,
+    Text,
+} from "@react-email/components";
+
 
 interface EmailTemplateProps {
     message: string,
@@ -7,13 +18,70 @@ interface EmailTemplateProps {
     phone: string
 }
 
+const baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "";
+
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     name, message, email, phone
 }) => (
-    <div>
-        <p>Hi my name is: {name}</p>
-        <p>{message}</p>
-        <p>From: {email}</p>
-        <p>Phone:{phone}</p>
-    </div>
+    <Html>
+        <Head />
+
+        <Body style={main}>
+            <Container style={container}>
+                <Section>
+                    <Img
+                        src={`${baseUrl}/images/logo.webp`}
+                        width="150"
+                        height="150"
+                        alt="Airi Treats"
+                    />
+                </Section>
+                <Section style={{ paddingBottom: "20px" }}>
+                    <Row>
+                        <Text style={heading}>Here's what {name} wrote</Text>
+                        <Text style={review}>{message}</Text>
+                    </Row>
+                    <Text style={paragraph}>Email: {email}</Text>
+                    {phone && <Text style={paragraph}>Phone: {phone}</Text>}
+                </Section>
+            </Container>
+        </Body>
+    </Html >
 );
+
+
+const main = {
+    backgroundColor: "#ffffff",
+    fontFamily:
+        '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
+};
+
+const container = {
+    margin: "0 auto",
+    padding: "20px 0 48px",
+    width: "580px",
+    maxWidth: "100%",
+};
+
+
+const heading = {
+    fontSize: "32px",
+    lineHeight: "1.3",
+    fontWeight: "700",
+    color: "#484848",
+};
+
+const paragraph = {
+    fontSize: "18px",
+    lineHeight: "1.4",
+    color: "#484848",
+};
+
+const review = {
+    ...paragraph,
+    padding: "24px",
+    backgroundColor: "#f2f3f3",
+    borderRadius: "4px",
+};
