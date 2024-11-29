@@ -40,7 +40,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                 </Section>
                 <Section style={{ paddingBottom: "20px" }}>
                     <Row>
-                        <Text style={heading}>Here's what {name} wrote</Text>
+                        <Text style={heading}>Here&apos;s what {name} wrote</Text>
                         <Text style={review}>{message}</Text>
                     </Row>
                     <Text style={paragraph}>Email: {email}</Text>
