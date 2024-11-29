@@ -18,9 +18,6 @@ interface EmailTemplateProps {
     phone: string
 }
 
-const baseUrl = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "";
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     name, message, email, phone
@@ -31,12 +28,11 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
             <Container style={container}>
                 <Section>
                     <Img
-                        src={`https://airi-treats.vercel.app/images/logo.png`}
+                        src={`${process.env.VERCEL_URL}`}
                         width="150"
                         height="150"
                         alt="Airi Treats"
                     />
-                    <img src="https://airi-treats.vercel.app/images/logo.png" width={150} height={150} alt="vanilla" />
                 </Section>
                 <Section style={{ paddingBottom: "20px" }}>
                     <Row>

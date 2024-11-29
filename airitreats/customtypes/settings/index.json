@@ -61,6 +61,22 @@
             }
           }
         }
+      },
+      "notification": {
+        "type": "Boolean",
+        "config": {
+          "label": "Notification",
+          "placeholder_false": "false",
+          "placeholder_true": "true",
+          "default_value": true
+        }
+      },
+      "notification_text": {
+        "type": "Text",
+        "config": {
+          "label": "Notification Text",
+          "placeholder": "Ex. Use Promo Code \"Treats\" to Save $5"
+        }
       }
     }
   }

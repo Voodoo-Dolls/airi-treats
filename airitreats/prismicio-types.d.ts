@@ -80,60 +80,6 @@ export type CategoryDocument<Lang extends string = string> =
     Lang
   >;
 
-/**
- * Content for Footer documents
- */
-interface FooterDocumentData {
-  /**
-   * Address field in *Footer*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: 13 Amherst Crescent, St. Albert, AB T8N 2P7
-   * - **API ID Path**: footer.address
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  address: prismic.KeyTextField;
-
-  /**
-   * Phone field in *Footer*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: (xxx) xxx-xxxx
-   * - **API ID Path**: footer.phone
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  phone: prismic.KeyTextField;
-
-  /**
-   * Google Maps URL of your location field in *Footer*
-   *
-   * - **Field Type**: GeoPoint
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.your_map_location
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#geopoint
-   */
-  your_map_location: prismic.GeoPointField;
-}
-
-/**
- * Footer document from Prismic
- *
- * - **API ID**: `footer`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type FooterDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<FooterDocumentData>,
-    "footer",
-    Lang
-  >;
-
 type PageDocumentDataSlicesSlice =
   | SectionTitleSlice
   | ImageBannerSlice
@@ -449,6 +395,29 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   links: prismic.GroupField<Simplify<SettingsDocumentDataLinksItem>>;
+
+  /**
+   * Notification field in *Settings*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: true
+   * - **API ID Path**: settings.notification
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  notification: prismic.BooleanField;
+
+  /**
+   * Notification Text field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Ex. Use Promo Code "Treats" to Save $5
+   * - **API ID Path**: settings.notification_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  notification_text: prismic.KeyTextField;
 }
 
 /**
@@ -469,7 +438,6 @@ export type SettingsDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | CategoryDocument
-  | FooterDocument
   | PageDocument
   | ProductDocument
   | SettingsDocument;
@@ -1211,8 +1179,6 @@ declare module "@prismicio/client" {
       CategoryDocument,
       CategoryDocumentData,
       CategoryDocumentDataSlicesSlice,
-      FooterDocument,
-      FooterDocumentData,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
