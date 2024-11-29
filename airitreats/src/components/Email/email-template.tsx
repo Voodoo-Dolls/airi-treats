@@ -4,7 +4,6 @@ import {
     Container,
     Head,
     Html,
-    Img,
     Row,
     Section,
     Text,
@@ -28,7 +27,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
             <Container style={container}>
                 <Section>
                     <img
-                        src={`${process.env.VERCEL_URL}images/logo.png`}
+                        src={`https://airi-treats.vercel.app/images/logo.png`}
                         width="150"
                         height="150"
                         alt="Airi Treats"
@@ -39,7 +38,6 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                         <Text style={heading}>Here&apos;s what {name} wrote</Text>
                         <Text style={review}>{message}</Text>
                     </Row>
-                    <Text style={paragraph}>debug:{`${process.env.VERCEL_URL}images/logo.png`}</Text>
                     <Text style={paragraph}>Email: {email}</Text>
                     {phone && <Text style={paragraph}>Phone: {phone}</Text>}
                 </Section>
