@@ -1,6 +1,6 @@
 'use client'
-import { useState, FormEvent } from "react";
-import { Toaster, toast } from "sonner";
+import { useState } from "react";
+import { toast } from "sonner";
 import styles from "./Newsletter.module.scss";
 
 export default function Newsletter() {
@@ -59,9 +59,6 @@ export default function Newsletter() {
             >
                 Send
             </button>
-            <p>{email}</p>
-
-
         </form>
     )
 

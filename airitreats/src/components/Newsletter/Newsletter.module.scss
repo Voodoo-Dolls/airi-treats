@@ -7,16 +7,18 @@
         height: 4rem;
         background-color: var(--lighterBlue);
         padding: 0.5rem;
+        border: none;
     }
 
     button {
+        font-family: var(--headerFont);
         grid-column: 2;
         background-color: var(--babyBlue);
+        border: none;
 
     }
 
-    button:hover{
+    button:hover {
         background-color: var(--yellow);
-        border: solid 4px var(--orange);
     }
 }

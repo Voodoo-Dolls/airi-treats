@@ -1,5 +1,6 @@
 import Contact from "@/components/Contact/Contact";
 import styles from "./ContactUs.module.scss"
+import Link from "next/link";
 
 export default async function ContactUs() {
     return (
@@ -16,7 +17,7 @@ export default async function ContactUs() {
                     <p>10:00 A.M. to 6:00 P.M.</p>
                 </div>
                 <div>
-                    <p>We’d love to see you! Check out our <a href="https://www.instagram.com/airitreats/" target="_blank">Instagram</a> or <a href="https://www.facebook.com/profile.php?id=61553694755284" target="_blank">Facebook</a> for the latest updates.</p>
+                    <p>We&#39;d love to see you! Check out our <Link href="https://www.instagram.com/airitreats/" target="_blank">Instagram</Link> or <Link href="https://www.facebook.com/profile.php?id=61553694755284" target="_blank">Facebook</Link> for the latest updates.</p>
                 </div>
             </div>
 

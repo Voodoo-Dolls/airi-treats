@@ -4,7 +4,7 @@
     padding: 1rem 0 1.5rem 0;
 }
 
-.container{
+.container {
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -12,25 +12,10 @@
 .address {
     padding: 1rem;
     color: white;
-    // border: 2px white solid;
-    
 
-    // div{
-    //     h3{
-    //         margin-bottom: 1rem;
-    //     }
-
-    //     div{
-    //         display: flex;
-    //         gap: 1rem;
-    //         align-items: center;
-    //         margin: 1rem 0;
-    //     }
-    // }
-    
 }
 
-.community{
+.community {
     padding: 1rem;
 }
 
@@ -48,17 +33,18 @@
     p {
         text-align: center;
     }
-    h3{
+
+    h3 {
         grid-column: 1 / span 2;
     }
 
-    
-    a:hover > .socialicon{
+
+    a:hover>.socialicon {
         color: var(--yellow);
         fill: var(--yellow);
         border-radius: 6px;
     }
-    
+
 }
 
 .subscription {
@@ -69,7 +55,7 @@
     grid-template-rows: auto auto auto;
     row-gap: 1rem;
 
-    p{
+    p {
         margin-bottom: 1rem;
     }
 }
@@ -87,23 +73,15 @@ $breakpoint-tablet: 760px;
 $breakpoint-desktop: 1100px;
 
 @media (min-width:$breakpoint-tablet) {
-    .community{
+    .community {
         display: grid;
         gap: 1rem;
         align-items: center;
         grid-template-columns: 50% 50%;
     }
-    // .socialMedia {
-    //     grid-column: 1 / 2;
-    //     grid-row: 1;
-    // }
 
-    .susbscription{
+    .susbscription {
         color: white;
     }
-    // .container{
-    //     align-items: center;
-    //     grid-column: 2 / 3;
-    //     grid-row: 1;
-    // }
+
 }
