@@ -28,7 +28,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
             <Container style={container}>
                 <Section>
                     <Img
-                        src={`${process.env.VERCEL_URL}`}
+                        src={`${process.env.VERCEL_URL}/images/logo.png`}
                         width="150"
                         height="150"
                         alt="Airi Treats"
