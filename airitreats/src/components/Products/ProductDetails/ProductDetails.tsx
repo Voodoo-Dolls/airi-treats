@@ -1,7 +1,5 @@
 'use client'
 
-import ProductText from "./ProductText/ProductText";
-import Image from 'next/image'
 import styles from "./ProductDetails.module.scss"
 import { PrismicNextImage } from "@prismicio/next";
 import { useState } from "react";

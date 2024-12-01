@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const page = await client.getSingle("settings")
   return {
     title: `${page.data.site_title}` || "Airi Treats",
-    // description: page.data.,
+    description: "Airi Treats has transformed your favourite snacks into an airy and crunchy treat that melts in your mouth; bursting with delicious flavours you will love. It's a shelf-stable treat that will last for more than a decade! Treat yourself to these special freeze-dried snacks. Made in Canada, with love, grab yours today!",
     openGraph: {
       images: [page.data.og_image.url || ""],
     },

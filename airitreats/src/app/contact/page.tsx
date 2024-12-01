@@ -2,6 +2,12 @@ import Contact from "@/components/Contact/Contact";
 import styles from "./ContactUs.module.scss"
 import Link from "next/link";
 
+export async function generateMetadata() {
+    return {
+        title: "Contact Us | Airi Treats"
+    }
+}
+
 export default async function ContactUs() {
     return (
         <div className={styles.container}>
